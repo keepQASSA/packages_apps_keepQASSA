@@ -351,4 +351,7 @@
     <string name="heads_up_time_out_6sec">6 detik</string>
     <string name="heads_up_time_out_8sec">8 detik</string>
     <string name="heads_up_time_out_10sec">10 detik</string>
+    <string name="add_heads_up_package">Tambahkan aplikasi</string>
+    <string name="add_heads_up_blacklist_summary">Jangan tampilkan petunjuk dari aplikasi ini</string>
+    <string name="heads_up_blacklist_title">Daftar Hitam</string>
 </resources>

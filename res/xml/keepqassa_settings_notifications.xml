@@ -41,6 +41,12 @@
             android:summary="@string/toast_icon_summary"
             android:defaultValue="true" />
 
+        <Preference
+            android:key="heads_up_settings"
+            android:title="@string/heads_up_cat_title"
+            android:summary="@string/heads_up_cat_summary"
+            android:fragment="com.keepqassa.settings.fragments.notifications.HeadsUpSettings" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

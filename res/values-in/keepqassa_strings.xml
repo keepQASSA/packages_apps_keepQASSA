@@ -330,4 +330,14 @@
     <string name="status_bar_lyric_app_title">Aplikasi lirik bilah status</string>
     <string name="status_bar_lyric_app_summary">Aktifkan akses notifikasi untuk StatusBarLyricExt</string>
     <string name="status_bar_lyric_info_summary">lirik akan ditampilkan tergantung pada lagu yang mendukung untuk menampilkan lirik atau tidak</string>
+    <string name="heads_up_cat_title">Perhatian</string>
+    <string name="heads_up_cat_summary">Tunda, daftar hitam batas waktu, dll</string>
+    <string name="heads_up_snooze_title">Pengatur waktu tunda</string>
+    <string name="heads_up_snooze_summary_one_minute">Menggeser ke atas pada pemberitahuan mengintip akan menunda kepala dari aplikasi itu selama 1 menit</string>
+    <string name="heads_up_snooze_disabled_summary">Pengatur waktu tunda dinonaktifkan</string>
+    <string name="heads_up_snooze_1min">1 menit</string>
+    <string name="heads_up_snooze_5min">5 menit</string>
+    <string name="heads_up_snooze_10min">10 menit</string>
+    <string name="heads_up_snooze_15min">15 menit</string>
+    <string name="heads_up_snooze_20min">20 menit</string>
 </resources>

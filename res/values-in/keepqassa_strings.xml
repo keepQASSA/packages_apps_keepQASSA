@@ -344,4 +344,11 @@
     <string name="heads_up_snooze_10min">10 menit</string>
     <string name="heads_up_snooze_15min">15 menit</string>
     <string name="heads_up_snooze_20min">20 menit</string>
+    <string name="heads_up_time_out_title">Waktu habis</string>
+    <string name="heads_up_time_out_2sec">2 detik</string>
+    <string name="heads_up_time_out_4sec">4 detik</string>
+    <string name="heads_up_time_out_5sec">5 detik</string>
+    <string name="heads_up_time_out_6sec">6 detik</string>
+    <string name="heads_up_time_out_8sec">8 detik</string>
+    <string name="heads_up_time_out_10sec">10 detik</string>
 </resources>

@@ -339,4 +339,6 @@
     <string name="status_bar_activity_indicators_title">Show activity indicators</string>
     <string name="status_bar_activity_indicators_summary">Show up and down icons on mobile and wifi icons when data is used</string>
 
+    <string name="qs_running_services_title">Running Services Icon</string>
+    <string name="qs_running_services_summary">Enable the running services icon in the footer</string>
 </resources>

@@ -356,4 +356,20 @@
     <string name="heads_up_blacklist_title">Daftar Hitam</string>
     <string name="notification_guts_kill_app_button_title">tombol tutup aplikasi</string>
     <string name="notification_guts_kill_app_button_summary">Tampilkan tombol aplikasi mematikan di menu tekan lama notifikasi</string>
+    <string name="screen_state_toggles_summary">@null</string>
+    <string name="screen_state_toggles_title">Tangguhkan Tindakan</string>
+    <string name="screen_state_toggles_enable_title">Aktifkan</string>
+    <string name="screen_state_toggles_enable_summary">Tindakan akan dijalankan di layar mati. Di layar pada keadaan sebelumnya akan dikembalikan.</string>
+    <string name="screen_state_toggles_mobile_title">Jaringan seluler</string>
+    <string name="screen_state_toggles_location_title">Lokasi</string>
+    <string name="screen_state_toggles_twog">Beralih ke 2G</string>
+    <string name="screen_state_toggles_twog_summary">Mode jaringan akan dialihkan ke 2G saat layar mati</string>
+    <string name="screen_state_toggles_gps">Nonaktifkan GPS</string>
+    <string name="screen_state_toggles_gps_summary">Layanan lokasi berbasis GPS akan dinonaktifkan pada layar mati</string>
+    <string name="screen_state_toggles_mobile_data">Nonaktifkan data seluler</string>
+    <string name="screen_state_toggles_mobile_data_summary">Data seluler akan dinonaktifkan saat layar mati</string>
+    <string name="screen_state_off_delay_title">Tunda tindakan Layar Mati</string>
+    <string name="screen_state_off_delay_summary">Jumlah detik untuk menunggu sebelum melakukan tindakan setelah layar mati</string>
+    <string name="screen_state_on_delay_title">Tunda tindakan Layar Pada</string>
+    <string name="screen_state_on_delay_summary">Jumlah detik untuk menunggu sebelum melakukan tindakan setelah layar aktif</string>
 </resources>

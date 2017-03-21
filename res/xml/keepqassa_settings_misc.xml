@@ -49,6 +49,11 @@
     <PreferenceCategory
         android:title="@string/general_misc_title">
 
+        <Preference
+            android:key="screenstate_category"
+            android:title="@string/screen_state_toggles_title" 
+            android:fragment="com.keepqassa.settings.fragments.misc.ScreenStateToggles" />
+
         <!-- Sensor Block -->
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="sensor_block"

@@ -465,4 +465,6 @@
     <string name="app_downgrade_summary">Ini memungkinkan Anda untuk menurunkan versi aplikasi. Perhatikan bahwa ini dapat menyebabkan kerusakan dan kerusakan data.</string>
     <string name="hosts_block_title">Blok iklan</string>
     <string name="hosts_block_summary">Blokir iklan dengan file host yang dimodifikasi. Nonaktifkan untuk menggunakan solusi pihak ketiga atau jika aplikasi menyebabkan masalah.</string>
+    <string name="lockscreen_battery_info_title">Info baterai</string>
+    <string name="lockscreen_battery_info_summary">Tampilkan info baterai saat mengisi daya</string>
 </resources>

@@ -18,14 +18,17 @@ package com.keepqassa.settings.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SELinux;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.util.Log;
 import android.view.ViewConfiguration;
 import androidx.preference.*;
 
@@ -34,6 +37,8 @@ import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 import com.keepqassa.settings.fragments.misc.SensorBlock;
+import com.keepqassa.settings.utils.SuShell;
+import com.keepqassa.settings.utils.SuTask;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -61,10 +66,15 @@ public class Misc extends SettingsPreferenceFragment
     private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
     private static final String SENSOR_BLOCK = "sensor_block";
+    private static final String SELINUX_CATEGORY = "selinux";
+    private static final String PREF_SELINUX_MODE = "selinux_mode";
+    private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
     private SwitchPreference mStreamSpoof;
+    private SwitchPreference mSelinuxMode;
+    private SwitchPreference mSelinuxPersistence;
 
     private CustomSeekBarPreference mScreenshotDelay;
 
@@ -105,6 +115,19 @@ public class Misc extends SettingsPreferenceFragment
         mSensorBlock.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.SENSOR_BLOCK, 0) == 1));
         mSensorBlock.setOnPreferenceChangeListener(this);
+
+        // SELinux
+        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
+        mSelinuxMode = (SwitchPreference) findPreference(PREF_SELINUX_MODE);
+        mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
+        mSelinuxMode.setOnPreferenceChangeListener(this);
+
+        mSelinuxPersistence =
+            (SwitchPreference) findPreference(PREF_SELINUX_PERSISTENCE);
+        mSelinuxPersistence.setOnPreferenceChangeListener(this);
+        mSelinuxPersistence.setChecked(getContext()
+            .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
+            .contains(PREF_SELINUX_MODE));
     }
 
     @Override
@@ -125,6 +148,14 @@ public class Misc extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
+            return true;
+        } else if (preference == mSelinuxMode) {
+            boolean enabled = (Boolean) newValue;
+            new SwitchSelinuxTask(getActivity()).execute(enabled);
+                    setSelinuxEnabled(enabled, mSelinuxPersistence.isChecked());
+            return true;
+        } else if (preference == mSelinuxPersistence) {
+                    setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
         }
         return true;
@@ -148,6 +179,45 @@ public class Misc extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
+    }
+
+    private void setSelinuxEnabled(boolean status, boolean persistent) {
+      SharedPreferences.Editor editor = getContext()
+          .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
+      if (persistent) {
+        editor.putBoolean(PREF_SELINUX_MODE, status);
+      } else {
+        editor.remove(PREF_SELINUX_MODE);
+      }
+      editor.apply();
+      mSelinuxMode.setChecked(status);
+    }
+
+    private class SwitchSelinuxTask extends SuTask<Boolean> {
+      public SwitchSelinuxTask(Context context) {
+        super(context);
+      }
+      @Override
+      protected void sudoInBackground(Boolean... params) throws SuShell.SuDeniedException {
+        if (params.length != 1) {
+          Log.e(TAG, "SwitchSelinuxTask: invalid params count");
+          return;
+        }
+        if (params[0]) {
+          SuShell.runWithSuCheck("setenforce 1");
+        } else {
+          SuShell.runWithSuCheck("setenforce 0");
+        }
+      }
+
+      @Override
+      protected void onPostExecute(Boolean result) {
+        super.onPostExecute(result);
+        if (!result) {
+          // Did not work, so restore actual value
+          setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
+        }
+      }
     }
 
     /**

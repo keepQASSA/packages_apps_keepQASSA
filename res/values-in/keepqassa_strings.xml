@@ -420,4 +420,14 @@
     <string name="battery_bar_blend_color_reverse_title">Membalikkan arah warna</string>
     <string name="battery_bar_blend_color_reverse_summary_off">Penuh &#8594; kosong: merah &#8592; hijau &#8592; biru &#8592; merah</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Penuh &#8594; kosong: merah &#8594; hijau &#8594; biru &#8594; merah</string>
+    <string name="selinux_category">SELinux</string>
+    <string name="selinux_explanation_summary">SELinux adalah seperangkat modifikasi kernel dan alat ruang pengguna. Mengubah mode dapat menyebabkan efek yang tidak diinginkan. Gunakan dengan risiko Anda sendiri.</string>
+    <string name="selinux_mode_title">mode SELinux</string>
+    <string name="selinux_permissive_summary">Permisif</string>
+    <string name="selinux_enforcing_summary">Menegakkan</string>
+    <string name="selinux_persistence_title">Bertahan di seluruh reboot</string>
+    <string name="selinux_persistence_summary">Kembalikan mode kebijakan yang ditetapkan di atas pada setiap boot</string>
+    <string name="selinux_permissive_toast_title">Selinux disetel ke permisif!</string>
+    <string name="selinux_enforcing_toast_title">Selinux disetel ke penegakan!</string>
+    <string name="cannot_get_su">Tindakan gagal karena tidak ada akses pengguna super</string>
 </resources>

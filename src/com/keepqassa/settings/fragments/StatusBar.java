@@ -44,6 +44,7 @@ import com.keepqassa.settings.utils.TelephonyUtils;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
+import com.keepqassa.settings.fragments.statusbar.BatteryBar;
 import com.keepqassa.settings.fragments.statusbar.Clock;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -169,6 +170,7 @@ public class StatusBar extends SettingsPreferenceFragment
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        BatteryBar.reset(mContext);
         boolean mConfigUseOldMobileType = mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_useOldMobileIcons);
 

@@ -332,6 +332,10 @@
     <string name="status_bar_lyric_info_summary">lirik akan ditampilkan tergantung pada lagu yang mendukung untuk menampilkan lirik atau tidak</string>
     <string name="heads_up_cat_title">Perhatian</string>
     <string name="heads_up_cat_summary">Tunda, daftar hitam batas waktu, dll</string>
+    <string name="heads_up_title">Aktifkan</string>
+    <string name="heads_up_summary_enabled">Notifikasi pendahuluan diaktifkan</string>
+    <string name="heads_up_summary_disabled">Pemberitahuan pendahuluan dinonaktifkan</string>
+    <string name="heads_up_advanced_title">Opsi Peringatan Lanjutan</string>
     <string name="heads_up_snooze_title">Pengatur waktu tunda</string>
     <string name="heads_up_snooze_summary_one_minute">Menggeser ke atas pada pemberitahuan mengintip akan menunda kepala dari aplikasi itu selama 1 menit</string>
     <string name="heads_up_snooze_disabled_summary">Pengatur waktu tunda dinonaktifkan</string>

@@ -90,4 +90,7 @@
     <string name="notification_headers_summary">Apakah akan menampilkan tajuk pemberitahuan gaya R</string>
     <string name="center_notification_headers_title">Header notifikasi ditengah</string>
     <string name="center_notification_headers_summary">Apakah header pemberitahuan gaya R ditengah</string>
+    <string name="general_misc_title">Umum</string>
+    <string name="screenshot_sound_title">Suara tangkapan layar</string>
+    <string name="screenshot_sound_summary">Putar suara saat tangkapan layar diambil</string>
 </resources>

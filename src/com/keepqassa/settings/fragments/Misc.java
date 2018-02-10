@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -88,9 +89,12 @@ public class Misc extends SettingsPreferenceFragment
     }
 
     public static void reset(Context mContext) {
+    final ContentResolver resolver = mContext.getContentResolver();
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SCREENSHOT_SOUND, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

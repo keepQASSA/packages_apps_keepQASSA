@@ -132,6 +132,8 @@ public class Misc extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_DELAY,
                 (int) ViewConfiguration.get(mContext).getScreenshotChordKeyTimeout(), UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SENSOR_BLOCK, 0, UserHandle.USER_CURRENT);
     }
 
     @Override

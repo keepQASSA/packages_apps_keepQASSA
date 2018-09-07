@@ -49,6 +49,12 @@
     <PreferenceCategory
         android:title="@string/general_misc_title">
 
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="sensor_block"
+            android:title="@string/sensor_block_title"
+            android:summary="@string/sensor_block_summary"
+            android:defaultValue="false" />
+
         <!-- Gaming mode -->
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="gaming_mode_enabled"

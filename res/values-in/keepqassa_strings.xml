@@ -287,4 +287,6 @@
     <string name="lockscreen_enable_qs_summary">Izinkan mengakses pengaturan cepat pada layar kunci aman</string>
     <string name="lockscreen_secure_power_menu_title">Menu daya aman</string>
     <string name="lockscreen_secure_power_menu_summary">Izinkan tindakan menu daya hanya setelah otentikasi</string>
+    <string name="sensor_block_title">Blok sensor per paket</string>
+    <string name="sensor_block_summary">Blokir akses ke sensor tertentu untuk beberapa aplikasi guna menghemat baterai</string>
 </resources>

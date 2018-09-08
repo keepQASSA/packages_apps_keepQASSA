@@ -35,12 +35,12 @@
             android:fragment="com.keepqassa.settings.fragments.StatusBar"
             android:icon="@drawable/ic_settings_statusbar"/>
 
-        <!-- Interface
+        <!-- Interface -->
         <Preference
             android:key="interface_category"
             android:title="@string/interface_title"
-            android:fragment="com.keepqassa.settings.fragments.Interface"
-            android:icon="@drawable/ic_settings_interface"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Interfaces"
+            android:icon="@drawable/ic_settings_interface"/>
 
         <!-- Quick Settings -->
         <Preference

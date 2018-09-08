@@ -475,4 +475,10 @@
     <string name="lockscreen_charging_animation_water">Air</string>
     <string name="advanced_reboot_secured_title">Layar kunci aman</string>
     <string name="advanced_reboot_secured_summary">Tampilkan opsi mulai ulang lanjutan pada layar kunci aman</string>
+    <string name="omnijaws_settings_title">Layanan cuaca</string>
+    <string name="omnijaws_settings_summary">Sesuaikan setelan layanan dan paket ikon</string>
+    <string name="weather_config_title">Pengaturan layanan</string>
+    <string name="weather_config_summary">Konfigurasi layanan untuk mengaktifkan detail cuaca</string>
+    <string name="weather_icon_pack_title">Paket ikon kondisi</string>
+    <string name="weather_icon_pack_note">Catatan\u003a Anda dapat menginstal paket ikon baru dari play store dengan menelusuri \"ikon Chronus\"</string>
 </resources>

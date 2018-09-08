@@ -738,4 +738,12 @@
     <string name="advanced_reboot_secured_title">Secured lockscreen</string>
     <string name="advanced_reboot_secured_summary">Display advanced restart options on secured lockscreen</string>
 
+    <!-- OmniJaws -->
+    <string name="omnijaws_settings_title">Weather service</string>
+    <string name="omnijaws_settings_summary">Customize service settings and icon pack</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary">Configure service to enable weather details</string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+    <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
+
 </resources>

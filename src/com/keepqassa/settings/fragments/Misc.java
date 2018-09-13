@@ -30,6 +30,7 @@ import android.view.ViewConfiguration;
 import androidx.preference.*;
 
 import com.keepqassa.settings.preferences.CustomSeekBarPreference;
+import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -112,6 +113,8 @@ public class Misc extends SettingsPreferenceFragment
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
+        Settings.Global.putInt(resolver,
+                Settings.Global.TOAST_ICON, 1);
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,

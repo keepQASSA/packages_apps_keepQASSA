@@ -231,4 +231,6 @@
     <string name="screenshot_misc_title">Tangkapan layar</string>
     <string name="fp_success_vibrate_title">Getaran otentikasi sidik jari</string>
     <string name="fp_success_vibrate_summary">Getar pada otentikasi sidik jari yang berhasil</string>
+    <string name="toast_icon_title">Ikon toast</string>
+    <string name="toast_icon_summary">Tampilan ikon aktivitas yang menghasilkan pesan toast</string>
 </resources>

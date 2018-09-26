@@ -374,4 +374,6 @@
     <string name="screen_state_on_delay_summary">Jumlah detik untuk menunggu sebelum melakukan tindakan setelah layar aktif</string>
     <string name="less_boring_heads_up_title">Lebih sedikit yang membosankan</string>
     <string name="less_boring_heads_up_summary">Tampilkan kepala hanya untuk dialer, pesan dan aplikasi alarm</string>
+    <string name="allow_signature_fake">Izinkan pemalsuan tanda tangan</string>
+    <string name="allow_signature_fake_summary">Izinkan aplikasi melewati sistem keamanan dengan berpura-pura menjadi aplikasi yang berbeda</string>
 </resources>

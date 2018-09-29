@@ -31,7 +31,7 @@ public class SecureSettingsStore extends androidx.preference.PreferenceDataStore
     }
 
     public boolean getBoolean(String key, boolean defValue) {
-        return getInt(key, defValue ? 1 : 0) != 0;
+        return Settings.Secure.getIntForUser(mContentResolver, key, defValue ? 1 : 0, UserHandle.USER_CURRENT) != 0;
     }
 
     public float getFloat(String key, float defValue) {

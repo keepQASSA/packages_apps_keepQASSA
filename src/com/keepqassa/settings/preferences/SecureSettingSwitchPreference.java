@@ -18,10 +18,12 @@ package com.keepqassa.settings.preferences;
 
 import android.content.Context;
 import android.provider.Settings;
+import android.os.UserHandle;
 import androidx.preference.SwitchPreference;
 import android.util.AttributeSet;
 
 public class SecureSettingSwitchPreference extends SwitchPreference {
+
     public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
@@ -36,22 +38,13 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
 
     @Override
     protected boolean persistBoolean(boolean value) {
-        if (shouldPersist()) {
-            if (value == getPersistedBoolean(!value)) {
-                // It's already there, so the same as persisting
-                return true;
-            }
-            Settings.Secure.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
-            return true;
-        }
-        return false;
+        Settings.Secure.putIntForUser(getContext().getContentResolver(),
+            getKey(), value ? 1 : 0, UserHandle.USER_CURRENT);
+        return true;
     }
 
     @Override
     protected boolean getPersistedBoolean(boolean defaultReturnValue) {
-        if (!shouldPersist()) {
-            return defaultReturnValue;
-        }
         return Settings.Secure.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }

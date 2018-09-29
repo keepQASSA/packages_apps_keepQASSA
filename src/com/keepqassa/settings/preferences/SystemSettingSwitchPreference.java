@@ -18,40 +18,36 @@ package com.keepqassa.settings.preferences;
 
 import android.content.Context;
 import android.provider.Settings;
+import android.os.UserHandle;
 import androidx.preference.SwitchPreference;
 import android.util.AttributeSet;
 
 public class SystemSettingSwitchPreference extends SwitchPreference {
+
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context) {
         super(context, null);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     @Override
     protected boolean persistBoolean(boolean value) {
-        if (shouldPersist()) {
-            if (value == getPersistedBoolean(!value)) {
-                // It's already there, so the same as persisting
-                return true;
-            }
-            Settings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
-            return true;
-        }
-        return false;
+        Settings.System.putIntForUser(getContext().getContentResolver(),
+            getKey(), value ? 1 : 0, UserHandle.USER_CURRENT);
+        return true;
     }
 
     @Override
     protected boolean getPersistedBoolean(boolean defaultReturnValue) {
-        if (!shouldPersist()) {
-            return defaultReturnValue;
-        }
         return Settings.System.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }

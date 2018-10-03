@@ -140,6 +140,14 @@ public class Misc extends SettingsPreferenceFragment
         if (!mSelinuxSwitch) {
             prefScreen.removePreference(perfCat);
         }
+
+        // SmartPixels
+	boolean enableSmartPixels = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
+        Preference SmartPixels = findPreference("smart_pixels");
+        if (!enableSmartPixels){
+            getPreferenceScreen().removePreference(SmartPixels);
+        }
     }
 
     @Override

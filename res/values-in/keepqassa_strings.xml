@@ -171,4 +171,6 @@
     <string name="qs_show_drag_handle_summary">Tampilkan pegangan footer Qs</string>
     <string name="volte_icon_title">ikon VoLTE</string>
     <string name="volte_icon_summary">Tampilkan ikon VoLTE bila tersedia</string>
+    <string name="roaming_indicator_icon_title">Indikator jelajah</string>
+    <string name="roaming_indicator_icon_summary">Menampilkan indikator roaming di ikon sinyal saat dalam mode roaming</string>
 </resources>

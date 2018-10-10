@@ -70,6 +70,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
+    private static final String KEY_SHOW_ROAMING = "roaming_indicator_icon";
 
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingListPreference mStatusBarAmPm;
@@ -82,6 +83,7 @@ public class StatusBar extends SettingsPreferenceFragment
 
     private SwitchPreference mOldMobileType;
     private SystemSettingSeekBarPreference mVolteIconStyle;
+    private SwitchPreference mShowRoaming;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -119,9 +121,11 @@ public class StatusBar extends SettingsPreferenceFragment
         mOldMobileType.setChecked(showing);
 
         mVolteIconStyle = (SystemSettingSeekBarPreference) findPreference(KEY_VOLTE_ICON_STYLE);
+        mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
 
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mVolteIconStyle);
+            prefScreen.removePreference(mShowRoaming);
         }
     }
 
@@ -185,6 +189,8 @@ public class StatusBar extends SettingsPreferenceFragment
                 Settings.System.USE_OLD_MOBILETYPE, mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.VOLTE_ICON_STYLE, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.ROAMING_INDICATOR_ICON, 1, UserHandle.USER_CURRENT);
     }
 
     @Override
@@ -214,6 +220,7 @@ public class StatusBar extends SettingsPreferenceFragment
 
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(KEY_VOLTE_ICON_STYLE);
+                        keys.add(KEY_SHOW_ROAMING);
                     }
 
                     return keys;

@@ -70,12 +70,12 @@
 	    android:fragment="com.keepqassa.settings.fragments.Navigation"/>
             android:icon="@drawable/ic_settings_navigation"/> -->
 
-        <!-- Lock Screen
+        <!-- Lock Screen -->
         <Preference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
-            android:fragment="com.keepqassa.settings.fragments.LockScreen"/>
-            android:icon="@drawable/ic_settings_lockscreen"/> -->
+            android:fragment="com.keepqassa.settings.fragments.LockScreen"
+            android:icon="@drawable/ic_settings_lockscreen"/>
 
         <!-- Notifications -->
         <Preference

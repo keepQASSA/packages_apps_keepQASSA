@@ -71,4 +71,26 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/dashboard_stuff"
+        android:layout="@layout/xd_pref_card_top"
+        settings:allowDividerAbove="false">
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
+            android:key="enable_conditions"
+            android:layout="@layout/xd_pref_card_mid"
+            android:title="@string/dashboard_conditions_title"
+            android:summaryOn="@string/summary_dashboard_conditions_enabled"
+            android:summaryOff="@string/summary_dashboard_conditions_disabled"
+            android:defaultValue="true" />
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
+            android:key="enable_suggestions"
+            android:layout="@layout/xd_pref_card_bot"
+            android:title="@string/dashboard_suggestions_title"
+            android:summaryOn="@string/summary_dashboard_suggestions_enabled"
+            android:summaryOff="@string/summary_dashboard_suggestions_disabled"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

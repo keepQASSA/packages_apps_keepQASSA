@@ -128,4 +128,11 @@
     <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>
     <string name="qs_blur_radius_title">Intensitas blur di balik Pengaturan Cepat</string>
     <string name="qs_blur_radius_summary">Atur radius blur di belakang panel QS</string>
+    <string name="dashboard_stuff">Setelan Dasbor</string>
+    <string name="dashboard_conditions_title">Kondisi dasbor</string>
+    <string name="summary_dashboard_conditions_enabled">Kondisi dasbor diaktifkan</string>
+    <string name="summary_dashboard_conditions_disabled">Kondisi dasbor dinonaktifkan</string>
+    <string name="dashboard_suggestions_title">Saran dasbor</string>
+    <string name="summary_dashboard_suggestions_enabled">Saran dasbor diaktifkan</string>
+    <string name="summary_dashboard_suggestions_disabled">Saran dasbor dinonaktifkan</string>
 </resources>

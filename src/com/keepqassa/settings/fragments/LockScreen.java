@@ -23,6 +23,7 @@ import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.provider.SearchIndexableResource;
 import androidx.preference.*;
@@ -42,16 +43,38 @@ import java.util.ArrayList;
 public class LockScreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    private static final String LOCKSCREEN_GESTURES_CATEGORY = "lockscreen_gestures_category";
+    private static final String FP_SUCCESS_VIBRATE = "fp_success_vibrate";
+
+    private FingerprintManager mFingerprintManager;
+
+    private Preference mFingerprintVib;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.keepqassa_settings_lockscreen);
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
+
+        PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (Preference) findPreference(FP_SUCCESS_VIBRATE);
+
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
+            gestCategory.removePreference(mFingerprintVib);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+    Settings.System.putIntForUser(resolver,
+                Settings.System.FP_SUCCESS_VIBRATE, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

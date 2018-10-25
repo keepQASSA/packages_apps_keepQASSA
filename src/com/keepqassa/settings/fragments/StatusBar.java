@@ -39,6 +39,7 @@ import androidx.preference.SwitchPreference;
 
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
+import com.keepqassa.settings.utils.TelephonyUtils;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
@@ -67,6 +68,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
+    private static final String KEY_SHOW_VOLTE = "show_volte_icon";
 
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingListPreference mStatusBarAmPm;
@@ -78,12 +80,15 @@ public class StatusBar extends SettingsPreferenceFragment
     private static boolean sHasCenteredNotch;
 
     private SwitchPreference mOldMobileType;
+    private SwitchPreference mShowVolte;
+
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.keepqassa_settings_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
         final ContentResolver resolver = getActivity().getContentResolver();
         Context mContext = getActivity().getApplicationContext();
@@ -112,6 +117,12 @@ public class StatusBar extends SettingsPreferenceFragment
                 Settings.System.USE_OLD_MOBILETYPE,
                 mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT) != 0;
         mOldMobileType.setChecked(showing);
+
+        mShowVolte = (SwitchPreference) findPreference(KEY_SHOW_VOLTE);
+
+        if (!TelephonyUtils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(mShowVolte);
+        }
     }
 
     @Override
@@ -172,6 +183,8 @@ public class StatusBar extends SettingsPreferenceFragment
 
         Settings.System.putIntForUser(resolver,
                 Settings.System.USE_OLD_MOBILETYPE, mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SHOW_VOLTE_ICON, 0, UserHandle.USER_CURRENT);
     }
 
     @Override
@@ -198,6 +211,10 @@ public class StatusBar extends SettingsPreferenceFragment
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
+
+                    if (!TelephonyUtils.isVoiceCapable(context)) {
+                        keys.add(KEY_SHOW_VOLTE);
+                    }
 
                     return keys;
                 }

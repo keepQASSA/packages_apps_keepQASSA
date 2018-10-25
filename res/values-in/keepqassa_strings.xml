@@ -169,4 +169,6 @@
     <string name="qs_use_status_bar_battery_style">Ikuti gaya bilah status</string>
     <string name="qs_show_drag_handle_title">Pegangan Tarik Qs</string>
     <string name="qs_show_drag_handle_summary">Tampilkan pegangan footer Qs</string>
+    <string name="volte_icon_title">ikon VoLTE</string>
+    <string name="volte_icon_summary">Tampilkan ikon VoLTE bila tersedia</string>
 </resources>

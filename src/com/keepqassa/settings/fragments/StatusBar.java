@@ -24,6 +24,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.text.TextUtils;
@@ -42,10 +43,17 @@ import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
+
+import com.keepqassa.settings.utils.TelephonyUtils;
 
 import com.android.internal.util.custom.cutout.CutoutUtils;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Set;
 
 public class StatusBar extends SettingsPreferenceFragment
@@ -59,6 +67,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
+    private static final String KEY_SHOW_VOLTE = "show_volte_icon";
 
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingListPreference mStatusBarAmPm;
@@ -70,12 +79,15 @@ public class StatusBar extends SettingsPreferenceFragment
     private static boolean sHasCenteredNotch;
 
     private SwitchPreference mOldMobileType;
+    private SwitchPreference mShowVolte;
+
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.keepqassa_settings_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
         final ContentResolver resolver = getActivity().getContentResolver();
         Context mContext = getActivity().getApplicationContext();
@@ -104,6 +116,12 @@ public class StatusBar extends SettingsPreferenceFragment
                 Settings.System.USE_OLD_MOBILETYPE,
                 mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT) != 0;
         mOldMobileType.setChecked(showing);
+
+        mShowVolte = (SwitchPreference) findPreference(KEY_SHOW_VOLTE);
+
+        if (!TelephonyUtils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(mShowVolte);
+        }
     }
 
     @Override
@@ -164,10 +182,41 @@ public class StatusBar extends SettingsPreferenceFragment
 
         Settings.System.putIntForUser(resolver,
                 Settings.System.USE_OLD_MOBILETYPE, mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SHOW_VOLTE_ICON, 0, UserHandle.USER_CURRENT);
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_statusbar;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    if (!TelephonyUtils.isVoiceCapable(context)) {
+                        keys.add(KEY_SHOW_VOLTE);
+                    }
+
+                    return keys;
+                }
+            };
 }

@@ -84,12 +84,12 @@
             android:fragment="com.keepqassa.settings.fragments.Notifications"
             android:icon="@drawable/ic_settings_notifications"/>
 
-        <!-- Animation
+        <!-- Animation -->
         <Preference
             android:key="animations_category"
             android:title="@string/animations_title"
             android:fragment="com.keepqassa.settings.fragments.Animations"
-            android:icon="@drawable/ic_settings_animations"/> -->
+            android:icon="@drawable/ic_settings_animation"/>
 
         <!-- Battery Saving -->
         <Preference

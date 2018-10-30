@@ -31,6 +31,8 @@ import android.view.View;
 import android.widget.Toast;
 import androidx.preference.*;
 
+import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
+
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;

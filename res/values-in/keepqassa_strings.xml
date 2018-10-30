@@ -215,4 +215,7 @@
     <string name="clock_date_left">Waktu yang tersisa</string>
     <string name="qs_clock_title">Jam</string>
     <string name="qs_clock_summary">Tampilkan jam di header bilah status cepat</string>
+    <string name="system_animations_category_title">Animasi transisi</string>
+    <string name="disable_transition_animations_title">Nonaktifkan animasi transisi</string>
+    <string name="disable_transition_animations_summary">Nonaktifkan paksa semua animasi transisi</string>
 </resources>

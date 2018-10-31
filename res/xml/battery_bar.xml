@@ -20,7 +20,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+    <SwitchPreference
         android:key="statusbar_battery_bar"
         android:title="@string/battery_bar_title"
         android:defaultValue="false" />

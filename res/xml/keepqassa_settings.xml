@@ -92,12 +92,12 @@
             android:fragment="com.keepqassa.settings.fragments.LockScreen"
             android:icon="@drawable/ic_settings_lockscreen"/> -->
 
-        <!-- Notifications
+        <!-- Notifications -->
         <Preference
             android:key="notifications_category"
             android:title="@string/notifications_title"
             android:fragment="com.keepqassa.settings.fragments.Notifications"
-            android:icon="@drawable/ic_settings_notifications"/> -->
+            android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- Animation
         <Preference

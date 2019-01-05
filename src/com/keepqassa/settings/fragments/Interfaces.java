@@ -36,11 +36,13 @@ import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settings.R;
 
+import com.keepqassa.settings.fragments.interfaces.RoundedCorners;
+
 import java.util.List;
 import java.util.ArrayList;
 
 @SearchIndexable
-public class Interface extends SettingsPreferenceFragment
+public class Interfaces extends SettingsPreferenceFragment
         implements Indexable {
 
     public static final String TAG = "Interface";

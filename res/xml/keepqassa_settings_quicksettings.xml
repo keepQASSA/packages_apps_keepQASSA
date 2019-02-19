@@ -71,6 +71,13 @@
             android:summary="@string/header_icons_style_summary"
             android:defaultValue="true" />
 
+        <!-- QS clock -->
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="show_qs_clock"
+            android:title="@string/qs_clock_title"
+            android:summary="@string/qs_clock_summary"
+            android:defaultValue="true" />
+
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="dismiss_all_button"
             android:title="@string/enable_clear_all_button"

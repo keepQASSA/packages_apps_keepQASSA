@@ -212,4 +212,6 @@
     <string name="clock_date_position">Posisi tanggal</string>
     <string name="clock_date_right">Tepat waktu</string>
     <string name="clock_date_left">Waktu yang tersisa</string>
+    <string name="qs_clock_title">Jam</string>
+    <string name="qs_clock_summary">Tampilkan jam di header bilah status cepat</string>
 </resources>

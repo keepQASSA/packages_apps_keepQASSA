@@ -149,6 +149,12 @@ public class QuickSettings extends SettingsPreferenceFragment
         return true;
     }
 
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SHOW_QS_CLOCK, 1, UserHandle.USER_CURRENT);
+    }
+
     private void updateQsAnimationDependents(int value) {
         mStatusBarQsAnimationTileDuration.setEnabled(value != 0);
         mStatusBarQsAnimationTileInterpolator.setEnabled(value != 0);

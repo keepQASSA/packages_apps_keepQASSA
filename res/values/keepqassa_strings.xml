@@ -294,4 +294,8 @@
     <string name="clock_date_position">Date position</string>
     <string name="clock_date_right">Next to the time (right)</string>
     <string name="clock_date_left">Next to the time (left)</string>
+
+    <!-- QS clock -->
+    <string name="qs_clock_title">Clock</string>
+    <string name="qs_clock_summary">Display clock in quick status bar header</string>
 </resources>

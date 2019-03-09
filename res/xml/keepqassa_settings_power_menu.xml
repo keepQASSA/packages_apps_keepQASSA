@@ -24,4 +24,9 @@
         android:key="lockdown"
         android:title="@string/power_menu_lockdown_title"
         android:defaultValue="false" />
+
+    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_screenrecord"
+        android:title="@string/powermenu_screenrecord_title"
+        android:defaultValue="false" />
 </PreferenceScreen>

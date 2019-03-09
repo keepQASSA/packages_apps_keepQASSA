@@ -385,4 +385,6 @@
 
     <string name="notificationheaders_quicksettings_title">Notification headers</string>
     <string name="notificationheaders_quicksettings_summary">Notification headers in quick settings</string>
+
+    <string name="powermenu_screenrecord_title">Screenrecord</string>
 </resources>

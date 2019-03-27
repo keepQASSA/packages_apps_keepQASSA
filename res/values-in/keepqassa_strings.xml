@@ -354,4 +354,6 @@
     <string name="add_heads_up_package">Tambahkan aplikasi</string>
     <string name="add_heads_up_blacklist_summary">Jangan tampilkan petunjuk dari aplikasi ini</string>
     <string name="heads_up_blacklist_title">Daftar Hitam</string>
+    <string name="notification_guts_kill_app_button_title">tombol tutup aplikasi</string>
+    <string name="notification_guts_kill_app_button_summary">Tampilkan tombol aplikasi mematikan di menu tekan lama notifikasi</string>
 </resources>

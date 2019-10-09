@@ -43,6 +43,7 @@ import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
+import com.keepqassa.settings.fragments.statusbar.Clock;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;

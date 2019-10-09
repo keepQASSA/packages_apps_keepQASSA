@@ -44,6 +44,7 @@ import com.keepqassa.settings.utils.TelephonyUtils;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
+import com.keepqassa.settings.fragments.statusbar.Clock;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -61,12 +62,9 @@ import java.util.Set;
 public class StatusBar extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String CATEGORY_CLOCK = "status_bar_clock_key";
-
     private static final String ICON_BLACKLIST = "icon_blacklist";
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
-    private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
@@ -75,11 +73,8 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
 
     private SystemSettingListPreference mStatusBarClock;
-    private SystemSettingListPreference mStatusBarAmPm;
 
     private SystemSettingSwitchPreference mStatusbarIconsStyle;
-
-    private PreferenceCategory mStatusBarClockCategory;
 
     private static boolean sHasCenteredNotch;
 
@@ -101,14 +96,9 @@ public class StatusBar extends SettingsPreferenceFragment
 
         sHasCenteredNotch = CutoutUtils.hasCenteredCutout(getActivity());
 
-        mStatusBarAmPm =
-                (SystemSettingListPreference) findPreference(STATUS_BAR_AM_PM);
         mStatusBarClock =
                 (SystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarClock.setOnPreferenceChangeListener(this);
-
-        mStatusBarClockCategory =
-                (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_CLOCK);
 
 	mStatusbarIconsStyle = (SystemSettingSwitchPreference) findPreference(STATUSBAR_ICONS_STYLE);
         mStatusbarIconsStyle.setChecked((Settings.System.getInt(resolver,
@@ -143,17 +133,6 @@ public class StatusBar extends SettingsPreferenceFragment
 
         final String curIconBlacklist = Settings.Secure.getString(getContext().getContentResolver(),
                 ICON_BLACKLIST);
-
-        if (TextUtils.delimitedStringContains(curIconBlacklist, ',', "clock")) {
-            getPreferenceScreen().removePreference(mStatusBarClockCategory);
-        } else {
-            getPreferenceScreen().addPreference(mStatusBarClockCategory);
-        }
-
-        if (DateFormat.is24HourFormat(getActivity())) {
-            mStatusBarAmPm.setEnabled(false);
-            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_info);
-        }
 
         final boolean disallowCenteredClock = sHasCenteredNotch;
 
@@ -203,6 +182,7 @@ public class StatusBar extends SettingsPreferenceFragment
                 Settings.System.DATA_DISABLED_ICON, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.SHOW_FOURG_ICON, 0, UserHandle.USER_CURRENT);
+        Clock.reset(mContext);
     }
 
     @Override

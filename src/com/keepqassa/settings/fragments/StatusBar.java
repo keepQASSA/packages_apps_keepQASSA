@@ -37,6 +37,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.keepqassa.settings.fragments.battery.BatteryBar;
 import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingSeekBarPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
@@ -165,6 +166,7 @@ public class StatusBar extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.BLUETOOTH_SHOW_BATTERY, 1, UserHandle.USER_CURRENT);
         Clock.reset(mContext);
+        BatteryBar.reset(mContext);
     }
 
     @Override

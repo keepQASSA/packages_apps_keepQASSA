@@ -762,4 +762,8 @@
     <string name="status_bar_battery_style_land_m">Icon landscape iOS Outline</string>
     <string name="status_bar_battery_style_land_n">Icon landscape Ruler</string>
     <string name="status_bar_battery_style_land_o">Icon landscape Windows</string>
+
+    <!-- Disabling FC notifications --> 
+    <string name="enable_fc_notifications_title">Force close notifications</string>
+    <string name="enable_fc_notifications_summary">Show a dialog when an application crashes</string>
 </resources>

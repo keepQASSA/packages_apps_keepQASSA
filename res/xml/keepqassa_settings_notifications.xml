@@ -70,6 +70,12 @@
             settings:min="0"
             settings:units="" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="enable_fc_notifications" 
+            android:title="@string/enable_fc_notifications_title" 
+            android:summary="@string/enable_fc_notifications_summary" 
+            android:defaultValue="true" /> 
+
    </PreferenceCategory>
 
    <PreferenceCategory

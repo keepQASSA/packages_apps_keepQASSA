@@ -494,4 +494,6 @@
     <string name="status_bar_battery_style_land_m">Ikon lanskap Garis Besar iOS</string>
     <string name="status_bar_battery_style_land_n">Ikon lanskap Penggaris</string>
     <string name="status_bar_battery_style_land_o">Ikon lanskap Jendela</string>
+    <string name="enable_fc_notifications_title">Tutup paksa notifikasi</string>
+    <string name="enable_fc_notifications_summary">Tampilkan dialog saat aplikasi mogok</string>
 </resources>

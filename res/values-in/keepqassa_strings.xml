@@ -510,4 +510,6 @@
     <string name="solid_gradient_void_light">Cahaya Gradien Void</string>
     <string name="solid_leafy_transparent">Aksen dedaunan transparan</string>
     <string name="solid_sharp_transparent">Sudut transparan yang tajam</string>
+    <string name="enable_fc_notifications_title">Tutup paksa notifikasi</string>
+    <string name="enable_fc_notifications_summary">Tampilkan dialog saat aplikasi mogok</string>
 </resources>

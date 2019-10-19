@@ -782,4 +782,7 @@
     <string name="solid_leafy_transparent">Accent transparent leafy</string>
     <string name="solid_sharp_transparent">Sharp transparent corner</string>
 
+    <!-- Disabling FC notifications --> 
+    <string name="enable_fc_notifications_title">Force close notifications</string>
+    <string name="enable_fc_notifications_summary">Show a dialog when an application crashes</string>
 </resources>

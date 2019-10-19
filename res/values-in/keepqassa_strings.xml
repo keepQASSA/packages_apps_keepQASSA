@@ -454,4 +454,11 @@
     <string name="smart_pixels_shift_times_20min">20 menit</string>
     <string name="smart_pixels_shift_times_30min">30 menit</string>
     <string name="smart_pixels_shift_times_1h">1 jam</string>
+    <string name="aggressive_battery_title">Baterai Agresif</string>
+    <string name="aggressive_idle_title">Menganggur Agresif</string>
+    <string name="aggressive_idle_summary">Masukkan perangkat idle lebih sering dan bangun lebih sedikit</string>
+    <string name="aggressive_standby_title">Siaga Agresif</string>
+    <string name="aggressive_standby_summary">Batasi aplikasi agar tidak berjalan di latar belakang</string>
+    <string name="aggressive_battery_saver_title">Aktifkan otomatis pada penghemat baterai</string>
+    <string name="aggressive_battery_saver_summary">Aktifkan Baterai Agresif secara otomatis saat menggunakan penghemat baterai</string>
 </resources>

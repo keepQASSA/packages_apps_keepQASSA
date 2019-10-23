@@ -399,4 +399,8 @@
 
     <string name="status_bar_show_clock_bg">Show statusbar clock background chip</string>
     <string name="quick_settings_show_clock_bg">Show qs clock background chip</string>
+
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Bluetooth battery status</string>
+    <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
 </resources>

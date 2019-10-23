@@ -273,4 +273,6 @@
     <string name="qs_clock_font_size_title">QS Header Clock font size</string>
     <string name="status_bar_show_clock_bg">Tampilkan chip latar belakang jam statusbar</string>
     <string name="quick_settings_show_clock_bg">Tampilkan chip latar belakang jam qs</string>
+    <string name="bluetooth_battery_title">Status baterai Bluetooth</string>
+    <string name="bluetooth_battery_summary">Tampilkan status baterai untuk perangkat bluetooth yang terhubung, jika tersedia</string>
 </resources>

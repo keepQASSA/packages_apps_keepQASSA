@@ -19,4 +19,47 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_title" >
 
+    <PreferenceCategory
+        android:title="@string/battery_qs_title">
+
+        <!-- Battery mode -->
+        <com.keepqassa.settings.preferences.SystemSettingListPreference
+            android:key="qs_battery_mode"
+            android:title="@string/battery_percentage_title"
+            android:entries="@array/qs_battery_mode_entries"
+            android:entryValues="@array/qs_battery_mode_values"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/battery_sb_title">
+
+        <!-- Battery styles -->
+        <com.keepqassa.settings.preferences.SystemSettingListPreference
+            android:key="status_bar_battery_style"
+            android:title="@string/status_bar_battery_style_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_battery_style_title"
+            android:entries="@array/status_bar_battery_style_entries"
+            android:entryValues="@array/status_bar_battery_style_values"
+            android:defaultValue="0" />
+
+        <!-- Show Battery percent on Statusbar -->
+        <com.keepqassa.settings.preferences.SystemSettingListPreference
+            android:key="status_bar_show_battery_percent"
+            android:title="@string/battery_percentage_title"
+            android:entries="@array/status_bar_battery_percentage_entries"
+            android:entryValues="@array/status_bar_battery_percentage_values"
+            android:defaultValue="0" />
+
+        <!-- Show battery percent when charging -->
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="status_bar_battery_text_charging"
+            android:title="@string/status_bar_battery_text_charging_title"
+            android:summary="@string/status_bar_battery_text_charging_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

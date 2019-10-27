@@ -190,4 +190,26 @@
     <!-- Right R Notification headers -->
     <string name="right_notification_headers_title">Right notification headers</string>
     <string name="right_notification_headers_summary">Whether to Right R style notification headers</string>
+
+    <!-- Battery styles -->
+    <string name="battery_qs_title">Quick Settings</string>
+    <string name="battery_sb_title">Status Bar</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Battery styles</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
+    <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
+
+    <!-- Battery mode -->
+    <string name="battery_percentage_title">Battery percentage</string>
+    <string name="battery_percentage_off">Disabled</string>
+    <string name="battery_percentage_next">Enabled</string>
+    <string name="battery_percentage_inside">Enabled (inside icon)</string>
+    <string name="battery_percentage_estimate">Enabled (estimate)</string>
 </resources>

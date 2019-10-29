@@ -275,4 +275,6 @@
     <string name="quick_settings_show_clock_bg">Tampilkan chip latar belakang jam qs</string>
     <string name="bluetooth_battery_title">Status baterai Bluetooth</string>
     <string name="bluetooth_battery_summary">Tampilkan status baterai untuk perangkat bluetooth yang terhubung, jika tersedia</string>
+    <string name="double_tap_sleep_anywhere_title">Ketuk untuk tidur</string>
+    <string name="double_tap_sleep_anywhere_summary">Ketuk dua kali di mana saja pada layar kunci untuk membuat perangkat tertidur</string>
 </resources>

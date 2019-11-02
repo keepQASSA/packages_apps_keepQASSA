@@ -45,10 +45,12 @@ public class LockScreen extends SettingsPreferenceFragment
 
     private static final String LOCKSCREEN_GESTURES_CATEGORY = "lockscreen_gestures_category";
     private static final String FP_SUCCESS_VIBRATE = "fp_success_vibrate";
+    private static final String FP_ERROR_VIBRATE = "fp_error_vibrate";
 
     private FingerprintManager mFingerprintManager;
 
-    private Preference mFingerprintVib;
+    private Preference mFingerprintVibSucces;
+    private Preference mFingerprintVibError;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -60,10 +62,12 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (Preference) findPreference(FP_SUCCESS_VIBRATE);
+        mFingerprintVibSucces = (Preference) findPreference(FP_SUCCESS_VIBRATE);
+        mFingerprintVibError = (Preference) findPreference(FP_ERROR_VIBRATE);
 
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
-            gestCategory.removePreference(mFingerprintVib);
+            gestCategory.removePreference(mFingerprintVibSucces);
+            gestCategory.removePreference(mFingerprintVibError);
         }
     }
 
@@ -77,6 +81,8 @@ public class LockScreen extends SettingsPreferenceFragment
                 Settings.System.FP_SUCCESS_VIBRATE, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.FP_ERROR_VIBRATE, 1, UserHandle.USER_CURRENT);
     }
 
     @Override
@@ -103,6 +109,12 @@ public class LockScreen extends SettingsPreferenceFragment
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
+                    FingerprintManager mFingerprintManager = (FingerprintManager)
+                            context.getSystemService(Context.FINGERPRINT_SERVICE);
+                    if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
+                        keys.add(FP_SUCCESS_VIBRATE);
+                        keys.add(FP_ERROR_VIBRATE);
+                    }
 
                     return keys;
                 }

@@ -380,4 +380,8 @@
     <string name="qs_theme_category">Gaya</string> 
     <string name="qs_bg_use_new_tint">Warna QS</string>
     <string name="qs_bg_use_new_tint_summary">Aktifkan gaya warna ubin QS</string>
+    <string name="qs_privacy_chip_title">Indikator Privasi</string>
+    <string name="qs_privacy_chip_info_summary">Ikon indikator privasi juga muncul di bilah status</string>
+    <string name="qs_privacy_perm_title">Tampilkan chip izin</string>
+    <string name="qs_privacy_perm_summary">Tampilkan di QS saat aplikasi menggunakan Mikrofon atau Lokasi juga Kamera</string>
 </resources>

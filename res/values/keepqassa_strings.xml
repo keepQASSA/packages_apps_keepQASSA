@@ -612,4 +612,11 @@
     <string name="qs_theme_category">Style</string>
     <string name="qs_bg_use_new_tint">QS Tint</string>
     <string name="qs_bg_use_new_tint_summary">Enable QS tiles tint style</string>
+
+    <!-- Privacy chip -->
+    <string name="qs_privacy_chip_title">Privacy Indicators</string>
+    <string name="qs_privacy_chip_info_summary">The privacy indicators icons also appears on the statusbar</string>
+    <string name="qs_privacy_perm_title">Show permissions chip</string>
+    <string name="qs_privacy_perm_summary">Show on QS when an app is using the Microphone or Location also Camera</string>
+
 </resources>

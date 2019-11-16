@@ -29,6 +29,7 @@ import androidx.preference.*;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import com.keepqassa.settings.fragments.misc.GamingMode;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class Misc extends SettingsPreferenceFragment
@@ -91,6 +92,7 @@ public class Misc extends SettingsPreferenceFragment
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
+        GamingMode.reset(mContext);
     }
 
     @Override

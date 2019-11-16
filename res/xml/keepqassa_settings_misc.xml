@@ -19,6 +19,18 @@
     android:title="@string/misc_title" >
 
     <PreferenceCategory
+        android:title="@string/general_misc_title">
+
+        <!-- Gaming Mode -->
+        <Preference
+            android:key="gaming_mode"
+            android:title="@string/gaming_mode_title"
+            android:summary="@string/gaming_mode_summary"
+            android:fragment="com.keepqassa.settings.fragments.misc.GamingMode"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="spoof_category"
         android:title="@string/spoof_title">
 

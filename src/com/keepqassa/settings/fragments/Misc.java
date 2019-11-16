@@ -28,7 +28,7 @@ import android.os.UserHandle;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
-
+import com.keepqassa.settings.fragments.misc.GamingMode;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -95,6 +95,7 @@ public class Misc extends SettingsPreferenceFragment
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 1, UserHandle.USER_CURRENT);
+        GamingMode.reset(mContext);
     }
 
     @Override

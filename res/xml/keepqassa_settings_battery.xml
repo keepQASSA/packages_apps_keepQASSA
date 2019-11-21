@@ -19,11 +19,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_title" >
 
+    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
+        android:key="charging_animation"
+        android:title="@string/charging_animation_title"
+        android:summary="@string/charging_animation_summary"
+        android:defaultValue="false" />
+
     <!-- Battery bar -->
     <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
         android:key="statusbar_battery_bar"
         android:title="@string/battery_bar_title"
         android:summary="@string/battery_bar_summary"
+        settings:allowDividerAbove="true"
         android:fragment="com.keepqassa.settings.fragments.battery.BatteryBar" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference

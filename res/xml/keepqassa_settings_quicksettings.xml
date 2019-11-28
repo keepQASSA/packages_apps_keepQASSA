@@ -55,6 +55,12 @@
             android:summary="@string/qs_show_drag_handle_summary"
             android:defaultValue="true" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="footer_text_show"
+            android:title="@string/qs_footer_text_title"
+            android:summary="@string/qs_footer_text_summary"
+            android:defaultValue="false"/>
+
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference     
             android:key="qs_footer_show_settings"
             android:title="@string/qs_footer_settings_title"

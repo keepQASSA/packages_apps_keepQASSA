@@ -351,4 +351,8 @@
     <string name="qs_footer_user_summary">Display Multi-user switcher icon in quick settings footer</string>
     <string name="qs_footer_edit_title">Edit icon</string>
     <string name="qs_footer_edit_summary">Display the tile edit icon in quick settings footer</string>
+
+    <!-- QS Footer Text -->
+    <string name="qs_footer_text_title">QS footer text</string>
+    <string name="qs_footer_text_summary">Display text at bottom of QS panel</string>
 </resources>

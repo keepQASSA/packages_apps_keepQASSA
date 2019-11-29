@@ -140,4 +140,6 @@
     <string name="battery_qs_title">Setelan Cepat</string>
     <string name="battery_show_location_title">Lokasi baterai</string>
     <string name="battery_show_location_summary">Beralih lokasi baterai untuk header QS</string>
+    <string name="qs_show_battery_estimate_title">Perkiraan baterai</string>
+    <string name="qs_show_battery_estimate_summary">Tampilkan perkiraan masa pakai baterai yang tersisa di sebelah ikon</string>
 </resources>

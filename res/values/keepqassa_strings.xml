@@ -194,4 +194,8 @@
     <string name="battery_qs_title">Quick Settings</string>
     <string name="battery_show_location_title">Battery location</string>
     <string name="battery_show_location_summary">Toggle battery location for QS header</string>
+
+    <!-- QS battery estimates -->
+    <string name="qs_show_battery_estimate_title">Battery estimates</string>
+    <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon</string>
 </resources>

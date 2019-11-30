@@ -248,4 +248,6 @@
     <string name="qs_footer_edit_summary">Menampilkan ikon edit ubin di footer pengaturan cepat</string>
     <string name="qs_footer_text_title">teks footer QS</string>
     <string name="qs_footer_text_summary">Tampilkan teks di bagian bawah panel QS</string>
+    <string name="qs_footer_text_string_title">Sesuaikan teks footer</string>
+    <string name="qs_footer_text_string_summary">Setel ke kosong untuk default</string>
 </resources>

@@ -35,6 +35,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
+import com.keepqassa.settings.preferences.SystemSettingEditTextPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
@@ -63,6 +64,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_DURATION = "anim_tile_duration";
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_INTERPOLATOR = "anim_tile_interpolator";
     private static final String HEADER_ICONS_STYLE = "headers_icons_style";
+    private static final String FOOTER_TEXT_STRING = "footer_text_string";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -79,6 +81,8 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     private PreferenceCategory mStatusBarBrightnessCategory;
     private PreferenceCategory mStatusBarQsAnimationCategory;
+
+    private SystemSettingEditTextPreference mFooterString;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -121,6 +125,18 @@ public class QuickSettings extends SettingsPreferenceFragment
         mHeaderIconsStyle.setChecked((Settings.System.getInt(resolver,
                 Settings.System.HEADER_ICONS_STYLE, 0) == 1));
         mHeaderIconsStyle.setOnPreferenceChangeListener(this);
+
+        mFooterString = (SystemSettingEditTextPreference) findPreference(FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String footerString = Settings.System.getString(getContentResolver(),
+                FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "")
+            mFooterString.setText(footerString);
+        else {
+            mFooterString.setText("#keepQASSA");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.FOOTER_TEXT_STRING, "#keepQASSA");
+        }
     }
 
     @Override
@@ -141,6 +157,17 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.System.putInt(resolver,
                     Settings.System.HEADER_ICONS_STYLE, value ? 1 : 0);
             ActionUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.FOOTER_TEXT_STRING, value);
+            else {
+                mFooterString.setText("#Durex");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.FOOTER_TEXT_STRING, "#Durex");
+            }
             return true;
         }
         int value = Integer.parseInt((String) newValue);

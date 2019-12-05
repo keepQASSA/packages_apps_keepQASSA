@@ -239,4 +239,10 @@
     <string name="status_bar_activity_indicators_summary">Menampilkan ikon naik turun di ponsel dan ikon wifi saat data digunakan</string>
     <string name="qs_running_services_title">Menjalankan Ikon Layanan</string>
     <string name="qs_running_services_summary">Aktifkan ikon layanan yang berjalan di footer</string>
+    <string name="qs_footer_settings_title">ikon Setelan</string>
+    <string name="qs_footer_settings_summary">Ikon Pengaturan Tampilan di footer pengaturan cepat</string>
+    <string name="qs_footer_user_title">Ikon pengalih pengguna</string>
+    <string name="qs_footer_user_summary">Tampilkan ikon pengalih multi-pengguna di footer pengaturan cepat</string>
+    <string name="qs_footer_edit_title">Ikon Edit</string>
+    <string name="qs_footer_edit_summary">Menampilkan ikon edit ubin di footer pengaturan cepat</string>
 </resources>

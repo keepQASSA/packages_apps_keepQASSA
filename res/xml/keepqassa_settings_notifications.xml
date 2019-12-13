@@ -34,6 +34,12 @@
             android:summary="@string/force_expanded_notifications_summary"
             android:defaultValue="false" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="hide_smart_replies"
+            android:title="@string/hide_smart_replies_title"
+            android:summary="@string/hide_smart_replies_summary"
+            android:defaultValue="false"/>
+
         <!-- Toast Icon -->
         <com.keepqassa.settings.preferences.GlobalSettingSwitchPreference
             android:key="toast_icon"

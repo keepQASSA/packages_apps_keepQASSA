@@ -394,4 +394,6 @@
     <string name="qs_datausage_disabled">Dinonaktifkan</string>
     <string name="qs_datausage_daily">Penggunaan harian</string>
     <string name="qs_datausage_monthly">Penggunaan bulanan</string>
+    <string name="hide_smart_replies_title">Sembunyikan balasan cerdas</string>
+    <string name="hide_smart_replies_summary">Sembunyikan balasan cerdas untuk menghemat ruang layar dengan pemberitahuan mengintip</string>
 </resources>

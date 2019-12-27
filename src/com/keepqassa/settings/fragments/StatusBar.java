@@ -17,6 +17,7 @@
 package com.keepqassa.settings.fragments;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.pm.PackageManager;
@@ -141,6 +142,13 @@ public class StatusBar extends SettingsPreferenceFragment implements
             return true;
         }
         return true;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+
+        Settings.System.putIntForUser(resolver,
+                Settings.System.USE_OLD_MOBILETYPE, 0, UserHandle.USER_CURRENT);
     }
 
     @Override

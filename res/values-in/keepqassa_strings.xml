@@ -266,4 +266,5 @@
     <string name="gaming_mode_use_menu_overlay_summary">Tampilkan menu overlay saat game sedang berjalan. Jika opsi ini dinonaktifkan, beberapa fitur mode permainan akan dinonaktifkan, seperti notifikasi Danmaku</string>
     <string name="gaming_mode_show_fpsinfo_title">Tampilkan info FPS</string>
     <string name="gaming_mode_show_fpsinfo_summary">Tampilkan informasi FPS terkini</string>
+    <string name="power_menu_screenrecord_title">Rekam layar</string>
 </resources>

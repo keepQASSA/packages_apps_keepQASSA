@@ -58,6 +58,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
+    private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
 
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingListPreference mStatusBarAmPm;
@@ -68,6 +69,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static boolean sHasCenteredNotch;
 
+    private SwitchPreference mOldMobileType;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -75,6 +78,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
 
         final ContentResolver resolver = getActivity().getContentResolver();
+        Context mContext = getActivity().getApplicationContext();
 
         sHasCenteredNotch = CutoutUtils.hasCenteredCutout(getActivity());
 
@@ -91,6 +95,15 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mStatusbarIconsStyle.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_ICONS_STYLE, 0) == 1));
         mStatusbarIconsStyle.setOnPreferenceChangeListener(this);
+
+        mOldMobileType = (SwitchPreference) findPreference(KEY_OLD_MOBILETYPE);
+        boolean mConfigUseOldMobileType = mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_useOldMobileIcons);
+
+        boolean showing = Settings.System.getIntForUser(resolver,
+                Settings.System.USE_OLD_MOBILETYPE,
+                mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+        mOldMobileType.setChecked(showing);
     }
 
     @Override
@@ -146,9 +159,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        boolean mConfigUseOldMobileType = mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_useOldMobileIcons);
 
         Settings.System.putIntForUser(resolver,
-                Settings.System.USE_OLD_MOBILETYPE, 0, UserHandle.USER_CURRENT);
+                Settings.System.USE_OLD_MOBILETYPE, mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT);
     }
 
     @Override

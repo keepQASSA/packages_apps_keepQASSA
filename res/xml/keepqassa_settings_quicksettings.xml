@@ -55,6 +55,12 @@
             android:summary="@string/header_icons_style_summary"
             android:defaultValue="true" />
 
+	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="dismiss_all_button"
+            android:title="@string/enable_clear_all_button"
+            android:summary="@string/enable_clear_all_button_summary"
+            android:defaultValue="false" />
+
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="qs_quick_pulldown"
             android:title="@string/status_bar_quick_qs_pulldown_title"

@@ -93,4 +93,8 @@
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar notification icons</string>
     <string name="header_icons_style">Colored Notification Headers Icons</string>
     <string name="header_icons_style_summary">Choose the style of your notification headers icons</string>
+
+    <!-- OOS clear all button -->
+    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
+    <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 </resources>

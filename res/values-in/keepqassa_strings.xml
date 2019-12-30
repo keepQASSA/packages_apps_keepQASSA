@@ -473,4 +473,6 @@
     <string name="lockscreen_charging_animation_drop">Jatuhkan</string>
     <string name="lockscreen_charging_animation_explosion">Ledakan</string>
     <string name="lockscreen_charging_animation_water">Air</string>
+    <string name="advanced_reboot_secured_title">Layar kunci aman</string>
+    <string name="advanced_reboot_secured_summary">Tampilkan opsi mulai ulang lanjutan pada layar kunci aman</string>
 </resources>

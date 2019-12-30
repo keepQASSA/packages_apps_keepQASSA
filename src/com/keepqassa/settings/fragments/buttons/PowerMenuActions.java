@@ -18,6 +18,7 @@
 
 package com.keepqassa.settings.fragments.buttons;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
@@ -222,6 +223,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         Intent u = new Intent();
         u.setAction(Intent.ACTION_UPDATE_POWER_MENU);
         mContext.sendBroadcastAsUser(u, UserHandle.ALL);
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.ADVANCED_REBOOT, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.ADVANCED_REBOOT_SECURED, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

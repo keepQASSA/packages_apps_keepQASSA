@@ -20,6 +20,18 @@
     android:title="@string/lockscreen_title" >
 
     <PreferenceCategory
+        android:key="lockscreen_interface_category"
+        android:title="@string/lockscreen_interface_category">
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_status_bar"
+            android:title="@string/lockscreen_status_bar_title"
+            android:summary="@string/lockscreen_status_bar_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_gestures_category"
         android:title="@string/gestures_title">
 

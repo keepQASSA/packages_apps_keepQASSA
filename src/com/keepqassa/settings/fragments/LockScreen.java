@@ -83,6 +83,8 @@ public class LockScreen extends SettingsPreferenceFragment
                 Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.FP_ERROR_VIBRATE, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.LOCKSCREEN_STATUS_BAR, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

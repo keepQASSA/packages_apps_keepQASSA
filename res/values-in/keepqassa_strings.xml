@@ -152,4 +152,6 @@
     <string name="battery_percentage_next">Diaktifkan</string>
     <string name="battery_percentage_inside">Diaktifkan (ikon di dalam)</string>
     <string name="battery_percentage_estimate">Diaktifkan (perkiraan)</string>
+    <string name="battery_estimate_title">Perkiraan baterai</string>
+    <string name="battery_estimate_summary">Menampilkan perkiraan sisa masa pakai baterai jika tersedia</string>
 </resources>

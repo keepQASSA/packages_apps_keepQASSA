@@ -279,4 +279,7 @@
     <string name="bluetooth_battery_summary">Tampilkan status baterai untuk perangkat bluetooth yang terhubung, jika tersedia</string>
     <string name="double_tap_sleep_anywhere_title">Ketuk untuk tidur</string>
     <string name="double_tap_sleep_anywhere_summary">Ketuk dua kali di mana saja pada layar kunci untuk membuat perangkat tertidur</string>
+    <string name="lockscreen_interface_category">Antarmuka</string>
+    <string name="lockscreen_status_bar_title">Bilah status</string>
+    <string name="lockscreen_status_bar_summary">Menampilkan bilah status di layar kunci</string>
 </resources>

@@ -101,6 +101,9 @@
     <string name="general_qs_title">General</string>
     <string name="rows_columns_qs_title">Rows and Columns</string>
 
+    <!-- Lockscreen categories -->
+    <string name="lockscreen_interface_category">Interface</string>
+
     <!-- Colored Statusbar & Header Icons -->
     <string name="statusbar_icons_style">Colored Statusbar Notification Icons</string>
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar notification icons</string>
@@ -409,4 +412,8 @@
     <!-- Lockscreen tap-to sleep -->
     <string name="double_tap_sleep_anywhere_title">Tap to sleep</string>
     <string name="double_tap_sleep_anywhere_summary">Double-tap anywhere on the lockscreen to put device asleep</string>
+
+    <!-- Show Statusbar on Lockscreen -->
+    <string name="lockscreen_status_bar_title">Status bar</string>
+    <string name="lockscreen_status_bar_summary">Display status bar on the lockscreen</string>
 </resources>

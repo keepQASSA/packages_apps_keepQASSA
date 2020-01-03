@@ -153,4 +153,8 @@
     <string name="battery_percentage_inside">Diaktifkan (ikon di dalam)</string>
     <string name="battery_estimate_title">Perkiraan baterai</string>
     <string name="battery_estimate_summary">Menampilkan perkiraan sisa masa pakai baterai jika tersedia</string>
+    <string name="qs_battery_location_title">Lokasi baterai</string>
+    <string name="qs_battery_location_qs_panel">Panel QS</string>
+    <string name="qs_battery_location_qs_statusbar_header">Tajuk Statusbar Cepat</string>
+    <string name="qs_use_status_bar_battery_style">Ikuti gaya bilah status</string>
 </resources>

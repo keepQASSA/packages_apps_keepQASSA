@@ -467,4 +467,6 @@
     <string name="hosts_block_summary">Blokir iklan dengan file host yang dimodifikasi. Nonaktifkan untuk menggunakan solusi pihak ketiga atau jika aplikasi menyebabkan masalah.</string>
     <string name="lockscreen_battery_info_title">Info baterai</string>
     <string name="lockscreen_battery_info_summary">Tampilkan info baterai saat mengisi daya</string>
+    <string name="lockscreen_charging_animation_title">Mengisi animasi</string>
+    <string name="lockscreen_charging_animation_summary">Tampilkan animasi saat mengisi daya</string>
 </resources>

@@ -89,6 +89,8 @@ public class LockScreen extends SettingsPreferenceFragment
                 Settings.Global.LOCKSCREEN_ENABLE_QS, 1);
         Settings.Global.putInt(resolver,
                 Settings.Global.LOCKSCREEN_POWERMENU_SECURE, 0);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CHARGING_ANIMATION, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

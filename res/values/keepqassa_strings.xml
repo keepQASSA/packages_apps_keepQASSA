@@ -518,4 +518,15 @@
     <string name="statusbar_padding">Status bar padding</string>
     <string name="statusbar_left_padding">Statusbar left padding</string>
     <string name="statusbar_right_padding">Statusbar right padding</string>
+
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_screen_summary">Show notifications ticker-style in status bar</string>
+    <string name="ticker_disabled">No ticker</string>
+    <string name="ticker_enabled">Notification ticker</string>
+    <string name="ticker_media_enabled">Notifications and music ticker</string>
+    <string name="ticker_animation_mode_title">Ticker animation style</string>
+    <string name="ticker_animation_mode_alpha_fade">Fade</string>
+    <string name="ticker_animation_mode_scroll">Scroll</string>
+    <string name="ticker_tick_duration_title">Ticker duration</string>
 </resources>

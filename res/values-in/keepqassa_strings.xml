@@ -311,4 +311,13 @@
     <string name="statusbar_right_padding">Padding kanan statusbar</string>
     <string name="signalicons_title">Ikon sinyal</string>
     <string name="signalicons_summary">Konfigurasikan Ikon sinyal</string>
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_screen_summary">Tampilkan notifikasi bergaya ticker di bilah status</string>
+    <string name="ticker_disabled">Tidak ada ticker</string>
+    <string name="ticker_enabled">Pemberitahuan ticker</string>
+    <string name="ticker_media_enabled">Pemberitahuan dan ticker musik</string>
+    <string name="ticker_animation_mode_title">Gaya animasi ticker</string>
+    <string name="ticker_animation_mode_alpha_fade">Pudar</string>
+    <string name="ticker_animation_mode_scroll">Gulir</string>
+    <string name="ticker_tick_duration_title">Durasi ticker</string>
 </resources>

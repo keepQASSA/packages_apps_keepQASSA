@@ -25,6 +25,13 @@
         android:summary="@string/traffic_summary"
         android:fragment="com.keepqassa.settings.fragments.statusbar.TrafficIndicators" />
 
+    <!-- Statusbar Ticker -->
+    <Preference
+        android:key="ticker_settings"
+        android:title="@string/ticker_screen_title"
+        android:summary="@string/ticker_screen_summary"
+        android:fragment="com.keepqassa.settings.fragments.statusbar.Ticker"/>
+
     <PreferenceCategory
         android:title="@string/statusbar_padding">
 

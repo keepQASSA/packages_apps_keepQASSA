@@ -766,4 +766,8 @@
     <!-- Disabling FC notifications --> 
     <string name="enable_fc_notifications_title">Force close notifications</string>
     <string name="enable_fc_notifications_summary">Show a dialog when an application crashes</string>
+
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Hide lock icon</string>
+    <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
 </resources>

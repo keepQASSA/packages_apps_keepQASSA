@@ -496,4 +496,6 @@
     <string name="status_bar_battery_style_land_o">Ikon lanskap Jendela</string>
     <string name="enable_fc_notifications_title">Tutup paksa notifikasi</string>
     <string name="enable_fc_notifications_summary">Tampilkan dialog saat aplikasi mogok</string>
+    <string name="hide_lockicon_title">Sembunyikan ikon gembok</string>
+    <string name="hide_lockicon_summary">Sembunyikan ikon gembok di layar kunci</string>
 </resources>

@@ -44,6 +44,7 @@ public class TrafficIndicators extends SettingsPreferenceFragment
 
     private CustomSeekBarPreference mThreshold;
     private SwitchPreference mNetMonitor;
+    private SwitchPreference mNetArrow;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,12 @@ public class TrafficIndicators extends SettingsPreferenceFragment
         mNetMonitor = (SwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
+
+        boolean isArrowEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_HIDEARROW, 0, UserHandle.USER_CURRENT) == 1;
+        mNetArrow = (SwitchPreference) findPreference("network_traffic_hidearrow");
+        mNetArrow.setChecked(isArrowEnabled);
+        mNetArrow.setOnPreferenceChangeListener(this);
 
         int value = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
@@ -81,6 +88,13 @@ public class TrafficIndicators extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mNetArrow) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_HIDEARROW, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetArrow.setChecked(value);
             return true;
         }
         return false;

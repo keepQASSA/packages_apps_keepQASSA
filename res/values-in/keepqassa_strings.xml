@@ -298,4 +298,12 @@
     <string name="volte_vowifi_override_summary">Sembunyikan VoLTE saat VoWiFi tersedia. Ini juga menggantikan ikon sinyal gaya lama untuk VoWiFi.</string>
     <string name="show_rotation_button_title">Tombol rotasi</string>
     <string name="show_rotation_button_summary">Tampilkan tombol rotasi pada bilah navigasi jika tersedia</string>
+    <string name="traffic_title">Indikator lalu lintas</string>
+    <string name="traffic_summary">Aktifkan dan konfigurasikan indikator lalu lintas</string>
+    <string name="network_traffic_type">Pilih jenis aktivitas bersih</string>
+    <string name="show_network_traffic_up">Uplink</string>
+    <string name="show_network_traffic_down">Tautan Bawah</string>
+    <string name="show_network_traffic_all">Uplink dan Downlink</string>
+    <string name="network_traffic_state_title">Tampilkan aktivitas bersih di bilah status</string>
+    <string name="network_traffic_autohide_threshold_title">Ambang sembunyikan otomatis aktivitas bersih (KB/dtk)</string>
 </resources>

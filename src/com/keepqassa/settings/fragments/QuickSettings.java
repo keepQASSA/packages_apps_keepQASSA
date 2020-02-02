@@ -212,6 +212,8 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
     }
 
     private void updateQsAnimationDependents(int value) {

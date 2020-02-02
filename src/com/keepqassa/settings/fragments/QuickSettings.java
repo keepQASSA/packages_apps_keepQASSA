@@ -39,6 +39,7 @@ import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
 import com.android.settings.R;
+import com.keepqassa.settings.fragments.quicksettings.CustomHeader;
 import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.Set;
@@ -146,6 +147,11 @@ public class QuickSettings extends SettingsPreferenceFragment
                 break;
         }
         return true;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        CustomHeader.reset(mContext);
     }
 
     private void updateQsAnimationDependents(int value) {

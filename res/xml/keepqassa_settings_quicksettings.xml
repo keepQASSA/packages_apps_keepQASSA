@@ -49,6 +49,13 @@
     <PreferenceCategory
         android:title="@string/general_qs_title">
 
+        <!-- Custom header -->
+        <Preference
+            android:key="custom_header"
+            android:fragment="com.keepqassa.settings.fragments.quicksettings.CustomHeader"
+            android:title="@string/custom_header_title"
+            android:summary="@string/custom_header_summary" />
+
         <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_drag_handle"
             android:title="@string/qs_show_drag_handle_title"

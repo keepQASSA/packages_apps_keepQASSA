@@ -40,6 +40,7 @@ import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.qassa.ActionUtils;
+import com.keepqassa.settings.fragments.quicksettings.CustomHeader;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -160,6 +161,7 @@ public class QuickSettings extends SettingsPreferenceFragment
         ContentResolver resolver = mContext.getContentResolver();
         Settings.System.putIntForUser(resolver,
                 Settings.System.SHOW_QS_CLOCK, 1, UserHandle.USER_CURRENT);
+        CustomHeader.reset(mContext);
     }
 
     private void updateQsAnimationDependents(int value) {

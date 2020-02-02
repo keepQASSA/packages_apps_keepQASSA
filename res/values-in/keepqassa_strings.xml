@@ -215,4 +215,25 @@
     <string name="clock_date_left">Waktu yang tersisa</string>
     <string name="qs_clock_title">Jam</string>
     <string name="qs_clock_summary">Tampilkan jam di header bilah status cepat</string>
+    <string name="custom_header_title">Header khusus</string>
+    <string name="custom_header_summary">Tampilkan gambar di atas panel notifikasi</string>
+    <string name="daylight_header_pack_title">Koleksi gambar header</string>
+    <string name="status_bar_custom_header_shadow_title">Bayangan gambar header</string>
+    <string name="status_bar_custom_header_shadow_summary">Untuk visibilitas yang lebih baik pada gambar yang cerah</string>
+    <string name="unit_percent">\u0025</string>
+    <string name="static_header_provider">statis</string>
+    <string name="daylight_header_provider">siang hari</string>
+    <string name="static_header_provider_title">Gambar statis</string>
+    <string name="daylight_header_provider_title">Koleksi gambar</string>
+    <string name="custom_header_provider_title">Penyedia header</string>
+    <string name="custom_header_browse_title">Jelajahi header yang terpasang</string>
+    <string name="custom_header_browse_summary">Klik gambar mana saja yang akan digunakan untuk mode statis</string>
+    <string name="custom_header_browse_summary_new">Jelajahi semua koleksi header yang tersedia</string>
+    <string name="custom_header_pick_title">Pilih gambar header</string>
+    <string name="custom_header_pick_summary">Pilih gambar yang akan digunakan untuk mode statis</string>
+    <string name="header_provider_disabled">Dinonaktifkan</string>
+    <string name="file_header_select_title">Pilih gambar</string>
+    <string name="file_header_select_summary">Pilih gambar khusus</string>
+    <string name="file_header_provider_title">Gambar khusus</string>
+    <string name="file_header_provider">file</string>
 </resources>

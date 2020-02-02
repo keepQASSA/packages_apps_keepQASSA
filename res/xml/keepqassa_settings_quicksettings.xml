@@ -49,6 +49,16 @@
     <PreferenceCategory
         android:title="@string/general_qs_title">
 
+        <!-- QS panel opacity -->
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:summary="@string/qs_panel_alpha_summary"
+            android:defaultValue="255"
+            android:max="255"
+            settings:min="0"
+            settings:units="" />
+
         <!-- Custom header -->
         <Preference
             android:key="custom_header"

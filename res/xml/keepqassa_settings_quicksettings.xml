@@ -142,7 +142,6 @@
         <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
             android:title="@string/qs_panel_alpha_title"
-            android:summary="@string/qs_panel_alpha_summary"
             android:defaultValue="255"
             android:max="255"
             settings:min="0"

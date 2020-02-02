@@ -321,4 +321,7 @@
     <string name="file_header_select_summary">Select custom image</string>
     <string name="file_header_provider_title">Custom image</string>
     <string name="file_header_provider">file</string>
+
+    <!-- QS background opacity -->
+    <string name="qs_panel_alpha_title">Background opacity</string>
 </resources>

@@ -389,4 +389,5 @@
     <string name="clipboard_toast_info_show_all">Tampilkan semua peringatan akses</string>
     <string name="custom_seekbar_default_value">secara default</string>
     <string name="custom_seekbar_default_value_is_set">Nilai default disetel</string>
+    <string name="qs_panel_alpha_title">Opasitas latar belakang</string>
 </resources>

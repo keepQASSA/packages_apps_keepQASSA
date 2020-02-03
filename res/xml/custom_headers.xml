@@ -57,6 +57,5 @@
         android:max="255"
         settings:min="0"
         settings:units=""
-        android:persistent="false"
         android:dependency="status_bar_custom_header" />
 </PreferenceScreen>

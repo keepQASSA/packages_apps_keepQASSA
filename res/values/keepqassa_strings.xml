@@ -18,11 +18,39 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="keepqassa_settings_title">#keepQASSA</string>
-    <string name="keepqassa_dashboard_summary">#Q Android System Still Allive</string>
+    <string name="keepqassa_dashboard_summary">here we keep QASSA</string>
     <string name="keepqassa_features_title">#keepQASSA Features</string>
+
+    <!-- About AOSQP -->
+    <string name="keepqassa_about_rom">About</string>
+    <string name="keepqassa_about_info_summary">AOSQP is an AOSP/PE+ based Rom with customizations</string>
+    <string name="keepqassa_features">#keepQASSA Features</string>
+    <string name="dev_info">About Teams</string>
+    <string name="leads">AOSQP Teams</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Join our Telegram discussion group</string>
+    <string name="web">Download Center</string>
+    <string name="web_description">Visit our download portal</string>
+    <string name="maintainers">Maintainers</string>
+    <string name="maintainer_description">Maintains for %1$s</string>
+    <string name="designers">Designers</string>
+    <string name="dev_1">r1oset</string>
+    <string name="dev1_description">Contributor, Bos Server</string>
+    <string name="dev_2">ghou8s</string>
+    <string name="dev2_description">Founder, Device maintainer</string>
+    <string name="dev_3">Fakeriz.</string>
+    <string name="dev3_description">Core Dev, Device maintainer</string>
+    <string name="dev_4">Yudi</string>
+    <string name="dev4_description">Contributor, Device maintainer</string>
+    <string name="dev_5">Lynx</string>
+    <string name="dev5_description">Contributor, Device maintainer</string>
+    <string name="dev_6">BH36B</string>
+    <string name="dev6_description">Contributor</string>
+    <string name="dev_7">Abidin</string>
+    <string name="dev7_description">Contributor, Device maintainer</string>
 	
     <!-- Categories -->
-    <string name="about_title">About</string>
+    <string name="about_title">About AOSQP and our Teams</string>
     <string name="animations_title">Animations</string>
     <string name="buttons_title">Buttons</string>
     <string name="gestures_title">Gestures</string>

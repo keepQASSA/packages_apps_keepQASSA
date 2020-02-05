@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2019 KomodOS ROM
+Copyright (C) 2022 AOSQP
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+
+You may obtain a copy of the License at
+https://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Maintainers -->
+    <string-array name="maintainers_title" translatable="false">
+        <item>Yudi</item>
+        <item>ghou8s</item>
+        <item>Lynx</item>
+	<item>Fakeriz.</item>
+        <item>Abidin</item>
+	</string-array>
+
+    <!-- Devices maintained by maintainer -->
+    <string-array name="maintainers_devices" translatable="false">
+        <item>Xiaomi Redmi Note 8 Pro (Begonia)</item>
+	<item>Xiaomi Redmi Note 9 Pro (Joyeuse)</item>
+        <item>Poco M3 / Redmi 9T (Juice)</item>
+        <item>Poco X3 NFC (Surya)</item>
+        <item>RMX2020 (Realme C3)</item>
+	</string-array>
+
+    <!-- Telegram URL of maintainers device group-->
+    <string-array name="maintainers_url" translatable="false">
+        <item>https://t.me/PasangRom</item>
+	<item>https://t.me/ghou8s</item>
+        <item>https://t.me/hakazeee</item>
+        <item>https://t.me/Fakeriz</item>
+	<item>https://t.me/bidin1709</item>
+	</string-array>
+
+</resources>

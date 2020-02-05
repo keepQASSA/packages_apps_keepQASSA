@@ -20,12 +20,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/keepqassa_settings_title" >
 
+    <PreferenceCategory
+        android:key="about rom"
+        android:title="@string/keepqassa_about_rom" >
+
     <!-- About -->
     <Preference
         android:key="about_catagory"
         android:title="@string/about_title"
         android:fragment="com.keepqassa.settings.fragments.About"
         android:icon="@drawable/ic_settings_keepqassa_about"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="features"

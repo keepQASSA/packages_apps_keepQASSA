@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2018 Rebellion-OS
+     Copyright (C) 2022 AOSQP
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,6 +17,136 @@ limitations under the License.
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/about_title" >
+    android:title="#keepQASSA" >
+
+    <PreferenceCategory
+        android:key="about"
+	android:title="@string/dev_info" >
+
+	<Preference
+	    android:summary="@string/keepqassa_about_info_summary" >
+            <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/ngantuprjktch/5" />
+        </Preference>
+
+	<Preference
+	    android:title="@string/telegram"
+	    android:summary="@string/telegram_description"
+	    android:icon="@drawable/ic_telegram" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/ngantuprjkt" />
+	</Preference>
+
+	<Preference
+	    android:title="@string/web_description"
+	    android:summary="@string/web"
+	    android:icon="@drawable/ic_web" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+	       	android:data="https://sourceforge.net/projects/keepqassa/files/%23keepQASSA/" />
+	</Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="leads"
+	android:title="@string/leads" >
+
+	<Preference
+	    android:title="@string/dev_1"
+	    android:summary="@string/dev1_description"
+	    android:icon="@drawable/ic_devs" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/r1oset" />
+        </Preference>
+
+	<Preference
+	    android:title="@string/dev_2"
+	    android:summary="@string/dev2_description"
+	    android:icon="@drawable/ic_devs" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/ghou8s" />
+	</Preference>
+
+	<Preference
+	    android:title="@string/dev_3"
+	    android:summary="@string/dev3_description"
+	    android:icon="@drawable/ic_devs" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/rayrzy" />
+        </Preference>
+
+	<Preference
+            android:title="@string/dev_4"
+            android:summary="@string/dev4_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Fakeriz" />
+        </Preference>
+
+	<Preference
+            android:title="@string/dev_5"
+            android:summary="@string/dev5_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/PasangRom" />
+        </Preference>
+
+	<Preference
+            android:title="@string/dev_6"
+            android:summary="@string/dev6_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/hakazeee" />
+        </Preference>
+
+	<Preference
+            android:title="@string/dev_7"
+            android:summary="@string/dev7_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/BH36B" />
+        </Preference>
+
+        <Preference
+            android:title="@string/dev_8"
+            android:summary="@string/dev8_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/bidin1709" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+	android:key="designers"
+	android:title="@string/designers" >
+
+	<Preference
+	    android:title="@string/dev_4"
+	    android:summary="@string/designers"
+	    android:icon="@drawable/ic_design">
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/Fakeriz" />
+	</Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+	android:key="maintainers"
+	android:title="@string/maintainers" >
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

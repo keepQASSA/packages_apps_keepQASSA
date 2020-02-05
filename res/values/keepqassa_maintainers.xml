@@ -38,12 +38,12 @@ limitations under the License.
 
     <!-- Telegram URL of maintainers device group-->
     <string-array name="maintainers_url" translatable="false">
-        <item>https://t.me/PasangRom</item>
-	<item>https://t.me/ghou8s</item>
-        <item>https://t.me/hakazeee</item>
-        <item>https://t.me/Fakeriz</item>
+        <item>https://t.me/aosqpbegonia</item>
+	<item>https://t.me/aosqpjoyeuse</item>
+        <item>https://t.me/aosqpjuice</item>
+        <item>https://t.me/aosqpsurya</item>
 	<item>https://t.me/bidin1709</item>
-	<item>https://t.me/rayrzy</item>
+	<item>https://t.me/aosqpvince</item>
 	</string-array>
 
 </resources>

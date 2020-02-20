@@ -607,4 +607,9 @@
     <!-- QS scrim view -->
     <string name="qs_scrim_view">Scrim view</string>
     <string name="qs_scrim_view_summary">enable scrim view in quick settings</string>
+
+    <!-- QS themes -->
+    <string name="qs_theme_category">Style</string>
+    <string name="qs_bg_use_new_tint">QS Tint</string>
+    <string name="qs_bg_use_new_tint_summary">Enable QS tiles tint style</string>
 </resources>

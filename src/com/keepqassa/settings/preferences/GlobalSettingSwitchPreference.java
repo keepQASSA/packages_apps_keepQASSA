@@ -62,3 +62,4 @@ public class GlobalSettingSwitchPreference extends SwitchPreference {
                 : (Boolean) defaultValue);
     }
 }
+

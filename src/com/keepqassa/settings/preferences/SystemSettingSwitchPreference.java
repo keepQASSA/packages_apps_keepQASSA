@@ -62,3 +62,4 @@ public class SystemSettingSwitchPreference extends SwitchPreference {
                 : (Boolean) defaultValue);
     }
 }
+

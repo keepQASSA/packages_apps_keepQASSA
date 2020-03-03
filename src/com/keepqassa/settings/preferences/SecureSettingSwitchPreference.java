@@ -62,3 +62,4 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
                 : (Boolean) defaultValue);
     }
 }
+

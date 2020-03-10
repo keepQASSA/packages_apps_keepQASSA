@@ -468,5 +468,9 @@
     <string name="lockscreen_battery_info_title">Info baterai</string>
     <string name="lockscreen_battery_info_summary">Tampilkan info baterai saat mengisi daya</string>
     <string name="lockscreen_charging_animation_title">Mengisi animasi</string>
-    <string name="lockscreen_charging_animation_summary">Tampilkan animasi saat mengisi daya</string>
+    <string name="lockscreen_charging_animation_flash">Flash</string>
+    <string name="lockscreen_charging_animation_battery">Baterai</string>
+    <string name="lockscreen_charging_animation_drop">Jatuhkan</string>
+    <string name="lockscreen_charging_animation_explosion">Ledakan</string>
+    <string name="lockscreen_charging_animation_water">Air</string>
 </resources>

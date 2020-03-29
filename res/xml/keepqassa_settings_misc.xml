@@ -54,6 +54,12 @@
             android:title="@string/screen_state_toggles_title" 
             android:fragment="com.keepqassa.settings.fragments.misc.ScreenStateToggles" />
 
+        <Preference
+            android:key="gesture_adaptive_playback_summary"
+            android:title="@string/adaptive_playback_screen_title"
+            android:fragment="com.android.settings.gestures.AdaptivePlaybackGestureSettings"
+            settings:controller="com.android.settings.gestures.AdaptivePlaybackParentPreferenceController" />
+
         <!-- Sensor Block -->
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="sensor_block"

@@ -85,6 +85,8 @@ public class LockScreen extends SettingsPreferenceFragment
                 Settings.System.FP_ERROR_VIBRATE, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.LOCKSCREEN_STATUS_BAR, 1, UserHandle.USER_CURRENT);
+        Settings.Global.putInt(resolver,
+                Settings.Global.LOCKSCREEN_ENABLE_QS, 1);
     }
 
     @Override

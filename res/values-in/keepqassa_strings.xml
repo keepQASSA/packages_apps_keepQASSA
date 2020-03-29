@@ -282,4 +282,7 @@
     <string name="lockscreen_interface_category">Antarmuka</string>
     <string name="lockscreen_status_bar_title">Bilah status</string>
     <string name="lockscreen_status_bar_summary">Menampilkan bilah status di layar kunci</string>
+    <string name="lockscreen_misc_category">Lain-lain</string>
+    <string name="lockscreen_enable_qs_title">Setelan cepat</string>
+    <string name="lockscreen_enable_qs_summary">Izinkan mengakses pengaturan cepat pada layar kunci aman</string>
 </resources>

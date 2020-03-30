@@ -19,4 +19,15 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_title" >
 
+    <PreferenceCategory
+        android:title="@string/battery_qs_title">
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_battery_location_bar"
+            android:title="@string/battery_show_location_title"
+            android:summary="@string/battery_show_location_summary"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

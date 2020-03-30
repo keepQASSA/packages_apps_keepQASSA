@@ -91,12 +91,12 @@
             android:fragment="com.keepqassa.settings.fragments.Animations"
             android:icon="@drawable/ic_settings_animations"/> -->
 
-        <!-- Battery Saving
+        <!-- Battery Saving -->
         <Preference
             android:key="battery_category"
             android:title="@string/battery_title"
             android:fragment="com.keepqassa.settings.fragments.Battery"
-            android:icon="@drawable/ic_settings_batterysave"/> -->
+            android:icon="@drawable/ic_settings_batterysave"/>
 
         <!-- Misc -->
         <Preference

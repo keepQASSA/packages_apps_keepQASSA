@@ -137,4 +137,7 @@
     <string name="summary_dashboard_suggestions_disabled">Saran dasbor dinonaktifkan</string>
     <string name="right_notification_headers_title">Header notifikasi dikanan</string>
     <string name="right_notification_headers_summary">Apakah header pemberitahuan gaya R dikanan</string>
+    <string name="battery_qs_title">Setelan Cepat</string>
+    <string name="battery_show_location_title">Lokasi baterai</string>
+    <string name="battery_show_location_summary">Beralih lokasi baterai untuk header QS</string>
 </resources>

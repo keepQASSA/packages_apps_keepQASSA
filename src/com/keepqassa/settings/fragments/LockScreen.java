@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2022 AOSQP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +26,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import androidx.preference.*;
+
+import com.keepqassa.settings.preferences.CustomSeekBarPreference;
+import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 

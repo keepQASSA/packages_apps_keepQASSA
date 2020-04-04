@@ -172,4 +172,12 @@
     <string name="blur_quicksettings_summary">Blurs the darkened background behind quick settings</string>
     <string name="qs_blur_radius_title">Blur intensity behind Quick Settings</string>
     <string name="qs_blur_radius_summary">Set radius of blur behind QS panel</string>
+
+    <!-- Custom lockscreen notifications count -->
+    <string name="notif_settings_title">Notifications</string>
+    <string name="lock_screen_custom_notif_title">Custom notifications count</string>
+    <string name="lock_screen_custom_notif_summary">Toggle to enable setting max notifications count on lockscreen</string>
+    <string name="lockscreen_max_notif_config_title">Maximum number of notifications</string>
+    <string name="lockscreen_max_notif_config_summary">Control the maximum number of expanded notifications to show on lockscreen</string>
+
 </resources>

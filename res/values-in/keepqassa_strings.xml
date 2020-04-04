@@ -125,4 +125,9 @@
     <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>
     <string name="qs_blur_radius_title">Intensitas blur di balik Pengaturan Cepat</string>
     <string name="qs_blur_radius_summary">Atur radius blur di belakang panel QS</string>
+    <string name="notif_settings_title">Pemberitahuan</string>
+    <string name="lock_screen_custom_notif_title">Penghitungan notifikasi khusus</string>
+    <string name="lock_screen_custom_notif_summary">Beralih untuk mengaktifkan pengaturan jumlah notifikasi maksimum di layar kunci</string>
+    <string name="lockscreen_max_notif_config_title">Jumlah maksimum pemberitahuan</string>
+    <string name="lockscreen_max_notif_config_summary">Kontrol jumlah maksimum pemberitahuan yang diperluas untuk ditampilkan di layar kunci</string>
 </resources>

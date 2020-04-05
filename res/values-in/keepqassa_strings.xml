@@ -372,4 +372,6 @@
     <string name="screen_state_off_delay_summary">Jumlah detik untuk menunggu sebelum melakukan tindakan setelah layar mati</string>
     <string name="screen_state_on_delay_title">Tunda tindakan Layar Pada</string>
     <string name="screen_state_on_delay_summary">Jumlah detik untuk menunggu sebelum melakukan tindakan setelah layar aktif</string>
+    <string name="less_boring_heads_up_title">Lebih sedikit yang membosankan</string>
+    <string name="less_boring_heads_up_summary">Tampilkan kepala hanya untuk dialer, pesan dan aplikasi alarm</string>
 </resources>

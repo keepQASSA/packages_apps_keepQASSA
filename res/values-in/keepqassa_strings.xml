@@ -123,4 +123,6 @@
     <string name="blur_quick_settings_summary">Tampilkan blur di belakang pengaturan cepat</string>
     <string name="blur_quicksettings_title">Aktifkan kabur di balik setelan cepat</string>
     <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>
+    <string name="qs_blur_radius_title">Intensitas blur di balik Pengaturan Cepat</string>
+    <string name="qs_blur_radius_summary">Atur radius blur di belakang panel QS</string>
 </resources>

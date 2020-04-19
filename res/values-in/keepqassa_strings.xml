@@ -118,4 +118,9 @@
     <string name="profile_choose_app">Pilih aplikasi</string>
     <string name="dialog_delete_title">Menghapus</string>
     <string name="dialog_delete_message">Hapus item yang dipilih?</string>
+    <string name="blur_qs_title">Kabur</string>
+    <string name="blur_quick_settings_title">Opsi kabur di balik setelan cepat</string>
+    <string name="blur_quick_settings_summary">Tampilkan blur di belakang pengaturan cepat</string>
+    <string name="blur_quicksettings_title">Aktifkan kabur di balik setelan cepat</string>
+    <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>
 </resources>

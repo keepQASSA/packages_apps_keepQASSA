@@ -92,4 +92,7 @@
     <string name="notification_headers_summary">Apakah akan menampilkan tajuk pemberitahuan gaya R</string>
     <string name="center_notification_headers_title">Header notifikasi ditengah</string>
     <string name="center_notification_headers_summary">Apakah header pemberitahuan gaya R ditengah</string>
+    <string name="blur_qs_title">Kabur</string>
+    <string name="blur_quicksettings_title">Kabur di balik setelan cepat</string>
+    <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>
 </resources>

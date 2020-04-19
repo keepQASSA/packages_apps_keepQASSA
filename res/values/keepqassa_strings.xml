@@ -132,4 +132,9 @@
     <!-- Center R Notification headers -->
     <string name="center_notification_headers_title">Center notification headers</string>
     <string name="center_notification_headers_summary">Whether to Center R style notification headers</string>
+
+    <!-- QS blur -->
+    <string name="blur_qs_title">Blur</string>
+    <string name="blur_quicksettings_title">Blur behind quick settings</string>
+    <string name="blur_quicksettings_summary">Blurs the darkened background behind quick settings</string>
 </resources>

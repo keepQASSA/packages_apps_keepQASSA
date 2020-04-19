@@ -83,6 +83,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/blur_qs_title">
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_blur"
+            android:title="@string/blur_quicksettings_title"
+            android:summary="@string/blur_quicksettings_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/rows_columns_qs_title">
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference

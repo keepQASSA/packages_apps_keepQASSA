@@ -87,4 +87,7 @@
     <string name="use_stream_spoof_summary">Palsukan perangkatmu ke Pixel 6 Pro untuk membuka kualitas tinggi di Amazon Prime, Disney+, Hotstar, dan Netflix</string>
     <string name="use_old_mobiletype_title">Gunakan ikon data seluler gaya lama</string>
     <string name="use_old_mobiletype_summary">Tampilkan ikon jenis ponsel di atas indikator sinyal</string>
+    <string name="notifications_qs_title">Pengaturan cepat</string>
+    <string name="notification_headers_title">Tampilkan header notifikasi</string>
+    <string name="notification_headers_summary">Apakah akan menampilkan tajuk pemberitahuan gaya R (Memerlukan restart SystemUI)</string>
 </resources>

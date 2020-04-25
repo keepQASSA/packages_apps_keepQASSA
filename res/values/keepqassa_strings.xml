@@ -719,4 +719,7 @@
     <string name="app_downgrade_title">Allow application downgrade</string>
     <string name="app_downgrade_summary">This allows you to downgrade applications. Note that this may lead to crashes and data corruption.</string>
 
+    <!-- QASSA ad-blocker -->
+    <string name="hosts_block_title">Ad-block</string>
+    <string name="hosts_block_summary">Block ads with a modified hosts file. Turn off to use third party solutions or if apps cause issues.</string>
 </resources>

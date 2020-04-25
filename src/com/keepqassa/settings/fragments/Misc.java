@@ -22,6 +22,7 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SELinux;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
@@ -48,6 +49,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
 
+import java.net.InetAddress;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -69,6 +71,9 @@ public class Misc extends SettingsPreferenceFragment
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
+    private static final String PREF_ADBLOCK = "persist.qassa.hosts_block";
+
+    private Handler mHandler = new Handler();
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
@@ -148,6 +153,8 @@ public class Misc extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             getPreferenceScreen().removePreference(SmartPixels);
         }
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -177,8 +184,19 @@ public class Misc extends SettingsPreferenceFragment
         } else if (preference == mSelinuxPersistence) {
                     setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
+        } else if (PREF_ADBLOCK.equals(preference.getKey())) {
+            // Flush the java VM DNS cache to re-read the hosts file.
+            // Delay to ensure the value is persisted before we refresh
+            mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        InetAddress.clearDnsCache();
+                    }
+            }, 1000);
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
 
     public static void reset(Context mContext) {

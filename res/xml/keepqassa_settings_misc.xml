@@ -42,6 +42,12 @@
         android:summary="@string/app_downgrade_summary"
         android:defaultValue="false"/>
 
+    <com.keepqassa.settings.preferences.SystemPropSwitchPreference
+        android:key="persist.qassa.hosts_block"
+        android:title="@string/hosts_block_title"
+        android:summary="@string/hosts_block_summary"
+        android:defaultValue="false" />
+
     <!-- Sensor Block -->
     <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
         android:key="sensor_block"

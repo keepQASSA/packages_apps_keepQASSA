@@ -479,6 +479,8 @@
     <string name="omnijaws_settings_summary">Sesuaikan setelan layanan dan paket ikon</string>
     <string name="weather_config_title">Pengaturan layanan</string>
     <string name="weather_config_summary">Konfigurasi layanan untuk mengaktifkan detail cuaca</string>
-    <string name="weather_icon_pack_title">Paket ikon kondisi</string>
+    <string name="weather_icon_pack_title">Paket ikon cuaca</string>
+    <string name="find_icon_pack_title">Temukan paket ikon</string>
+    <string name="find_icon_pack_summary">Temukan dan instal paket ikon baru dari App Store</string>
     <string name="weather_icon_pack_note">Catatan\u003a Anda dapat menginstal paket ikon baru dari play store dengan menelusuri \"ikon Chronus\"</string>
 </resources>

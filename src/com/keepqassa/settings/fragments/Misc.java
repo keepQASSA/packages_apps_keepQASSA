@@ -33,6 +33,7 @@ import com.keepqassa.settings.preferences.CustomSeekBarPreference;
 import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
+import com.keepqassa.settings.fragments.misc.SensorBlock;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -132,8 +133,7 @@ public class Misc extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_DELAY,
                 (int) ViewConfiguration.get(mContext).getScreenshotChordKeyTimeout(), UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.SENSOR_BLOCK, 0, UserHandle.USER_CURRENT);
+        SensorBlock.reset(mContext);
     }
 
     @Override

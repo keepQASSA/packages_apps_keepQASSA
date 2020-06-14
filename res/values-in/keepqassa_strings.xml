@@ -437,4 +437,6 @@
     <string name="padding_quick_settings_title">Sesuaikan bantalan konten sudut membulat</string>
     <string name="corner_fwvals">Gunakan nilai default</string>
     <string name="content_padding">Pengisi konten sudut</string>
+    <string name="statusbar_dual_row_title">Bilah Status Ganda</string>
+    <string name="statusbar_dual_row_summary">Aktifkan bilah status baris ganda</string>
 </resources>

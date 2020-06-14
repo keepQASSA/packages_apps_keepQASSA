@@ -686,4 +686,9 @@
     <string name="padding_quick_settings_title">Adjust rounded corner content padding</string>
     <string name="corner_fwvals">Use default values</string>
     <string name="content_padding">Corner content padding</string>
+
+    <!-- Statusbar dual row -->
+    <string name="statusbar_dual_row_title">Dual Status Bar</string>
+    <string name="statusbar_dual_row_summary">Enable dual row statusbar</string>
+
 </resources>

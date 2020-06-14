@@ -69,10 +69,12 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+    private static final String STATUSBAR_DUAL_ROW = "statusbar_dual_row";
 
     private SystemSettingListPreference mStatusBarClock;
 
     private SystemSettingSwitchPreference mStatusbarIconsStyle;
+    private SystemSettingSwitchPreference mStatusbarDualRow;
 
     private static boolean sHasCenteredNotch;
 
@@ -115,6 +117,11 @@ public class StatusBar extends SettingsPreferenceFragment
         if (!mEnableStatusBarPadding) {
             prefScreen.removePreference(perfCat);
         }
+
+        mStatusbarDualRow = (SystemSettingSwitchPreference) findPreference(STATUSBAR_DUAL_ROW);
+        mStatusbarDualRow.setChecked((Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_DUAL_ROW, 0) == 1));
+        mStatusbarDualRow.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -157,6 +164,12 @@ public class StatusBar extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0);
+            return true;
+        } else if (preference == mStatusbarDualRow) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_DUAL_ROW, value ? 1 : 0);
+            ActionUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return true;

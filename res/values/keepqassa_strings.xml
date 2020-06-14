@@ -762,4 +762,9 @@
     <string name="status_bar_battery_style_land_m">Icon landscape iOS Outline</string>
     <string name="status_bar_battery_style_land_n">Icon landscape Ruler</string>
     <string name="status_bar_battery_style_land_o">Icon landscape Windows</string>
+
+    <!-- Statusbar dual row -->
+    <string name="statusbar_dual_row_title">Dual Status Bar</string>
+    <string name="statusbar_dual_row_summary">Enable dual row statusbar</string>
+
 </resources>

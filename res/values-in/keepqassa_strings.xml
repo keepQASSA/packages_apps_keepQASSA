@@ -494,4 +494,6 @@
     <string name="status_bar_battery_style_land_m">Ikon lanskap Garis Besar iOS</string>
     <string name="status_bar_battery_style_land_n">Ikon lanskap Penggaris</string>
     <string name="status_bar_battery_style_land_o">Ikon lanskap Jendela</string>
+    <string name="statusbar_dual_row_title">Bilah Status Ganda</string>
+    <string name="statusbar_dual_row_summary">Aktifkan bilah status baris ganda</string>
 </resources>

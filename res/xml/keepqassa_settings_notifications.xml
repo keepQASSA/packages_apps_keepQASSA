@@ -50,4 +50,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/general_notifications_title">
+
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="force_expanded_notifications"
+            android:title="@string/force_expanded_notifications_title"
+            android:summary="@string/force_expanded_notifications_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

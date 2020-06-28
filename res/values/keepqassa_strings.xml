@@ -221,8 +221,13 @@
     <string name="qs_show_drag_handle_title">Qs Drag Handle</string>
     <string name="qs_show_drag_handle_summary">Show Qs footer handle</string>
 
+    <!-- VoLTE icon -->
     <string name="volte_icon_title">VoLTE icon</string>
     <string name="volte_icon_summary">Display VoLTE icon when available</string>
+
+    <!-- VoWiFi icon -->
+    <string name="vowifi_icon_title">VoWiFi icon</string>
+    <string name="vowifi_icon_summary">Display VoWiFi icon when available</string>
 
     <!-- Roaming indicator icon -->
     <string name="roaming_indicator_icon_title">Roaming indicator</string>

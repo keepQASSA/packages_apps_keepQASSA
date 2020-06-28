@@ -56,6 +56,16 @@
             settings:min="0"
             settings:units="" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="vowifi_icon_style"
+            android:title="@string/vowifi_icon_title"
+            android:summary="@string/vowifi_icon_summary"
+            android:defaultValue="0"
+            settings:defaultValueText="@string/disabled"
+            android:max="5"
+            settings:min="0"
+            settings:units="" />
+
        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"

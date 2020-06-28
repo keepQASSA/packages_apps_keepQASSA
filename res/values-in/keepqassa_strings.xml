@@ -292,4 +292,6 @@
     <string name="sensor_block_app_picker_title">Blokir sensor untuk aplikasi ini</string>
     <string name="add_sensor_block_package_title">Tambahkan aplikasi untuk blok Sensor</string>
     <string name="add_sensor_block_package_summary">Gerakan signifikan, akselerometer, sensor akselerasi linier akan diblokir untuk aplikasi ini</string>
+    <string name="vowifi_icon_title">ikon VoWiFi</string>
+    <string name="vowifi_icon_summary">Tampilkan ikon VoWiFi jika tersedia</string>
 </resources>

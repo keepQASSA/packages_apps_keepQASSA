@@ -72,6 +72,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String KEY_SHOW_DATA_DISABLED = "data_disabled_icon";
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
     private static final String KEY_VOWIFI_ICON_STYLE = "vowifi_icon_style";
+    private static final String KEY_VOLTE_VOWIFI_OVERRIDE = "volte_vowifi_override";
 
     private SystemSettingListPreference mStatusBarClock;
 
@@ -85,6 +86,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private SwitchPreference mShowRoaming;
     private SwitchPreference mDataDisabled;
     private SwitchPreference mShowFourg;
+    private SwitchPreference mOverride;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -121,6 +123,7 @@ public class StatusBar extends SettingsPreferenceFragment
         mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
         mDataDisabled = (SwitchPreference) findPreference(KEY_SHOW_DATA_DISABLED);
         mShowFourg = (SwitchPreference) findPreference(KEY_SHOW_FOURG);
+        mOverride = (SwitchPreference) findPreference(KEY_VOLTE_VOWIFI_OVERRIDE);
 
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mVolteIconStyle);
@@ -128,6 +131,7 @@ public class StatusBar extends SettingsPreferenceFragment
             prefScreen.removePreference(mShowRoaming);
             prefScreen.removePreference(mDataDisabled);
             prefScreen.removePreference(mShowFourg);
+            prefScreen.removePreference(mOverride);
         }
     }
 
@@ -181,6 +185,8 @@ public class StatusBar extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.VOLTE_ICON_STYLE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
+                Settings.System.VOLTE_VOWIFI_OVERRIDE, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
                 Settings.System.VOWIFI_ICON_STYLE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.ROAMING_INDICATOR_ICON, 1, UserHandle.USER_CURRENT);
@@ -224,6 +230,7 @@ public class StatusBar extends SettingsPreferenceFragment
                         keys.add(KEY_SHOW_ROAMING);
                         keys.add(KEY_SHOW_DATA_DISABLED);
                         keys.add(KEY_SHOW_FOURG);
+                        keys.add(KEY_VOLTE_VOWIFI_OVERRIDE);
                     }
 
                     return keys;

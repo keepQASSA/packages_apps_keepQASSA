@@ -294,4 +294,6 @@
     <string name="add_sensor_block_package_summary">Gerakan signifikan, akselerometer, sensor akselerasi linier akan diblokir untuk aplikasi ini</string>
     <string name="vowifi_icon_title">ikon VoWiFi</string>
     <string name="vowifi_icon_summary">Tampilkan ikon VoWiFi jika tersedia</string>
+    <string name="volte_vowifi_override_title">Penggantian VoWiFi</string>
+    <string name="volte_vowifi_override_summary">Sembunyikan VoLTE saat VoWiFi tersedia. Ini juga menggantikan ikon sinyal gaya lama untuk VoWiFi.</string>
 </resources>

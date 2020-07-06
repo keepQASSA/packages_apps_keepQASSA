@@ -296,4 +296,6 @@
     <string name="vowifi_icon_summary">Tampilkan ikon VoWiFi jika tersedia</string>
     <string name="volte_vowifi_override_title">Penggantian VoWiFi</string>
     <string name="volte_vowifi_override_summary">Sembunyikan VoLTE saat VoWiFi tersedia. Ini juga menggantikan ikon sinyal gaya lama untuk VoWiFi.</string>
+    <string name="show_rotation_button_title">Tombol rotasi</string>
+    <string name="show_rotation_button_summary">Tampilkan tombol rotasi pada bilah navigasi jika tersedia</string>
 </resources>

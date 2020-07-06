@@ -672,6 +672,12 @@ public class Buttons extends SettingsPreferenceFragment
         return false;
     }
 
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.Global.putInt(resolver,
+                Settings.Global.SHOW_ROTATION_BUTTON, 1);
+    }
+
     private void writeDisableNavkeysOption(boolean enabled) {
         NavbarUtils.setEnabled(getActivity(), enabled);
     }

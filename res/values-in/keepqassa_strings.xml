@@ -384,4 +384,6 @@
     <string name="qs_privacy_chip_info_summary">Ikon indikator privasi juga muncul di bilah status</string>
     <string name="qs_privacy_perm_title">Tampilkan chip izin</string>
     <string name="qs_privacy_perm_summary">Tampilkan di QS saat aplikasi menggunakan Mikrofon atau Lokasi juga Kamera</string>
+    <string name="show_clipboard_toast_title">Peringatan akses clipboard</string>
+    <string name="show_clipboard_toast_summary">Menampilkan toast saat aplikasi mencoba mengakses clipboard</string>
 </resources>

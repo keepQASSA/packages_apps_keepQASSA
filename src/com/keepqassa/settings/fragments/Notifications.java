@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
@@ -73,6 +74,8 @@ public class Notifications extends SettingsPreferenceFragment
     final ContentResolver resolver = mContext.getContentResolver();
         Settings.Global.putInt(resolver,
                 Settings.Global.TOAST_ICON, 1);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SHOW_CLIPBOARD_TOAST, 0, UserHandle.USER_CURRENT);
     }
 
     @Override

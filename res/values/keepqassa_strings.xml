@@ -233,4 +233,7 @@
     <string name="qs_battery_location_qs_panel">QS Panel</string>
     <string name="qs_battery_location_qs_statusbar_header">Quick Statusbar Header</string>
     <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
+
+    <string name="qs_show_drag_handle_title">Qs Drag Handle</string>
+    <string name="qs_show_drag_handle_summary">Show Qs footer handle</string>
 </resources>

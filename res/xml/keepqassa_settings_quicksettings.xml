@@ -49,6 +49,12 @@
     <PreferenceCategory
         android:title="@string/general_qs_title">
 
+        <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
+            android:key="qs_show_drag_handle"
+            android:title="@string/qs_show_drag_handle_title"
+            android:summary="@string/qs_show_drag_handle_summary"
+            android:defaultValue="true" />
+
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="headers_icons_style"
             android:title="@string/header_icons_style"

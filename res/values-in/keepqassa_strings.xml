@@ -189,4 +189,6 @@
     <string name="file_header_provider_title">Gambar khusus</string>
     <string name="file_header_provider">file</string>
     <string name="qs_panel_alpha_title">Opasitas latar belakang</string>
+    <string name="qs_show_drag_handle_title">Pegangan Tarik Qs</string>
+    <string name="qs_show_drag_handle_summary">Tampilkan pegangan footer Qs</string>
 </resources>

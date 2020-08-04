@@ -37,14 +37,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.keepqassa.settings.preferences.CustomSeekBarPreference;
+import com.keepqassa.settings.preferences.SystemSettingListPreference;
 
 @SearchIndexable
 public class TrafficIndicators extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String NETWORK_TRAFFIC_FONT_STYLE = "network_traffic_font_style";
+
     private CustomSeekBarPreference mThreshold;
     private SwitchPreference mNetMonitor;
     private SwitchPreference mNetArrow;
+    private SystemSettingListPreference mNetTrafficFont;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +68,11 @@ public class TrafficIndicators extends SettingsPreferenceFragment
         mNetArrow = (SwitchPreference) findPreference("network_traffic_hidearrow");
         mNetArrow.setChecked(isArrowEnabled);
         mNetArrow.setOnPreferenceChangeListener(this);
+        mNetTrafficFont = (SystemSettingListPreference) findPreference(NETWORK_TRAFFIC_FONT_STYLE);
+        int netTrafFont = Settings.System.getInt(resolver,
+                Settings.System.NETWORK_TRAFFIC_FONT_STYLE, 0);
+        mNetTrafficFont.setValue(String.valueOf(netTrafFont));
+        mNetTrafficFont.setOnPreferenceChangeListener(this);
 
         int value = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
@@ -95,6 +104,13 @@ public class TrafficIndicators extends SettingsPreferenceFragment
                     Settings.System.NETWORK_TRAFFIC_HIDEARROW, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNetArrow.setChecked(value);
+            return true;
+        }  else if (preference == mNetTrafficFont) {
+            int netTrafFont = Integer.valueOf((String) newValue);
+            int index = mNetTrafficFont.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.
+                NETWORK_TRAFFIC_FONT_STYLE, netTrafFont);
+            mNetTrafficFont.setSummary(mNetTrafficFont.getEntries()[index]);
             return true;
         }
         return false;

@@ -103,6 +103,8 @@ public class Misc extends SettingsPreferenceFragment
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SCREENSHOT_DELAY, 500, UserHandle.USER_CURRENT);
         GamingMode.reset(mContext);
     }
 

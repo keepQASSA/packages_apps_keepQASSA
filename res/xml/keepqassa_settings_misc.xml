@@ -29,6 +29,15 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="false" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="screenshot_delay"
+            android:title="@string/screenshot_delay_title"
+            android:summary="@string/screenshot_delay_summary"
+            android:defaultValue="500"
+            android:max="3000"
+            settings:min="0"
+            settings:units="@string/unit_milliseconds" />
+
         <!-- Gaming Mode -->
         <Preference
             android:key="gaming_mode"

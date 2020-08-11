@@ -220,4 +220,6 @@
     <string name="system_animations_category_title">Animasi transisi</string>
     <string name="disable_transition_animations_title">Nonaktifkan animasi transisi</string>
     <string name="disable_transition_animations_summary">Nonaktifkan paksa semua animasi transisi</string>
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Delay before actual screenshot via volume keys</string>
 </resources>

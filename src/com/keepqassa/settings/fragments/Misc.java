@@ -26,7 +26,10 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.view.ViewConfiguration;
 import androidx.preference.*;
+
+import com.keepqassa.settings.preferences.CustomSeekBarPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.keepqassa.settings.fragments.misc.GamingMode;
@@ -51,10 +54,13 @@ public class Misc extends SettingsPreferenceFragment
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
     private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
+    private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
     private SwitchPreference mStreamSpoof;
+
+    private CustomSeekBarPreference mScreenshotDelay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +82,10 @@ public class Misc extends SettingsPreferenceFragment
         mStreamSpoof = (SwitchPreference) findPreference(KEY_STREAM_SPOOF);
         mStreamSpoof.setChecked(SystemProperties.getBoolean(SYS_STREAM_SPOOF, true));
         mStreamSpoof.setOnPreferenceChangeListener(this);
+
+        mScreenshotDelay = (CustomSeekBarPreference) findPreference(KEY_SCREENSHOT_DELAY);
+        int delay = (int) ViewConfiguration.get(getActivity()).getScreenshotChordKeyTimeout();
+        mScreenshotDelay.setDefaultValue(delay);
     }
 
     @Override
@@ -104,7 +114,8 @@ public class Misc extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
-                Settings.System.SCREENSHOT_DELAY, 500, UserHandle.USER_CURRENT);
+                Settings.System.SCREENSHOT_DELAY,
+                (int) ViewConfiguration.get(mContext).getScreenshotChordKeyTimeout(), UserHandle.USER_CURRENT);
         GamingMode.reset(mContext);
     }
 

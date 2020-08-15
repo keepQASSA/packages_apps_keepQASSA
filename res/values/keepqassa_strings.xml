@@ -619,7 +619,8 @@
     <string name="qs_privacy_perm_title">Show permissions chip</string>
     <string name="qs_privacy_perm_summary">Show on QS when an app is using the Microphone or Location also Camera</string>
 
-    <!-- Clipboard toast toggle -->
-    <string name="show_clipboard_toast_title">Clipboard access alerts</string>
-    <string name="show_clipboard_toast_summary">Display a toast when an app tries to access the clipboard</string>
+    <!-- Clipboard toast info -->
+    <string name="clipboard_toast_info_title">Clipboard access alerts</string>
+    <string name="clipboard_toast_info_show_important">Show only important alerts</string>
+    <string name="clipboard_toast_info_show_all">Show all access alerts</string>
 </resources>

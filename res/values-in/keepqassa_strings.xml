@@ -90,4 +90,6 @@
     <string name="notifications_qs_title">Pengaturan cepat</string>
     <string name="notification_headers_title">Tampilkan header notifikasi</string>
     <string name="notification_headers_summary">Apakah akan menampilkan tajuk pemberitahuan gaya R (Memerlukan restart SystemUI)</string>
+    <string name="center_notification_headers_title">Header notifikasi ditengah</string>
+    <string name="center_notification_headers_summary">Apakah header pemberitahuan gaya R ditengah (Memerlukan restart SystemUI)</string>
 </resources>

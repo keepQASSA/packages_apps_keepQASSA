@@ -56,6 +56,12 @@
             android:summary="@string/toast_icon_summary"
             android:defaultValue="true" />
 
+        <!-- Gaming mode -->
+        <Preference
+            android:key="gaming_category"
+            android:title="@string/gaming_title" 
+            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory

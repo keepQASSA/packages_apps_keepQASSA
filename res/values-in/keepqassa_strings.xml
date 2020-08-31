@@ -390,6 +390,8 @@
     <string name="custom_seekbar_default_value">secara default</string>
     <string name="custom_seekbar_default_value_is_set">Nilai default disetel</string>
     <string name="qs_panel_alpha_title">Opasitas latar belakang</string>
-    <string name="qs_datausage_title">Tampilkan penggunaan data di qs panel</string>
-    <string name="qs_datausage_subtitle">Menampilkan penggunaan data di header pengaturan cepat sim yang digunakan untuk data</string>
+    <string name="qs_datausage_title">Penggunaan Data di QS Panel</string>
+    <string name="qs_datausage_disabled">Dinonaktifkan</string>
+    <string name="qs_datausage_daily">Penggunaan harian</string>
+    <string name="qs_datausage_monthly">Penggunaan bulanan</string>
 </resources>

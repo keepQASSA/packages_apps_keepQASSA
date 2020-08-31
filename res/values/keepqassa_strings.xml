@@ -633,7 +633,10 @@
     <!-- QS background opacity -->
     <string name="qs_panel_alpha_title">Background opacity</string>
 
-    <string name="qs_datausage_title">Show data usage in qs panel</string>
-    <string name="qs_datausage_subtitle">Shows data usage in quick settings header of sim used for data</string>
+    <!-- QS Panel Data Usage -->
+    <string name="qs_datausage_title">Data Usage in QS Panel</string>
+    <string name="qs_datausage_disabled">Disabled</string>
+    <string name="qs_datausage_daily">Daily usage</string>
+    <string name="qs_datausage_monthly">Monthly usage</string>
 
 </resources>

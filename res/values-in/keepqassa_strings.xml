@@ -267,4 +267,6 @@
     <string name="notificationheaders_quicksettings_title">Header notifikasi</string>
     <string name="notificationheaders_quicksettings_summary">Header notifikasi di quick settings</string>
     <string name="powermenu_screenrecord_title">Rekam layar</string>
+    <string name="show_app_volume_title">Tampilkan volume aplikasi</string>
+    <string name="show_app_volume_summary">Tampilkan volume aplikasi di panel volume.</string>
 </resources>

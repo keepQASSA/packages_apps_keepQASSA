@@ -389,4 +389,7 @@
     <string name="notificationheaders_quicksettings_summary">Notification headers in quick settings</string>
 
     <string name="powermenu_screenrecord_title">Screenrecord</string>
+
+    <string name="show_app_volume_title">Show app volume</string>
+    <string name="show_app_volume_summary">Show app volume in volume panel.</string>
 </resources>

@@ -320,4 +320,6 @@
     <string name="ticker_animation_mode_alpha_fade">Pudar</string>
     <string name="ticker_animation_mode_scroll">Gulir</string>
     <string name="ticker_tick_duration_title">Durasi ticker</string>
+    <string name="status_bar_show_lyric_title">Lirik bilah status</string>
+    <string name="status_bar_show_lyric_summary">Tampilkan lirik di bilah status (membutuhkan dukungan Aplikasi)</string>
 </resources>

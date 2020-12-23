@@ -540,4 +540,6 @@
     <string name="qqs_count_title">Tingkatkan jumlah ikon di QQS (memerlukan SystemUI restart)</string>
     <string name="max_visible_notification_icons_title">Ikon notifikasi</string>
     <string name="max_visible_notification_icons_summary">Max. ikon notifikasi terlihat di bilah status</string>
+    <string name="notification_sound_vib_screen_on_title">Pemberitahuan berisik</string>
+    <string name="notification_sound_vib_screen_on_summary">Putar suara dan getaran untuk notifikasi saat layar aktif</string>
 </resources>

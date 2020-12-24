@@ -515,4 +515,18 @@
     <string name="hide_lockicon_title">Sembunyikan ikon gembok</string>
     <string name="hide_lockicon_summary">Sembunyikan ikon gembok di layar kunci</string>
     <string name="statusbar_top_padding">Padding atas statusbar</string>
+    <string name="gvisual_title">Mod G-Visual</string>
+    <string name="gvisual_summary">Berbagai penyesuaian UI oleh @ImYourGege</string>
+    <string name="rounded_ui_title">Sudut membulat</string>
+    <string name="rounded_ui_dialog_title">Pilih model sudut membulat</string>
+    <string name="rounded_style_default">Default</string>
+    <string name="rounded_style_rectangle">Persegi Panjang</string>
+    <string name="rounded_style_large">Besar</string>
+    <string name="rounded_style_medium">Sedang</string>
+    <string name="statusbar_height_title">Tinggi bilah status</string>
+    <string name="statusbar_height_dialog_title">Pilih model ketinggian bilah status</string>
+    <string name="sb_height_default">Default</string>
+    <string name="sb_height_medium">Sedang</string>
+    <string name="sb_height_large">Besar</string>
+    <string name="sb_height_extralarge">Ekstra Besar</string>
 </resources>

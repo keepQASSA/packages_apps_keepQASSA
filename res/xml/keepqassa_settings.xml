@@ -34,12 +34,12 @@
             android:layout="@layout/xd_pref_card_top"
             android:fragment="com.keepqassa.settings.fragments.StatusBar"/>
 
-        <!-- Interface
+        <!-- Interface -->
         <Preference
             android:key="interface_category"
             android:title="@string/interface_title"
             android:layout="@layout/xd_pref_card_mid"
-            android:fragment="com.keepqassa.settings.fragments.Interface"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Interface"/>
 
         <!-- Quick Settings -->
         <Preference

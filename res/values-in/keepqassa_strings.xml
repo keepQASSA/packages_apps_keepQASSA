@@ -542,4 +542,6 @@
     <string name="max_visible_notification_icons_summary">Max. ikon notifikasi terlihat di bilah status</string>
     <string name="notification_sound_vib_screen_on_title">Pemberitahuan berbunyi jika aktif</string>
     <string name="notification_sound_vib_screen_on_summary">Putar suara dan getaran untuk notifikasi saat layar aktif</string>
+    <string name="vibrate_on_notifications_title">Getar untuk notifikasi</string>
+    <string name="vibrate_on_notifications_summary">Toogle untuk menonaktifkan notifikasi getar</string>
 </resources>

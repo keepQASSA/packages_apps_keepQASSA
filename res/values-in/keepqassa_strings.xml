@@ -533,6 +533,8 @@
     <string name="navbar_orchid">Anggrek</string>
     <string name="navbar_red">Merah</string>
     <string name="navbar_purp">Ungu</string>
+    <string name="navbar_blue">Biru</string>
+    <string name="navbar_rose">Mawar</string>
     <string name="navbar_color_title">Warna Navbar</string>
     <string name="navbar_color_dialog_title">Pilih warna</string>
 </resources>

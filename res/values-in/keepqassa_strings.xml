@@ -529,4 +529,10 @@
     <string name="sb_height_medium">Sedang</string>
     <string name="sb_height_large">Besar</string>
     <string name="sb_height_extralarge">Ekstra Besar</string>
+    <string name="navbar_default">Default</string>
+    <string name="navbar_orchid">Anggrek</string>
+    <string name="navbar_red">Merah</string>
+    <string name="navbar_purp">Ungu</string>
+    <string name="navbar_color_title">Warna Navbar</string>
+    <string name="navbar_color_dialog_title">Pilih warna</string>
 </resources>

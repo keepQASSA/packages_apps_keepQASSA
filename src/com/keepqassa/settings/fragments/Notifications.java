@@ -76,6 +76,8 @@ public class Notifications extends SettingsPreferenceFragment
                 Settings.Global.TOAST_ICON, 1);
         Settings.System.putIntForUser(resolver,
                 Settings.System.CLIPBOARD_TOAST_INFO, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.NOTIFICATION_BG_ALPHA, 255, UserHandle.USER_CURRENT);
     }
 
     @Override

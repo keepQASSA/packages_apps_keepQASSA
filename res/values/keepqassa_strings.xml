@@ -738,4 +738,7 @@
     <string name="advanced_reboot_secured_title">Secured lockscreen</string>
     <string name="advanced_reboot_secured_summary">Display advanced restart options on secured lockscreen</string>
 
+    <!-- Notification background opacity -->
+    <string name="notification_alpha_title">Notification background opacity</string>
+
 </resources>

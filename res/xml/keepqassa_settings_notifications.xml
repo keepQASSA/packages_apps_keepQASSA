@@ -61,6 +61,15 @@
             android:summary="@string/notification_guts_kill_app_button_summary"
             android:defaultValue="false" />
 
+        <!-- Notification background opacity -->
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="notification_bg_alpha"
+            android:title="@string/notification_alpha_title"
+            android:defaultValue="255"
+            android:max="255"
+            settings:min="0"
+            settings:units="" />
+
    </PreferenceCategory>
 
    <PreferenceCategory

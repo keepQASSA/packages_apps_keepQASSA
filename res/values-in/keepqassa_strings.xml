@@ -539,4 +539,6 @@
     <string name="quicksettings_landscape_dialog_title">Pilih model lanskap pengaturan cepat</string>
     <string name="quicksettings_landscape_default">Default</string>
     <string name="quicksettings_landscape_wide">Lebar</string>
+    <string name="custom_signal_bar_title">Ikon sinyal</string>
+    <string name="custom_wifi_bar_title">ikon Wi-Fi</string>
 </resources>

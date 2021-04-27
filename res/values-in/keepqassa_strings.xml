@@ -533,4 +533,6 @@
     <string name="themer_summary">Jelajahi dan pilih tema yang terpasang</string>
     <string name="theme_select_title">Tema</string>
     <string name="theme_select_summary">Jelajahi dan pilih tema yang terpasang</string>
+    <string name="custom_signal_bar_title">Ikon sinyal</string>
+    <string name="custom_wifi_bar_title">ikon Wi-Fi</string>
 </resources>

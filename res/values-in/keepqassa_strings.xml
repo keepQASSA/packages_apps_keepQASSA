@@ -66,4 +66,6 @@
     <string name="navbar_tuner_title">Tombol Navbar</string>
     <string name="general_qs_title">Umum</string>
     <string name="rows_columns_qs_title">Baris dan Kolom</string>
+    <string name="statusbar_icons_style">Notifikasi statusbar berwarna</string>
+    <string name="statusbar_icons_style_summary">Aktifkan Notifikasi statusbar berwarna (butuh restart SystemUI)</string>
 </resources>

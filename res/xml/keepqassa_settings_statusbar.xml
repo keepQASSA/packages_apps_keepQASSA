@@ -35,6 +35,12 @@
             <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
         </PreferenceScreen>
 
+	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="statusbar_icons_style"
+            android:title="@string/statusbar_icons_style"
+            android:summary="@string/statusbar_icons_style_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

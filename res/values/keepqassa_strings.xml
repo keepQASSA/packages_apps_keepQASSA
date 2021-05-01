@@ -88,7 +88,9 @@
     <string name="general_qs_title">General</string>
     <string name="rows_columns_qs_title">Rows and Columns</string>
 
-    <!-- Colored Statusbar Icons -->
+    <!-- Colored Statusbar & Header Icons -->
     <string name="statusbar_icons_style">Colored Statusbar Notification Icons</string>
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar notification icons (requires SystemUI restart)</string>
+    <string name="header_icons_style">Colored Notification Headers Icons</string>
+    <string name="header_icons_style_summary">Choose the style of your notification headers icons (requires SystemUI restart)</string>
 </resources>

@@ -27,6 +27,9 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import androidx.preference.*;
 
+import com.keepqassa.settings.preferences.SystemSettingListPreference;
+import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
+
 import com.android.internal.logging.nano.MetricsProto;
 import com.keepqassa.settings.fragments.misc.GamingMode;
 import com.android.settings.R;

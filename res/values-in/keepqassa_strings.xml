@@ -167,4 +167,13 @@
     <string name="qs_battery_location_qs_panel">Panel QS</string>
     <string name="qs_battery_location_qs_statusbar_header">Tajuk Statusbar Cepat</string>
     <string name="qs_use_status_bar_battery_style">Ikuti gaya bilah status</string>
+    <string name="volume_panel">Gaya Panel Volume</string>
+    <string name="volume_panel_aosp">AOSP</string>
+    <string name="volume_panel_compat">Kompatibel</string>
+    <string name="volume_panel_oreo">Oreo</string>
+    <string name="volume_panel_tiled">Ubin</string>
+    <string name="volume_panel_aosp_val">co.potatoproject.plugin.volume.aosp</string>
+    <string name="volume_panel_compat_val">co.potatoproject.plugin.volume.compact</string>
+    <string name="volume_panel_oreo_val">co.potatoproject.plugin.volume.oreo</string>
+    <string name="volume_panel_tiled_val">co.potatoproject.plugin.volume.tiled</string>
 </resources>

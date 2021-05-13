@@ -29,6 +29,13 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="false" />
 
+        <com.keepqassa.settings.preferences.SystemSettingListPreference
+      	    android:key="systemui_plugin_volume"
+    	    android:title="@string/volume_panel"
+    	    android:entries="@array/volume_panel_entries"
+	    android:entryValues="@array/volume_panel_values"
+	    android:defaultValue="@string/volume_panel_aosp_val" />
+
         <!-- Gaming Mode -->
         <Preference
             android:key="gaming_mode"

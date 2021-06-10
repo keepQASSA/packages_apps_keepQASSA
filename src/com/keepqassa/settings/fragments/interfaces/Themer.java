@@ -18,8 +18,14 @@ package com.keepqassa.settings.fragments.interfaces;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.om.IOverlayManager;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.RemoteException;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import androidx.preference.*;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -30,15 +36,25 @@ import com.android.settings.display.OverlayCategoryPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 import com.android.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Themer extends DashboardFragment {
+public class Themer extends DashboardFragment implements
+        OnPreferenceChangeListener {
     private static final String TAG = "Themer";
 
     private ContentResolver mResolver;
+
+    private static final String ACCENT_COLOR = "accent_color";
+    private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
+
+    private IOverlayManager mOverlayService;
+    private ColorPickerPreference mThemeColor;
+
 
     @Override
     public int getMetricsCategory() {
@@ -50,13 +66,41 @@ public class Themer extends DashboardFragment {
         return TAG;
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
-    }
-
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.themer;
+    }
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        setupAccentPref();
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mThemeColor) {
+            int color = (Integer) newValue;
+            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
+            SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
+            try {
+                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+             } catch (RemoteException ignored) {
+             }
+        }
+        return true;
+    }
+
+    private void setupAccentPref() {
+        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
+        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
+        int color = "-1".equals(colorVal)
+                ? Color.WHITE
+                : Color.parseColor("#" + colorVal);
+        mThemeColor.setNewPreviewColor(color);
+        mThemeColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -79,4 +123,5 @@ public class Themer extends DashboardFragment {
                 "android.theme.customization.wifi_icon"));
         return controllers;
     }
+
 }

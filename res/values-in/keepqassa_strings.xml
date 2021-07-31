@@ -529,4 +529,8 @@
     <string name="sb_height_medium">Sedang</string>
     <string name="sb_height_large">Besar</string>
     <string name="sb_height_extralarge">Ekstra Besar</string>
+    <string name="themer_title">Themer</string>
+    <string name="themer_summary">Jelajahi dan pilih tema yang terpasang</string>
+    <string name="theme_select_title">Tema</string>
+    <string name="theme_select_summary">Jelajahi dan pilih tema yang terpasang</string>
 </resources>

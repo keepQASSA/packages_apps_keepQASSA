@@ -26,4 +26,10 @@
         android:layout="@layout/xd_action_bar"
         android:selectable="false"/>
 
+    <Preference
+        android:key="themer_category"
+        android:title="@string/themer_title"
+        android:summary="@string/themer_summary"
+        android:fragment="com.keepqassa.settings.fragments.interfaces.Themer" />
+
 </PreferenceScreen>

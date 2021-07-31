@@ -807,4 +807,9 @@
     <string name="sb_height_medium">Medium</string>
     <string name="sb_height_large">Large</string>
     <string name="sb_height_extralarge">Extra Large</string>
+
+    <string name="themer_title">Themer</string>
+    <string name="themer_summary">Browse and select installed themes</string>
+    <string name="theme_select_title">Themes</string>
+    <string name="theme_select_summary">Browse and select installed themes</string>
 </resources>

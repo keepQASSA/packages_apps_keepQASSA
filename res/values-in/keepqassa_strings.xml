@@ -307,4 +307,6 @@
     <string name="network_traffic_header">Header yang diperluas</string>
     <string name="network_traffic_location_title">Penempatan indikator lalu lintas</string>
     <string name="network_traffic_location_summary">Tempatkan indikator di bilah status atau header yang diperluas</string>
+    <string name="statusbar_left_padding">Padding kiri statusbar</string>
+    <string name="statusbar_right_padding">Padding kanan statusbar</string>
 </resources>

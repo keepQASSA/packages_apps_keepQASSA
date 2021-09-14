@@ -434,4 +434,6 @@
     <string name="battery_level_colors_summary">Setiap penurunan level baterai diberi kode warna (hanya untuk baterai lingkaran)</string>
     <string name="charging_animator_title">Aktifkan animator pengisian daya</string>
     <string name="charging_animator_summary">Animasi simbol petir \u26A1\uFE0E saat mengisi daya (hanya untuk baterai lingkaran)</string>
+    <string name="qs_brightness_slider_title">Beralih gaya Slider Kecerahan</string>
+    <string name="qs_brightness_slider_summary">Memerlukan Mulai Ulang SystemUI</string>
 </resources>

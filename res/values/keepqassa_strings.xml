@@ -679,4 +679,6 @@
     <string name="charging_animator_title">Enable charging animator</string>
     <string name="charging_animator_summary">Animate lightning \u26A1\uFE0E symbol when charging (only for circle battery)</string>
 
+    <string name="battery_level_colors_title">Toggle colorful battery icon</string>
+    <string name="battery_level_colors_summary">Each battery level drop is color coded (only for circle battery)</string>
 </resources>

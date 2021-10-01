@@ -26,6 +26,12 @@
         android:summary="@string/battery_bar_summary"
         android:fragment="com.keepqassa.settings.fragments.battery.BatteryBar" />
 
+    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        android:key="battery_level_colors"
+        android:title="@string/battery_level_colors_title"
+        android:summary="@string/battery_level_colors_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/battery_sb_title">
 

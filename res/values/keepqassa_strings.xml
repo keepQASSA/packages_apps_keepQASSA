@@ -823,4 +823,7 @@
     <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
     <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted.</string>
 
+    <!-- QQS Count -->
+    <string name="qqs_count_title">Increase the number of icons in QQS (requires SystemUI restart)</string>
+
 </resources>

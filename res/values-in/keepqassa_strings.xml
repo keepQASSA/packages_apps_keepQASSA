@@ -537,4 +537,5 @@
     <string name="custom_wifi_bar_title">ikon Wi-Fi</string>
     <string name="spoof_storage_encryption_status_title">Gunakan spoofing enkripsi penyimpanan</string>
     <string name="spoof_storage_encryption_status_summary">Status enkripsi penyimpanan spoof menjadi terenkripsi.</string>
+    <string name="qqs_count_title">Tingkatkan jumlah ikon di QQS (memerlukan SystemUI restart)</string>
 </resources>

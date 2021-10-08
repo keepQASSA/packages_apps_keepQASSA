@@ -136,6 +136,14 @@
             android:entryValues="@array/qs_datausage_values"
             android:defaultValue="0" />
 
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="qqs_count"
+            android:title="@string/qqs_count_title"
+            android:max="6"
+            android:min="1"
+            android:defaultValue="6"
+            settings:units="" />
+
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="dismiss_all_button"
             android:title="@string/enable_clear_all_button"

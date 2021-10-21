@@ -32,12 +32,13 @@
             android:entryValues="@array/status_bar_brightness_slider_values"
             android:defaultValue="1" />
 
-       <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
-           android:key="qs_brightness_slider_style"
-           android:title="@string/qs_brightness_slider_title"
-           android:summary="@string/qs_brightness_slider_summary"
-           android:dependency="qs_show_brightness_slider"
-           android:defaultValue="false" />
+        <com.keepqassa.settings.preferences.SystemSettingListPreference
+            android:title="@string/qs_brightness_slider_title"
+            android:summary="@string/qs_brightness_slider_summary"
+            android:dependency="qs_show_brightness_slider"
+            android:entries="@array/qs_brightness_slider_style_entries"
+      	    android:entryValues="@array/qs_brightness_slider_style_values"
+            android:defaultValue="0" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_show_auto_brightness"

@@ -682,6 +682,10 @@
     <string name="charging_animator_title">Enable charging animator</string>
     <string name="charging_animator_summary">Animate lightning \u26A1\uFE0E symbol when charging (only for circle battery)</string>
 
-    <string name="qs_brightness_slider_title">Toggle Brightness Slider style</string>
+    <!-- QS brightness Slider style -->
+    <string name="qs_brightness_slider_title">Select Brightness Slider style</string>
     <string name="qs_brightness_slider_summary">Requires SystemUI Restart</string>
+    <string name="qs_slider_default">Default style</string>
+    <string name="qs_slider_style_1">Thick accented style</string>
+    <string name="qs_slider_style_2">A12 style</string>
 </resources>

@@ -20,12 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title=" " >
 
-    <!-- #keepQASSA Banner -->
+    <!-- #keepQASSA Banner
     <PreferenceScreen
         android:key="keepqassa_banner"
         android:enabled="true"
         android:layout="@layout/keepqassa_banner"
-        android:fragment="com.keepqassa.settings.fragments.About" />
+        android:fragment="com.keepqassa.settings.fragments.About" /> -->
+    <com.keepqassa.settings.fragments.Kasa/>
 			
         <!-- Status Bar -->
         <Preference

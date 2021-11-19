@@ -264,4 +264,6 @@
     <string name="gaming_mode_menu_opacity_title">Tingkat opacity menu</string>
     <string name="gaming_mode_use_menu_overlay_title">Tampilkan hamparan menu</string>
     <string name="gaming_mode_use_menu_overlay_summary">Tampilkan menu overlay saat game sedang berjalan. Jika opsi ini dinonaktifkan, beberapa fitur mode permainan akan dinonaktifkan, seperti notifikasi Danmaku</string>
+    <string name="gaming_mode_show_fpsinfo_title">Tampilkan info FPS</string>
+    <string name="gaming_mode_show_fpsinfo_summary">Tampilkan informasi FPS terkini</string>
 </resources>

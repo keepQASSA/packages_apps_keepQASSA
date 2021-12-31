@@ -849,4 +849,8 @@
     <string name="custom_wifi_width">Width</string>
 
     <string name="status_bar_battery_style_icon_landscape_ios15">Icon landscape iOS Fifteen</string>
+
+    <!-- Idle Manager -->
+    <string name="idle_manager_title">Idle Manager</string>
+    <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 </resources>

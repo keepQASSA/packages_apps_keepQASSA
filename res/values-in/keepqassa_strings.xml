@@ -141,6 +141,8 @@
     <string name="battery_sb_title">Bilah Status</string>
     <string name="status_bar_battery_style_title">Gaya baterai</string>
     <string name="status_bar_battery_style_icon_portrait">Potret ikon</string>
+    <string name="status_bar_battery_style_icon_rlandscape">Ikon lanskap (Kanan)</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikon lanskap (Kiri)</string>
     <string name="status_bar_battery_style_circle">Lingkaran</string>
     <string name="status_bar_battery_style_dotted_circle">Lingkaran putus-putus</string>
     <string name="status_bar_battery_style_solid">Padat</string>

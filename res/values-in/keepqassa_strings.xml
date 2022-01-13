@@ -151,7 +151,8 @@
     <string name="status_bar_battery_text_charging_summary">Selalu tampilkan persentase baterai saat mengisi daya</string>
     <string name="battery_percentage_title">Persentase baterai</string>
     <string name="battery_percentage_off">Dinonaktifkan</string>
-    <string name="battery_percentage_next">Diaktifkan</string>
+    <string name="battery_percentage_next_right">Diaktifkan, di sebelah ikon (kanan)</string>
+    <string name="battery_percentage_next_left">Diaktifkan, di sebelah ikon (kiri)</string>
     <string name="battery_percentage_inside">Diaktifkan (ikon di dalam)</string>
     <string name="battery_estimate_title">Perkiraan baterai</string>
     <string name="battery_estimate_summary">Menampilkan perkiraan sisa masa pakai baterai jika tersedia</string>

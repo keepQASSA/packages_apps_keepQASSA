@@ -74,4 +74,7 @@
     <string name="enable_clear_all_button_summary">Tampilkan tombol hapus semua notifikasi di quick settings dari pada tombol teks default</string>
     <string name="status_bar_notif_count_title">Jumlah notifikasi</string>
     <string name="status_bar_notif_count_summary">Tampilkan jumlah notifikasi yang belum di baca</string>
+    <string name="spoof_title">Pemalsuan</string>
+    <string name="use_photos_spoof_title">Penyimpanan Photos tanpa batas</string>
+    <string name="use_photos_spoof_summary">Palsukan perangkatmu ke Pixel XL untuk penyimpanan Google Photos tanpa batas</string>
 </resources>

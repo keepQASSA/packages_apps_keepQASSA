@@ -113,12 +113,12 @@
             android:fragment="com.keepqassa.settings.fragments.Battery"
             android:icon="@drawable/ic_settings_batterysave"/>
 
-        <!-- Misc
+        <!-- Misc -->
         <Preference
             android:key="misc_category"
             android:title="@string/misc_title"
             android:fragment="com.keepqassa.settings.fragments.Misc"
-            android:icon="@drawable/ic_settings_misc"/> -->
+            android:icon="@drawable/ic_settings_misc"/>
 
     </PreferenceCategory>
 </PreferenceScreen>

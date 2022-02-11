@@ -76,6 +76,18 @@
         android:fragment="com.keepqassa.settings.fragments.misc.gaming.GamingModeSettings"
         android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:title="@string/gms_category"
+        android:layout="@layout/xd_pref_category">
+
+        <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
+            android:key="gms_enabled"
+            android:title="@string/gms_enabled"
+            android:summary="@string/gms_enabled_desc"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
     <!-- Gvisual mod -->
     <PreferenceCategory 
         android:key="gvisual_category"

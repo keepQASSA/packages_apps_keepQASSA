@@ -546,4 +546,6 @@
     <string name="idle_manager_title">Manajer Idle</string>
     <string name="idle_manager_summary">Hentikan semua proses latar belakang yang tidak penting saat perangkat dalam keadaan idle</string>
     <string name="status_bar_battery_style_icon_landscape_oneui7">Ikon lanskap OneUI 7</string>
+    <string name="gms_enabled">Aktifkan layanan Google</string>
+    <string name="gms_enabled_desc">Menonaktifkan layanan Google dapat membantu memperpanjang masa pakai baterai, tetapi aplikasi pihak ketiga yang mengandalkan komponen GMS tidak akan berfungsi dengan baik.</string>
 </resources>

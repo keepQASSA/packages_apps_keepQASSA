@@ -846,4 +846,9 @@
     <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 
     <string name="status_bar_battery_style_icon_landscape_oneui7">Icon landscape OneUI 7</string>
+
+    <!-- GMS switch -->
+    <string name="gms_category">GMS</string>
+    <string name="gms_enabled">Enable Google services</string>
+    <string name="gms_enabled_desc">Disable Google services may help extend the battery life, but third-party apps relying on GMS components will not work properly.</string>
 </resources>

@@ -38,11 +38,14 @@ public class Misc extends SettingsPreferenceFragment
 
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
     private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
+    private static final String KEY_STREAM_SPOOF = "use_stream_spoof";
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
+    private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
+    private SwitchPreference mStreamSpoof;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,10 @@ public class Misc extends SettingsPreferenceFragment
         mPhotosSpoof = (SwitchPreference) prefScreen.findPreference(KEY_PHOTOS_SPOOF);
         mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
         mPhotosSpoof.setOnPreferenceChangeListener(this);
+
+        mStreamSpoof = (SwitchPreference) findPreference(KEY_STREAM_SPOOF);
+        mStreamSpoof.setChecked(SystemProperties.getBoolean(SYS_STREAM_SPOOF, true));
+        mStreamSpoof.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -72,6 +79,10 @@ public class Misc extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
             return true;
+        } else if (preference == mStreamSpoof) {
+            boolean value = (Boolean) newValue;
+            SystemProperties.set(SYS_STREAM_SPOOF, value ? "true" : "false");
+            return true;
         }
         return true;
     }
@@ -79,6 +90,7 @@ public class Misc extends SettingsPreferenceFragment
     public static void reset(Context mContext) {
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
+        SystemProperties.set(SYS_STREAM_SPOOF, "true");
     }
 
     @Override

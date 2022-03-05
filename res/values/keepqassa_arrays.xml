@@ -44,8 +44,12 @@
 
     <string-array name="status_bar_battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_icon_portrait</item>
-        <item>@string/status_bar_battery_style_icon_rlandscape</item> 
+        <item>@string/status_bar_battery_style_icon_rlandscape</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_a</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_b</item>
         <item>@string/status_bar_battery_style_icon_landscape</item>
+        <item>@string/status_bar_battery_style_icon_landscape_a</item>
+        <item>@string/status_bar_battery_style_icon_landscape_b</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -66,6 +70,10 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
 
     <!-- Battery percent -->
@@ -88,7 +96,11 @@
         <item>@string/qs_use_status_bar_battery_style</item>
         <item>@string/status_bar_battery_style_icon_portrait</item>
         <item>@string/status_bar_battery_style_icon_rlandscape</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_a</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_b</item>
         <item>@string/status_bar_battery_style_icon_landscape</item>
+        <item>@string/status_bar_battery_style_icon_landscape_a</item>
+        <item>@string/status_bar_battery_style_icon_landscape_b</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -110,6 +122,10 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
 
     <!-- QS battery location  -->

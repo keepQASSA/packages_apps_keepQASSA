@@ -141,8 +141,12 @@
     <string name="battery_sb_title">Bilah Status</string>
     <string name="status_bar_battery_style_title">Gaya baterai</string>
     <string name="status_bar_battery_style_icon_portrait">Potret ikon</string>
-    <string name="status_bar_battery_style_icon_rlandscape">Ikon lanskap (Kanan)</string>
-    <string name="status_bar_battery_style_icon_landscape">Ikon lanskap (Kiri)</string>
+    <string name="status_bar_battery_style_icon_rlandscape">Ikon lanskap bawaan (Kanan)</string>
+    <string name="status_bar_battery_style_icon_rlandscape_a">Ikon lanskap A (Kanan)</string>
+    <string name="status_bar_battery_style_icon_rlandscape_b">Ikon lanskap B (Kanan)</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikon lanskap bawaan (Kiri)</string>
+    <string name="status_bar_battery_style_icon_landscape_a">Ikon lanskap A (Kiri)</string>
+    <string name="status_bar_battery_style_icon_landscape_b">Ikon lanskap B (Kiri)</string>
     <string name="status_bar_battery_style_circle">Lingkaran</string>
     <string name="status_bar_battery_style_big_circle">Lingkaran besar</string>
     <string name="status_bar_battery_style_dotted_circle">Lingkaran putus-putus</string>

@@ -66,6 +66,12 @@
             android:fragment="com.android.settings.gestures.AdaptivePlaybackGestureSettings"
             settings:controller="com.android.settings.gestures.AdaptivePlaybackParentPreferenceController" />
 
+        <com.keepqassa.settings.preferences.GlobalSettingSwitchPreference
+            android:key="pm_downgrade_allowed"
+            android:title="@string/app_downgrade_title"
+            android:summary="@string/app_downgrade_summary"
+            android:defaultValue="false"/>
+
         <!-- Sensor Block -->
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="sensor_block"

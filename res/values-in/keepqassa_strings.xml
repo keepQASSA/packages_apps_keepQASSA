@@ -461,4 +461,6 @@
     <string name="aggressive_standby_summary">Batasi aplikasi agar tidak berjalan di latar belakang</string>
     <string name="aggressive_battery_saver_title">Aktifkan otomatis pada penghemat baterai</string>
     <string name="aggressive_battery_saver_summary">Aktifkan Baterai Agresif secara otomatis saat menggunakan penghemat baterai</string>
+    <string name="app_downgrade_title">Izinkan penurunan versi aplikasi</string>
+    <string name="app_downgrade_summary">Ini memungkinkan Anda untuk menurunkan versi aplikasi. Perhatikan bahwa ini dapat menyebabkan kerusakan dan kerusakan data.</string>
 </resources>

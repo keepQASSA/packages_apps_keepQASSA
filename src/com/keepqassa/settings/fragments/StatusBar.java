@@ -39,7 +39,7 @@ import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-
+import com.android.internal.util.custom.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -56,9 +56,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
+    private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
 
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingListPreference mStatusBarAmPm;
+
+    private SystemSettingSwitchPreference mStatusbarIconsStyle;
 
     private PreferenceCategory mStatusBarClockCategory;
 
@@ -70,6 +73,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.keepqassa_settings_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        final ContentResolver resolver = getActivity().getContentResolver();
+
         sHasCenteredNotch = CutoutUtils.hasCenteredCutout(getActivity());
 
         mStatusBarAmPm =
@@ -80,6 +85,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
         mStatusBarClockCategory =
                 (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_CLOCK);
+
+	mStatusbarIconsStyle = (SystemSettingSwitchPreference) findPreference(STATUSBAR_ICONS_STYLE);
+        mStatusbarIconsStyle.setChecked((Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_ICONS_STYLE, 0) == 1));
+        mStatusbarIconsStyle.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -122,6 +132,14 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+    final ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mStatusbarIconsStyle) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_ICONS_STYLE, value ? 1 : 0);
+            ActionUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        }
         return true;
     }
 

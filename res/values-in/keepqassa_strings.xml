@@ -229,4 +229,6 @@
     <string name="general_notifications_title">Umum</string>
     <string name="force_expanded_notifications_title">Paksa perluas pemberitahuan</string>
     <string name="force_expanded_notifications_summary">Hanya tersedia untuk aplikasi yang mendukung pemberitahuan yang diperluas</string>
+    <string name="ignore_window_secure_title">Abaikan tanda keamanan jendela</string>
+    <string name="ignore_window_secure_summary">Ini menghapus batas tangkapan layar dan rekaman layar untuk semua aplikasi. Biasanya, aplikasi khusus diganti dengan area hitam dalam catatan. Ini bisa nyaman dalam beberapa kasus tetapi dapat menyebabkan kebocoran privasi. Setelah mengubah sakelar ini, Anda mungkin perlu memulai ulang aplikasi agar perubahan diterapkan</string>
 </resources>

@@ -38,6 +38,12 @@
             settings:interval="10"
             settings:units="@string/unit_milliseconds" />
 
+        <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
+
         <!-- Gaming Mode -->
         <Preference
             android:key="gaming_mode"

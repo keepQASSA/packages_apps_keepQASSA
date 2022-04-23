@@ -30,6 +30,7 @@ import android.view.ViewConfiguration;
 import androidx.preference.*;
 
 import com.keepqassa.settings.preferences.CustomSeekBarPreference;
+import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.keepqassa.settings.fragments.misc.GamingMode;

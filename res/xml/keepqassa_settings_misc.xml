@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2018 Rebellion-OS
+     Copyright (C) 2022 AOSQP
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,5 +18,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/misc_title" >
+
+    <PreferenceCategory
+        android:key="spoof_category"
+        android:title="@string/spoof_title">
+
+        <!-- Unlimited google photos storage -->
+        <SwitchPreference
+            android:key="use_photos_spoof"
+            android:title="@string/use_photos_spoof_title"
+            android:summary="@string/use_photos_spoof_summary"
+            android:defaultValue="true" />
+
+        <!-- Unlock FPS for specific games -->
+        <SwitchPreference
+            android:key="use_games_spoof"
+            android:title="@string/use_games_spoof_title"
+            android:summary="@string/use_games_spoof_summary" />
+
+        <!-- Unlock higher quality streams for specific apps -->
+        <SwitchPreference
+            android:key="use_stream_spoof"
+            android:title="@string/use_stream_spoof_title"
+            android:summary="@string/use_stream_spoof_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

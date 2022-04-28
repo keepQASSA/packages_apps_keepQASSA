@@ -65,6 +65,7 @@
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
     <string name="interface_title">Themes</string>
+    <string name="networktraffic_title">Network Traffic</string>
 	
     <!-- General strings -->
     <string name="ok">OK</string>

@@ -64,4 +64,6 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
     <string name="navbar_tuner_title">Tombol Navbar</string>
+    <string name="general_qs_title">Umum</string>
+    <string name="rows_columns_qs_title">Baris dan Kolom</string>
 </resources>

@@ -2,6 +2,7 @@
 <!--
     Copyright © 2018-19 The rebellion OS Project
     Copyright © 2019 Ancient OS Project
+    Copyright © 2022 AOSQP
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -83,4 +84,7 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
+    <!-- QS settings -->
+    <string name="general_qs_title">General</string>
+    <string name="rows_columns_qs_title">Rows and Columns</string>
 </resources>

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2022 AOSQP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,40 +16,75 @@
  */
 package com.keepqassa.settings.fragments;
 
-import android.content.ContentResolver;
-import android.content.res.Resources;
+import android.app.settings.SettingsEnums;
 import android.content.Context;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.RemoteException;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.View;
-import android.view.WindowManagerGlobal;
-import androidx.preference.*;
-
-import com.android.internal.logging.nano.MetricsProto;
+import android.hardware.display.AmbientDisplayConfiguration;
+import android.provider.SearchIndexableResource;
 
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
-public class Gestures extends SettingsPreferenceFragment implements
-Preference.OnPreferenceChangeListener {
+import java.util.Arrays;
+import java.util.List;
 
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.keepqassa_settings_gestures);
-        PreferenceScreen prefSet = getPreferenceScreen();
-    }
+import com.android.settings.gestures.AssistGestureSettingsPreferenceController;
+import com.android.settings.gestures.DoubleTapScreenPreferenceController;
+import com.android.settings.gestures.PickupGesturePreferenceController;
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
-    }
+@SearchIndexable
+public class Gestures extends DashboardFragment {
+
+    private static final String TAG = "Gestures";
+
+    private AmbientDisplayConfiguration mAmbientDisplayConfig;
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.KEEPQASSA;
+        return SettingsEnums.SETTINGS_GESTURES;
     }
+
+    @Override
+    protected String getLogTag() {
+        return TAG;
+    }
+
+    @Override
+    protected int getPreferenceScreenResId() {
+        return R.xml.keepqassa_settings_gestures;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        use(AssistGestureSettingsPreferenceController.class).setAssistOnly(false);
+        use(PickupGesturePreferenceController.class).setConfig(getConfig(context));
+        use(DoubleTapScreenPreferenceController.class).setConfig(getConfig(context));
+    }
+
+    private AmbientDisplayConfiguration getConfig(Context context) {
+        if (mAmbientDisplayConfig == null) {
+            mAmbientDisplayConfig = new AmbientDisplayConfiguration(context);
+        }
+        return mAmbientDisplayConfig;
+    }
+
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(
+                        Context context, boolean enabled) {
+                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_gestures;
+                    return Arrays.asList(sir);
+                }
+
+                @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    // All rows in this screen can lead to a different page, so suppress everything
+                    // from this page to remove duplicates.
+                    return false;
+                }
+            };
 }

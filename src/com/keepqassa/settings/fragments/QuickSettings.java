@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2022 AOSQP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,25 +24,144 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.util.ArraySet;
+import android.view.View;
 import androidx.preference.*;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
+
+import com.keepqassa.settings.preferences.SystemSettingListPreference;
+import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.util.Set;
+
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
+
+    private static final String CATEGORY_BRIGHTNESS = "status_bar_brightness_category";
+    private static final String CATEGORY_QS_ANIMATION = "quick_settings_animations";
+
+    private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
+    private static final String STATUS_BAR_QUICK_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
+    private static final String STATUS_BAR_QUICK_QS_ANIMATION_STYLE = "anim_tile_style";
+    private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_DURATION = "anim_tile_duration";
+    private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_INTERPOLATOR = "anim_tile_interpolator";
+
+    private static final int PULLDOWN_DIR_NONE = 0;
+    private static final int PULLDOWN_DIR_RIGHT = 1;
+    private static final int PULLDOWN_DIR_LEFT = 2;
+
+    private SystemSettingListPreference mQuickPulldown;
+    private SystemSettingListPreference mStatusBarQsAnimationStyle;
+    private SystemSettingListPreference mStatusBarQsAnimationTileDuration;
+    private SystemSettingListPreference mStatusBarQsAnimationTileInterpolator;
+
+    private SwitchPreference mStatusBarQsShowAutoBrightness;
+
+    private PreferenceCategory mStatusBarBrightnessCategory;
+    private PreferenceCategory mStatusBarQsAnimationCategory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.keepqassa_settings_quicksettings);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mQuickPulldown =
+                (SystemSettingListPreference) findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
+        mQuickPulldown.setOnPreferenceChangeListener(this);
+        updateQuickPulldownSummary(mQuickPulldown.getIntValue(0));
+
+        mStatusBarBrightnessCategory =
+                (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_BRIGHTNESS);
+        mStatusBarQsShowAutoBrightness = mStatusBarBrightnessCategory.findPreference(STATUS_BAR_QUICK_QS_SHOW_AUTO_BRIGHTNESS);
+        if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_automatic_brightness_available)){
+            mStatusBarBrightnessCategory.removePreference(mStatusBarQsShowAutoBrightness);
+        }
+
+        mStatusBarQsAnimationCategory =
+                (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_QS_ANIMATION);
+
+        mStatusBarQsAnimationStyle =
+                (SystemSettingListPreference) mStatusBarQsAnimationCategory.findPreference(STATUS_BAR_QUICK_QS_ANIMATION_STYLE);
+        mStatusBarQsAnimationStyle.setOnPreferenceChangeListener(this);
+
+        mStatusBarQsAnimationTileDuration =
+                (SystemSettingListPreference) mStatusBarQsAnimationCategory.findPreference(STATUS_BAR_QUICK_QS_ANIMATION_TILE_DURATION);
+        mStatusBarQsAnimationTileDuration.setOnPreferenceChangeListener(this);
+
+        mStatusBarQsAnimationTileInterpolator =
+                (SystemSettingListPreference) mStatusBarQsAnimationCategory.findPreference(STATUS_BAR_QUICK_QS_ANIMATION_TILE_INTERPOLATOR);
+        mStatusBarQsAnimationTileInterpolator.setOnPreferenceChangeListener(this);
+
+        updateQsAnimationDependents(Integer.parseInt(mStatusBarQsAnimationStyle.getValue()));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Adjust status bar preferences for RTL
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
+            mQuickPulldown.setEntryValues(R.array.status_bar_quick_qs_pulldown_values);
+        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+    final ContentResolver resolver = getActivity().getContentResolver();
+        int value = Integer.parseInt((String) newValue);
+        String key = preference.getKey();
+        switch (key) {
+            case STATUS_BAR_QUICK_QS_PULLDOWN:
+                updateQuickPulldownSummary(value);
+                break;
+        case STATUS_BAR_QUICK_QS_ANIMATION_STYLE:
+                updateQsAnimationDependents(value);
+                break;
+        }
+        return true;
+    }
+
+    private void updateQsAnimationDependents(int value) {
+        mStatusBarQsAnimationTileDuration.setEnabled(value != 0);
+        mStatusBarQsAnimationTileInterpolator.setEnabled(value != 0);
+    }
+
+    private void updateQuickPulldownSummary(int value) {
+        String summary="";
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL){
+            if (value == PULLDOWN_DIR_LEFT) {
+                value = PULLDOWN_DIR_RIGHT;
+            }else if (value == PULLDOWN_DIR_RIGHT) {
+                value = PULLDOWN_DIR_LEFT;
+            }
+        }
+        switch (value) {
+            case PULLDOWN_DIR_NONE:
+                summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_off);
+                break;
+            case PULLDOWN_DIR_LEFT:
+                summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_summary_left_edge);
+                break;
+            case PULLDOWN_DIR_RIGHT:
+                summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_summary_right_edge);
+                break;
+        }
+        mQuickPulldown.setSummary(summary);
     }
 
     @Override

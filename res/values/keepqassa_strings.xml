@@ -63,6 +63,7 @@
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
     <string name="interface_title">Themes</string>
+    <string name="networktraffic_title">Network Traffic</string>
 	
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -83,4 +84,7 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
+    <!-- QS settings -->
+    <string name="general_qs_title">General</string>
+    <string name="rows_columns_qs_title">Rows and Columns</string>
 </resources>

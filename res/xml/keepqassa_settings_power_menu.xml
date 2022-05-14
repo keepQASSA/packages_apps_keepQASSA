@@ -6,22 +6,26 @@
 
     <CheckBoxPreference
         android:key="screenshot"
+	android:layout="@layout/xd_pref_card_top"
         android:title="@string/power_menu_screenshot_title"
         android:summary="@string/power_menu_screenshot_summary"
         android:defaultValue="false" />
 
     <CheckBoxPreference
         android:key="airplane"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/power_menu_airplane_title"
         android:defaultValue="false" />
 
     <CheckBoxPreference
         android:key="users"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/power_menu_users_title"
         android:defaultValue="false" />
 
     <CheckBoxPreference
         android:key="lockdown"
+	android:layout="@layout/xd_pref_card_bot"
         android:title="@string/power_menu_lockdown_title"
         android:defaultValue="false" />
 </PreferenceScreen>

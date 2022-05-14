@@ -21,66 +21,77 @@
 
     <Preference
         android:key="gesture_assist_input_summary"
+	android:layout="@layout/xd_pref_card_top"
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"
         settings:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController" />
 
     <Preference
         android:key="gesture_swipe_down_fingerprint_input_summary"
+	android:layout="@layout/xd_pref_card_bot"
         android:title="@string/fingerprint_swipe_for_notifications_title"
         android:fragment="com.android.settings.gestures.SwipeToNotificationSettings"
         settings:controller="com.android.settings.gestures.SwipeToNotificationPreferenceController" />
 
     <Preference
         android:key="gesture_double_tap_power_input_summary"
+	android:layout="@layout/xd_pref_card_top"
         android:title="@string/double_tap_power_for_camera_title"
         android:fragment="com.android.settings.gestures.DoubleTapPowerSettings"
         settings:controller="com.android.settings.gestures.DoubleTapPowerPreferenceController" />
 
     <Preference
         android:key="gesture_double_twist_input_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/double_twist_for_camera_mode_title"
         android:fragment="com.android.settings.gestures.DoubleTwistGestureSettings"
         settings:controller="com.android.settings.gestures.DoubleTwistPreferenceController" />
 
     <Preference
         android:key="gesture_tap_screen_input_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/ambient_display_tap_screen_title"
         android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
         settings:controller="com.android.settings.gestures.TapScreenGesturePreferenceController" />
 
     <Preference
         android:key="gesture_double_tap_screen_input_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/ambient_display_title"
         android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
         settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" />
 
     <Preference
         android:key="gesture_pick_up_input_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/ambient_display_pickup_title"
         android:fragment="com.android.settings.gestures.PickupGestureSettings"
         settings:controller="com.android.settings.gestures.PickupGesturePreferenceController" />
 
     <Preference
         android:key="gesture_prevent_ringing_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/gesture_prevent_ringing_screen_title"
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController" />
 
     <Preference
         android:key="gesture_global_actions_panel_summary"
+	android:layout="@layout/xd_pref_card_mid"
         android:title="@string/global_actions_panel_short_title"
         android:fragment="com.android.settings.gestures.GlobalActionsPanelSettings"
         settings:controller="com.android.settings.gestures.GlobalActionsPanelPreferenceController" />
 
     <Preference
         android:key="gesture_swipe_to_screenshot_summary"
+	android:layout="@layout/xd_pref_card_bot"
         android:title="@string/swipe_to_screenshot_gesture_title"
         android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
         settings:controller="com.android.settings.gestures.SwipeToScreenshotGesturePreferenceController" />
 
     <Preference
         android:key="touchscreen_gesture_settings"
+	android:layout="@layout/xd_pref_card_sin"
         android:persistent="false"
         android:title="@string/touchscreen_gesture_settings_title"
         android:summary="@string/touchscreen_gesture_settings_summary"

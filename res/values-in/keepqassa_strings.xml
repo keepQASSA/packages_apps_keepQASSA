@@ -38,6 +38,8 @@
     <string name="dev5_description">Kontributor, Device maintainer</string>
     <string name="dev6_description">Kontributor</string>
     <string name="dev7_description">Kontributor, Device maintainer</string>
+    <string name="dev8_description">Kontributor</string>
+    <string name="dev9_description">Kontributor</string>
     <string name="about_title">Tentang AOSQP dan Tim</string>
     <string name="animations_title">Animasi</string>
     <string name="buttons_title">Tombol</string>

@@ -117,6 +117,24 @@ limitations under the License.
                 android:data="https://t.me/bidin1709" />
         </Preference>
 
+	<Preference
+            android:title="@string/dev_8"
+            android:summary="@string/dev8_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/schatzrebirth" />
+        </Preference>
+
+	<Preference
+            android:title="@string/dev_9"
+            android:summary="@string/dev9_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/fvckzysn" />
+        </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

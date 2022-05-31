@@ -135,6 +135,15 @@ limitations under the License.
                 android:data="https://t.me/fvckzysn" />
         </Preference>
 
+        <Preference
+            android:title="@string/dev_10"
+            android:summary="@string/dev10_description"
+            android:icon="@drawable/ic_devs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Mukhlas_Ex" />
+        </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -149,6 +158,15 @@ limitations under the License.
 		android:action="android.intent.action.VIEW"
 		android:data="https://t.me/Fakeriz" />
 	</Preference>
+
+        <Preference
+            android:title="@string/dev_10"
+            android:summary="@string/designers"
+            android:icon="@drawable/ic_design">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Fakeriz" />
+        </Preference>
 
     </PreferenceCategory>
 

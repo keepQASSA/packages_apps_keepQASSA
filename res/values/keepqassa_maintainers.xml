@@ -20,7 +20,6 @@ limitations under the License.
     <string-array name="maintainers_title" translatable="false">
         <item>Yudi</item>
         <item>ghou8s</item>
-        <item>Lynx</item>
 	<item>Fakeriz.</item>
         <item>Abidin</item>
 	</string-array>
@@ -29,7 +28,6 @@ limitations under the License.
     <string-array name="maintainers_devices" translatable="false">
         <item>Xiaomi Redmi Note 8 Pro (Begonia)</item>
 	<item>Xiaomi Redmi Note 9 Pro (Joyeuse)</item>
-        <item>Poco M3 / Redmi 9T (Juice)</item>
         <item>Poco X3 NFC (Surya)</item>
         <item>RMX2020 (Realme C3)</item>
 	</string-array>
@@ -38,7 +36,6 @@ limitations under the License.
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/PasangRom</item>
 	<item>https://t.me/ghou8s</item>
-        <item>https://t.me/hakazeee</item>
         <item>https://t.me/Fakeriz</item>
 	<item>https://t.me/bidin1709</item>
 	</string-array>

@@ -96,25 +96,25 @@ limitations under the License.
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/hakazeee" />
+                android:data="https://t.me/BH36B" />
         </Preference>
 
-	<Preference
+        <Preference
             android:title="@string/dev_6"
             android:summary="@string/dev6_description"
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/BH36B" />
+                android:data="https://t.me/bidin1709" />
         </Preference>
 
-        <Preference
+	<Preference
             android:title="@string/dev_7"
             android:summary="@string/dev7_description"
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/bidin1709" />
+                android:data="https://t.me/schatzrebirth" />
         </Preference>
 
 	<Preference
@@ -123,21 +123,12 @@ limitations under the License.
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/schatzrebirth" />
-        </Preference>
-
-	<Preference
-            android:title="@string/dev_9"
-            android:summary="@string/dev9_description"
-            android:icon="@drawable/ic_devs" >
-            <intent
-                android:action="android.intent.action.VIEW"
                 android:data="https://t.me/fvckzysn" />
         </Preference>
 
         <Preference
-            android:title="@string/dev_10"
-            android:summary="@string/dev10_description"
+            android:title="@string/dev_9"
+            android:summary="@string/dev9_description"
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
@@ -145,8 +136,8 @@ limitations under the License.
         </Preference>
 
         <Preference
-            android:title="@string/dev_11"
-            android:summary="@string/dev11_description"
+            android:title="@string/dev_10"
+            android:summary="@string/dev10_description"
             android:icon="@drawable/ic_devs" >
             <intent
                 android:action="android.intent.action.VIEW"
@@ -170,7 +161,7 @@ limitations under the License.
 	</Preference>
 
         <Preference
-            android:title="@string/dev_10"
+            android:title="@string/dev_9"
             android:summary="@string/designers"
             android:icon="@drawable/ic_design">
             <intent

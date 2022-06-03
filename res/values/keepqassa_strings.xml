@@ -43,20 +43,18 @@
     <string name="dev3_description">Core Dev, Device maintainer</string>
     <string name="dev_4">Yudi</string>
     <string name="dev4_description">Contributor, Device maintainer</string>
-    <string name="dev_5">Lynx</string>
-    <string name="dev5_description">Contributor, Device maintainer</string>
-    <string name="dev_6">BH36B</string>
-    <string name="dev6_description">Contributor</string>
-    <string name="dev_7">Abidin</string>
-    <string name="dev7_description">Contributor, Device maintainer</string>
-    <string name="dev_8">Rifandi Mutakin</string>
+    <string name="dev_5">BH36B</string>
+    <string name="dev5_description">Contributor</string>
+    <string name="dev_6">Abidin</string>
+    <string name="dev6_description">Contributor, Device maintainer</string>
+    <string name="dev_7">Rifandi Mutakin</string>
+    <string name="dev7_description">Contributor</string>
+    <string name="dev_8">ꐦ𝘧𝘷𝘤𝘬𝘻𝘺𝘴𝘯</string>
     <string name="dev8_description">Contributor</string>
-    <string name="dev_9">ꐦ𝘧𝘷𝘤𝘬𝘻𝘺𝘴𝘯</string>
-    <string name="dev9_description">Contributor</string>
-    <string name="dev_10">Simuks</string>
-    <string name="dev10_description">Contributor, Desainer</string>
-    <string name="dev_11">ᵖⁱᵖⁱᵖⁱʷʷ°</string>
-    <string name="dev11_description">Contributor</string>
+    <string name="dev_9">Simuks</string>
+    <string name="dev9_description">Contributor, Desainer</string>
+    <string name="dev_10">ᵖⁱᵖⁱᵖⁱʷʷ°</string>
+    <string name="dev10_description">Contributor</string>
 	
     <!-- Categories -->
     <string name="about_title">About AOSQP and our Teams</string>

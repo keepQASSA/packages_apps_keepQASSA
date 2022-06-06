@@ -94,7 +94,7 @@ public class Misc extends SettingsPreferenceFragment
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
         Settings.System.putIntForUser(resolver,
-                Settings.System.SCREENSHOT_SOUND, 1, UserHandle.USER_CURRENT);
+                Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         GamingMode.reset(mContext);
     }
 

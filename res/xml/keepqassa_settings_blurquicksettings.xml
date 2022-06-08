@@ -33,6 +33,6 @@
         android:dependency="qs_blur"
         android:max="25"
         settings:min="1"
-        android:defaultValue="7" />
+        android:defaultValue="25" />
 
 </PreferenceScreen>

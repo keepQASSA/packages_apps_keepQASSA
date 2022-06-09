@@ -37,7 +37,7 @@ import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.custom.ActionUtils;
+import com.android.internal.util.aosqp.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 

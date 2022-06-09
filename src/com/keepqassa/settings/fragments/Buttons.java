@@ -62,8 +62,9 @@ import com.android.settings.gestures.SystemNavigationPreferenceController;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_2BUTTON_OVERLAY;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVERLAY;
 
-public class Buttons extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class Buttons extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
     private static final String TAG = "Buttons";
 
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";

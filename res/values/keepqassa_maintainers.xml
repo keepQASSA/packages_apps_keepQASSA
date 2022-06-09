@@ -21,23 +21,20 @@ limitations under the License.
         <item>Yudi</item>
         <item>ghou8s</item>
 	<item>Fakeriz.</item>
-        <item>Abidin</item>
-	</string-array>
+    </string-array>
 
     <!-- Devices maintained by maintainer -->
     <string-array name="maintainers_devices" translatable="false">
         <item>Xiaomi Redmi Note 8 Pro (Begonia)</item>
 	<item>Xiaomi Redmi Note 9 Pro (Joyeuse)</item>
         <item>Poco X3 NFC (Surya)</item>
-        <item>RMX2020 (Realme C3)</item>
-	</string-array>
+    </string-array>
 
     <!-- Telegram URL of maintainers device group-->
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/PasangRom</item>
 	<item>https://t.me/ghou8s</item>
         <item>https://t.me/Fakeriz</item>
-	<item>https://t.me/bidin1709</item>
-	</string-array>
+    </string-array>
 
 </resources>

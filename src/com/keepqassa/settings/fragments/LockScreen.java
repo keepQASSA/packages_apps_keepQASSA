@@ -31,8 +31,8 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class LockScreen extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class LockScreen extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {

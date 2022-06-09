@@ -37,7 +37,7 @@ import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.custom.ActionUtils;
+import com.android.internal.util.aosqp.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -138,7 +138,7 @@ public class QuickSettings extends SettingsPreferenceFragment
         int value = Integer.parseInt((String) newValue);
         String key = preference.getKey();
         switch (key) {
-            case STATUS_BAR_QUICK_QS_PULLDOWN:
+        case STATUS_BAR_QUICK_QS_PULLDOWN:
                 updateQuickPulldownSummary(value);
                 break;
         case STATUS_BAR_QUICK_QS_ANIMATION_STYLE:

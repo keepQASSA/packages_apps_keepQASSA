@@ -40,7 +40,7 @@ import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.custom.ActionUtils;
+import com.android.internal.util.aosqp.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -48,8 +48,8 @@ import com.android.internal.util.custom.cutout.CutoutUtils;
 
 import java.util.Set;
 
-public class StatusBar extends SettingsPreferenceFragment implements
-    Preference.OnPreferenceChangeListener {
+public class StatusBar extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String CATEGORY_CLOCK = "status_bar_clock_key";
 

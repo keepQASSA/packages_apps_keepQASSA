@@ -48,8 +48,10 @@ import com.android.internal.util.custom.cutout.CutoutUtils;
 
 import java.util.Set;
 
-public class StatusBar extends SettingsPreferenceFragment implements
-    Preference.OnPreferenceChangeListener {
+public class StatusBar extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
+    public static final String TAG = "StatusBar";
 
     private static final String CATEGORY_CLOCK = "status_bar_clock_key";
 

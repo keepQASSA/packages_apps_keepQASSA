@@ -35,8 +35,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
 
-public class BlurQuickSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class BlurQuickSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "BlurQuickSettings";
 

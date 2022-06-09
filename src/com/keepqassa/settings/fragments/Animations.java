@@ -43,6 +43,8 @@ import java.util.List;
 public class Animations extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    public static final String TAG = "Animations";
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);

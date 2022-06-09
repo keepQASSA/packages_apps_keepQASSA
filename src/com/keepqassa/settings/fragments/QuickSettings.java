@@ -46,6 +46,8 @@ import java.util.Set;
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    public static final String TAG = "QuickSettings";
+
     private static final String CATEGORY_BRIGHTNESS = "status_bar_brightness_category";
     private static final String CATEGORY_QS_ANIMATION = "quick_settings_animations";
 

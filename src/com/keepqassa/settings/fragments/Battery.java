@@ -46,64 +46,15 @@ public class Battery extends SettingsPreferenceFragment
 
     public static final String TAG = "Battery";
 
-    private static final String CATEGORY_BATTERY = "status_bar_battery_key";
-
-    private static final String ICON_BLACKLIST = "icon_blacklist";
-
-    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-    private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-
-    private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 2;
-
-    private SystemSettingListPreference mStatusBarBattery;
-    private SystemSettingListPreference mStatusBarBatteryShowPercent;
-
-    private PreferenceCategory mStatusBarBatteryCategory;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.keepqassa_settings_battery);
-
-        mStatusBarBatteryShowPercent =
-                (SystemSettingListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
-        mStatusBarBattery =
-                (SystemSettingListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
-        mStatusBarBattery.setOnPreferenceChangeListener(this);
-        enableStatusBarBatteryDependents(mStatusBarBattery.getIntValue(2));
-
-        mStatusBarBatteryCategory =
-                (PreferenceCategory) getPreferenceScreen().findPreference(CATEGORY_BATTERY);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        final String curIconBlacklist = Settings.Secure.getString(getContext().getContentResolver(),
-                ICON_BLACKLIST);
-
-        if (TextUtils.delimitedStringContains(curIconBlacklist, ',', "battery")) {
-            getPreferenceScreen().removePreference(mStatusBarBatteryCategory);
-        } else {
-            getPreferenceScreen().addPreference(mStatusBarBatteryCategory);
-        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-    int value = Integer.parseInt((String) newValue);
-        String key = preference.getKey();
-        switch (key) {
-            case STATUS_BAR_BATTERY_STYLE:
-                enableStatusBarBatteryDependents(value);
-                break;
-        }
-        return true;
-    }
-
-    private void enableStatusBarBatteryDependents(int batteryIconStyle) {
-        mStatusBarBatteryShowPercent.setEnabled(batteryIconStyle != STATUS_BAR_BATTERY_STYLE_TEXT);
+        return false;
     }
 
     @Override

@@ -29,8 +29,6 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.internal.util.custom.cutout.CutoutUtils;
-
 public class NetworkTraffic extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener  {
 

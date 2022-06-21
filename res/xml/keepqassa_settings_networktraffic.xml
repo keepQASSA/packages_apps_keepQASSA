@@ -21,7 +21,8 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/network_traffic_settings_title" >
 
-    <DropDownPreference
+    <com.keepqassa.settings.preferences.SystemSettingListPreference
+        android:layout="@layout/xd_pref_card_top"
         android:key="network_traffic_location"
         android:title="@string/network_traffic_mode_title"
         android:entries="@array/network_traffic_mode_entries"
@@ -30,12 +31,14 @@
         android:persistent="false" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        android:layout="@layout/xd_pref_card_mid"
         android:key="network_traffic_autohide"
         android:title="@string/network_traffic_autohide"
         android:summary="@string/network_traffic_autohide_summary"
         android:defaultValue="false" />
 
-    <DropDownPreference
+    <com.keepqassa.settings.preferences.SystemSettingListPreference
+        android:layout="@layout/xd_pref_card_bot"
         android:key="network_traffic_unit_type"
         android:title="@string/network_traffic_units_title"
         android:entries="@array/network_traffic_units_entries"

@@ -21,10 +21,12 @@
 
     <PreferenceCategory
         android:key="status_bar_battery_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/status_bar_battery_title">
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="status_bar_battery_style"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/status_bar_battery_style_title"
             android:summary="%s"
             android:dialogTitle="@string/status_bar_battery_style_title"
@@ -34,6 +36,7 @@
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="status_bar_show_battery_percent"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/status_bar_battery_percentage_title"
             android:summary="%s"
             android:dialogTitle="@string/status_bar_battery_percentage_title"

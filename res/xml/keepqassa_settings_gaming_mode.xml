@@ -23,6 +23,7 @@
     <!-- Master switch -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_enabled"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_enabled_summary"
         android:defaultValue="false" />
@@ -30,6 +31,7 @@
     <!-- Heads up -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_headsup_toggle"
+        android:layout="@layout/xd_pref_card_mid"
         android:title="@string/gaming_mode_headsup_title"
         android:summary="@string/gaming_mode_headsup_summary"
         android:dependency="gaming_mode_enabled"
@@ -38,6 +40,7 @@
     <!-- Manual brightness -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_manual_brightness_toggle"
+        android:layout="@layout/xd_pref_card_mid"
         android:title="@string/gaming_mode_brightness_title"
         android:summary="@string/gaming_mode_brightness_summary"
         android:dependency="gaming_mode_enabled"
@@ -45,6 +48,7 @@
 
     <com.keepqassa.settings.preferences.SystemSettingListPreference
         android:key="gaming_mode_ringer_mode"
+        android:layout="@layout/xd_pref_card_mid"
         android:title="@string/gaming_mode_ringer_title"
         android:entries="@array/gaming_mode_ringer_entries"
         android:entryValues="@array/gaming_mode_ringer_values"
@@ -54,6 +58,7 @@
 
     <com.keepqassa.settings.preferences.SystemSettingListPreference
         android:key="gaming_mode_notifications"
+        android:layout="@layout/xd_pref_card_mid"
         android:title="@string/gaming_mode_notifications_title"
         android:entries="@array/gaming_mode_notifications_entries"
         android:entryValues="@array/gaming_mode_notifications_values"
@@ -64,6 +69,7 @@
     <!-- Dynamic gaming mode -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_state"
+        android:layout="@layout/xd_pref_card_bot"
         android:title="@string/gaming_mode_dynamic_title"
         android:summary="@string/gaming_mode_dynamic_summary"
         android:dependency="gaming_mode_enabled"
@@ -72,10 +78,14 @@
     <!-- App picker activity for gaming mode -->
     <PreferenceCategory
         android:title="@string/gaming_mode_app_picker_title"
+        android:layout="@layout/xd_pref_card_top"
         android:dependency="gaming_mode_enabled"
-        android:key="gamingmode_applications">
+        android:key="gamingmode_applications"
+        settings:allowDividerAbove="false">
         <Preference
             android:key="add_gamingmode_packages"
-            android:title="@string/add_gaming_mode_package_title" />
+            android:layout="@layout/xd_pref_card_bot"
+            android:title="@string/add_gaming_mode_package_title"
+            settings:allowDividerBelow="false" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -23,102 +23,81 @@
     <!-- #keepQASSA Banner -->
     <PreferenceScreen
         android:key="keepqassa_banner"
-        android:enabled="false"
-        android:layout="@layout/keepqassa_banner" />
-
-    <PreferenceCategory
-        android:key="about rom"
-        android:title="@string/keepqassa_about_rom" >
-
-    <!-- About -->
-    <Preference
-        android:key="about_catagory"
-        android:title="@string/about_title"
-        android:fragment="com.keepqassa.settings.fragments.About"
-        android:icon="@drawable/ic_settings_keepqassa_about"/>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="features"
-        android:title="@string/keepqassa_features_title" >
+        android:enabled="true"
+        android:layout="@layout/keepqassa_banner"
+        android:fragment="com.keepqassa.settings.fragments.About" />
 			
         <!-- Status Bar -->
         <Preference
             android:key="statusbar_category"
+            android:layout="@layout/xd_pref_card_top"
             android:title="@string/statusbar_title"
-            android:fragment="com.keepqassa.settings.fragments.StatusBar" 
-            android:icon="@drawable/ic_settings_statusbar"/>
+            android:fragment="com.keepqassa.settings.fragments.StatusBar"/>
 
         <!-- Interface
         <Preference
             android:key="interface_category"
             android:title="@string/interface_title"
-            android:fragment="com.keepqassa.settings.fragments.Interface"
-            android:icon="@drawable/ic_settings_interface"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Interface"/> -->
 
         <!-- Quick Settings -->
         <Preference
             android:key="quicksettings_category"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/quicksettings_title"
-            android:fragment="com.keepqassa.settings.fragments.QuickSettings"
-            android:icon="@drawable/ic_settings_quicksettings"/>
+            android:fragment="com.keepqassa.settings.fragments.QuickSettings"/>
 
         <!-- Buttons -->
         <Preference
             android:key="buttons_category"
+            android:layout="@layout/xd_pref_card_top"
             android:title="@string/buttons_title"
-            android:fragment="com.keepqassa.settings.fragments.Buttons"
-            android:icon="@drawable/ic_settings_buttons"/>
+            android:fragment="com.keepqassa.settings.fragments.Buttons"/>
         
         <!-- Gesture -->
         <Preference
             android:key="gestures_category"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/gestures_title"
-            android:fragment="com.keepqassa.settings.fragments.Gestures"
-            android:icon="@drawable/ic_settings_gesture"/>
+            android:fragment="com.keepqassa.settings.fragments.Gestures"/>
 
         <!-- Navigation Bar
         <Preference
             android:key="navigation_category"
             android:title="@string/navigation_title" 
-	    android:fragment="com.keepqassa.settings.fragments.Navigation"
-            android:icon="@drawable/ic_settings_navigation"/> -->
+	    android:fragment="com.keepqassa.settings.fragments.Navigation"/> -->
 
         <!-- Lock Screen
         <Preference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
-            android:fragment="com.keepqassa.settings.fragments.LockScreen"
-            android:icon="@drawable/ic_settings_lockscreen"/> -->
+            android:fragment="com.keepqassa.settings.fragments.LockScreen"/> -->
 
         <!-- Notifications -->
         <Preference
             android:key="notifications_category"
+            android:layout="@layout/xd_pref_card_top"
             android:title="@string/notifications_title"
-            android:fragment="com.keepqassa.settings.fragments.Notifications"
-            android:icon="@drawable/ic_settings_notifications"/>
+            android:fragment="com.keepqassa.settings.fragments.Notifications"/>
 
         <!-- Animation
         <Preference
             android:key="animations_category"
             android:title="@string/animations_title"
-            android:fragment="com.keepqassa.settings.fragments.Animations"
-            android:icon="@drawable/ic_settings_animation"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Animations"/> -->
 
         <!-- Battery Saving -->
         <Preference
             android:key="battery_category"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/battery_title"
-            android:fragment="com.keepqassa.settings.fragments.Battery"
-            android:icon="@drawable/ic_settings_batterysave"/>
+            android:fragment="com.keepqassa.settings.fragments.Battery"/>
 
         <!-- Misc -->
         <Preference
             android:key="misc_category"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/misc_title"
-            android:fragment="com.keepqassa.settings.fragments.Misc"
-            android:icon="@drawable/ic_settings_misc"/>
+            android:fragment="com.keepqassa.settings.fragments.Misc"/>
 
-    </PreferenceCategory>
 </PreferenceScreen>

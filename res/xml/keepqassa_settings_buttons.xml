@@ -21,39 +21,46 @@
 
     <PreferenceCategory
         android:key="navbar_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/navigation_bar_title">
 
         <SwitchPreference
             android:key="disable_nav_keys"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/disable_navkeys_title"
             android:summary="@string/disable_navkeys_summary"
             android:defaultValue="false" />
 
         <Preference
             android:key="navbar_gestures"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/system_navigation_title"
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_compact_layout"
+            android:layout="@layout/xd_pref_card_top"
             android:title="@string/navigation_bar_compact_layout_title"
             android:summary="@string/navigation_bar_compact_layout_summary"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="navbar_inverse"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/nav_bar_layout_inverse_title"
             android:summary="@string/nav_bar_layout_inverse_summary"
             android:defaultValue="false" />
 
         <ListPreference
             android:key="navigation_home_long_press"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/navigation_bar_home_long_press_title"
             android:title="@string/navigation_bar_home_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -61,17 +68,19 @@
             android:persistent="false" />
 
         <ListPreference
-            android:key="navigation_home_double_tap"
-            android:dialogTitle="@string/navigation_bar_home_double_tap_title"
-            android:title="@string/navigation_bar_home_double_tap_title"
+            android:key="navigation_app_switch_long_press"
+            android:layout="@layout/xd_pref_card_mid"
+            android:dialogTitle="@string/navigation_bar_app_switch_long_press_title"
+            android:title="@string/navigation_bar_app_switch_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
 
         <ListPreference
-            android:key="navigation_app_switch_long_press"
-            android:dialogTitle="@string/navigation_bar_app_switch_long_press_title"
-            android:title="@string/navigation_bar_app_switch_long_press_title"
+            android:key="navigation_home_double_tap"
+            android:layout="@layout/xd_pref_card_bot"
+            android:dialogTitle="@string/navigation_bar_home_double_tap_title"
+            android:title="@string/navigation_bar_home_double_tap_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
@@ -80,33 +89,40 @@
 
     <PreferenceCategory
         android:key="power_key"
-        android:title="@string/hardware_keys_power_key_title">
+        android:layout="@layout/xd_pref_card_top"
+        android:title="@string/hardware_keys_power_key_title"
+        settings:allowDividerAbove="false">
 
         <PreferenceScreen
             android:key="power_menu"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/power_menu_title"
             android:fragment="com.keepqassa.settings.fragments.buttons.PowerMenuActions" />
 
         <SwitchPreference
             android:key="power_end_call"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/power_end_call_title"
             android:summary="@string/power_end_call_summary"
             android:persistent="false"/>
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_disable_power_menu"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/lockscreen_power_menu_disabled_title"
             android:summary="@string/lockscreen_power_menu_disabled_summary"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="torch_long_press_power_gesture"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/torch_long_press_power_gesture_title"
             android:summary="@string/torch_long_press_power_gesture_desc"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="torch_long_press_power_timeout"
+            android:layout="@layout/xd_pref_card_bot"
             android:dialogTitle="@string/torch_long_press_power_timeout_title"
             android:title="@string/torch_long_press_power_timeout_title"
             android:summary="%s"
@@ -119,27 +135,33 @@
 
     <PreferenceCategory
         android:key="volume_keys"
-        android:title="@string/hardware_keys_volume_keys_title" >
+        android:layout="@layout/xd_pref_card_top"
+        android:title="@string/hardware_keys_volume_keys_title"
+        settings:allowDividerAbove="false">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="volume_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="volume_answer_call"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/volume_answer_call_title"
             android:summary="@string/volume_answer_call_summary"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="volbtn_music_controls"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/volbtn_music_controls_title"
             android:summary="@string/volbtn_music_controls_summary"
             android:defaultValue="true" />
 
         <ListPreference
             android:key="volume_key_cursor_control"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/volbtn_cursor_control_title"
             android:title="@string/volbtn_cursor_control_title"
             android:entries="@array/volbtn_cursor_control_entries"
@@ -148,16 +170,19 @@
 
         <SwitchPreference
             android:key="swap_volume_buttons"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/swap_volume_buttons_title"
             android:summary="@string/swap_volume_buttons_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="button_backlight_cat"
+        android:layout="@layout/xd_pref_card_sin"
         android:title="@string/button_backlight_title">
 
         <com.keepqassa.settings.fragments.buttons.preference.ButtonBacklightBrightness
             android:key="button_backlight"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/button_backlight_title"
             android:dialogTitle="@string/button_backlight_title"
             android:persistent="false" />
@@ -166,21 +191,25 @@
 
     <PreferenceCategory
         android:key="home_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_home_key_title" >
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="home_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="true" />
 
         <SwitchPreference
             android:key="home_answer_call"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/home_answer_call_title"
             android:summary="@string/home_answer_call_summary"
             android:persistent="false"/>
 
         <ListPreference
             android:key="hardware_keys_home_long_press"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/hardware_keys_long_press_title"
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -189,6 +218,7 @@
 
         <ListPreference
             android:key="hardware_keys_home_double_tap"
+            android:layout="@layout/xd_pref_card_bot"
             android:dialogTitle="@string/hardware_keys_double_tap_title"
             android:title="@string/hardware_keys_double_tap_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -199,10 +229,12 @@
 
     <PreferenceCategory
         android:key="back_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_back_key_title" >
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="back_wake_screen"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
@@ -210,15 +242,18 @@
 
     <PreferenceCategory
         android:key="menu_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_menu_key_title" >
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="menu_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <ListPreference
             android:key="hardware_keys_menu_press"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/hardware_keys_short_press_title"
             android:title="@string/hardware_keys_short_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -227,6 +262,7 @@
 
         <ListPreference
             android:key="hardware_keys_menu_long_press"
+            android:layout="@layout/xd_pref_card_bot"
             android:dialogTitle="@string/hardware_keys_long_press_title"
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -237,15 +273,18 @@
 
     <PreferenceCategory
         android:key="assist_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_assist_key_title" >
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="assist_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <ListPreference
             android:key="hardware_keys_assist_press"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/hardware_keys_short_press_title"
             android:title="@string/hardware_keys_short_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -254,6 +293,7 @@
 
         <ListPreference
             android:key="hardware_keys_assist_long_press"
+            android:layout="@layout/xd_pref_card_bot"
             android:dialogTitle="@string/hardware_keys_long_press_title"
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -264,15 +304,18 @@
 
     <PreferenceCategory
         android:key="app_switch_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_appswitch_key_title" >
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="app_switch_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <ListPreference
             android:key="hardware_keys_app_switch_press"
+            android:layout="@layout/xd_pref_card_mid"
             android:dialogTitle="@string/hardware_keys_short_press_title"
             android:title="@string/hardware_keys_short_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -281,6 +324,7 @@
 
         <ListPreference
             android:key="hardware_keys_app_switch_long_press"
+            android:layout="@layout/xd_pref_card_bot"
             android:dialogTitle="@string/hardware_keys_long_press_title"
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -291,21 +335,25 @@
 
     <PreferenceCategory
         android:key="camera_key"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/hardware_keys_camera_key_title">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="camera_wake_screen"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="camera_sleep_on_release"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/camera_sleep_on_release_title"
             android:summary="@string/camera_sleep_on_release_summary"
             android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="camera_launch"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/camera_launch_title"
             android:summary="@string/camera_launch_summary"
             android:defaultValue="false" />
@@ -314,10 +362,12 @@
 
     <PreferenceCategory
         android:key="others_category"
+        android:layout="@layout/xd_pref_card_top"
         android:title="@string/others_settings_title">
 
         <Preference
             android:key="additional_buttons"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/additional_buttons_title" />
 
     </PreferenceCategory>

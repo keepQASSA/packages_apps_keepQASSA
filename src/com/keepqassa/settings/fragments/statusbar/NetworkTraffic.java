@@ -21,7 +21,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.Toast;
 
-import androidx.preference.DropDownPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
@@ -29,14 +28,17 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.keepqassa.settings.preferences.SystemSettingListPreference;
+import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
+
 public class NetworkTraffic extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener  {
 
     private static final String TAG = "NetworkTraffic";
 
-    private DropDownPreference mNetTrafficMode;
-    private SwitchPreference mNetTrafficAutohide;
-    private DropDownPreference mNetTrafficUnitType;
+    private SystemSettingListPreference mNetTrafficMode;
+    private SystemSettingSwitchPreference mNetTrafficAutohide;
+    private SystemSettingListPreference mNetTrafficUnitType;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,16 +46,16 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.keepqassa_settings_networktraffic);
         final ContentResolver resolver = getActivity().getContentResolver();
 
-        mNetTrafficMode = findPreference(Settings.System.NETWORK_TRAFFIC_LOCATION);
+        mNetTrafficMode = (SystemSettingListPreference) findPreference(Settings.System.NETWORK_TRAFFIC_LOCATION);
         mNetTrafficMode.setOnPreferenceChangeListener(this);
         int mode = Settings.System.getInt(resolver,
                 Settings.System.NETWORK_TRAFFIC_LOCATION, 0);
         mNetTrafficMode.setValue(String.valueOf(mode));
 
-        mNetTrafficAutohide = findPreference(Settings.System.NETWORK_TRAFFIC_AUTOHIDE);
+        mNetTrafficAutohide = (SystemSettingSwitchPreference) findPreference(Settings.System.NETWORK_TRAFFIC_AUTOHIDE);
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
-        mNetTrafficUnitType = findPreference(Settings.System.NETWORK_TRAFFIC_UNIT_TYPE);
+        mNetTrafficUnitType = (SystemSettingListPreference) findPreference(Settings.System.NETWORK_TRAFFIC_UNIT_TYPE);
         mNetTrafficUnitType.setOnPreferenceChangeListener(this);
         int units = Settings.System.getInt(resolver,
                 Settings.System.NETWORK_TRAFFIC_UNIT_TYPE, /* Mbps */ 1);

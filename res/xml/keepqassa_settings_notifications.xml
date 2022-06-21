@@ -21,21 +21,26 @@
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="status_bar_notif_count"
+        android:layout="@layout/xd_pref_card_sin"
         android:title="@string/status_bar_notif_count_title"
         android:summary="@string/status_bar_notif_count_summary"
         android:defaultValue="false" />
 
     <PreferenceCategory
-        android:title="@string/notifications_qs_title">
+        android:title="@string/notifications_qs_title"
+        android:layout="@layout/xd_pref_card_top"
+        settings:allowDividerAbove="false">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="notification_headers"
+            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/notification_headers_title"
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="center_notification_headers"
+            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/center_notification_headers_title"
             android:summary="@string/center_notification_headers_summary"
             android:dependency="notification_headers"

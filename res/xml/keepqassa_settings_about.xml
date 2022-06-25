@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2018 Rebellion-OS
-     Copyright (C) 2022 AOSQP
+     Copyright (C) 2022 QASSA
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -53,9 +53,9 @@ limitations under the License.
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="aosqp teams"
+        android:key="qassa teams"
         android:layout="@layout/xd_pref_card_top"
-	android:title="@string/aosqp_teams"
+	android:title="@string/qassa_teams"
         settings:allowDividerAbove="false" >
 
 	<Preference
@@ -188,7 +188,7 @@ limitations under the License.
             android:summary="@string/maintainer1_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/aosqpjoyeuse" />
+                android:data="https://t.me/qassajoyeuse" />
         </Preference>
 
         <Preference
@@ -197,7 +197,7 @@ limitations under the License.
             android:summary="@string/maintainer2_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/aosqpbegonia" />
+                android:data="https://t.me/qassabegonia" />
         </Preference>
 
         <Preference

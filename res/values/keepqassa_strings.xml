@@ -2,7 +2,7 @@
 <!--
     Copyright © 2018-19 The rebellion OS Project
     Copyright © 2019 Ancient OS Project
-    Copyright © 2022 AOSQP
+    Copyright © 2022 QASSA
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@
     <string name="keepqassa_dashboard_summary">here we keep QASSA</string>
     <string name="keepqassa_features_title">#keepQASSA Features</string>
 
-    <!-- About AOSQP -->
+    <!-- About QASSA -->
     <string name="keepqassa_about_rom">About</string>
-    <string name="keepqassa_about_info_summary">AOSQP is an AOSP/PE+ based Rom with customizations</string>
+    <string name="keepqassa_about_info_summary">QASSA is an AOSP/PE+ based Rom with customizations</string>
     <string name="about_info">About Teams</string>
-    <string name="aosqp_teams">AOSQP Teams</string>
+    <string name="qassa_teams">QASSA Teams</string>
     <string name="telegram">Telegram</string>
     <string name="telegram_description">Join our Telegram discussion group</string>
     <string name="web">Download Center</string>
@@ -60,7 +60,7 @@
     <string name="contributor5_description">Contributor</string>
 	
     <!-- Categories -->
-    <string name="about_title">About AOSQP and our Teams</string>
+    <string name="about_title">About QASSA and our Teams</string>
     <string name="animations_title">Animations</string>
     <string name="buttons_title">Buttons</string>
     <string name="gestures_title">Gestures</string>

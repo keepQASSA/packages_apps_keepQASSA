@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2018 Rebellion-OS
  *  Copyright (C) 2019 Ancient-OS
+ *  Copyright (C) 2022 QASSA
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

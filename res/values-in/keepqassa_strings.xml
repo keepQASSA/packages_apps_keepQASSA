@@ -2,7 +2,7 @@
 <!--
     Copyright © 2018-19 The rebellion OS Project
     Copyright © 2019 Ancient OS Project
-    Copyright © 2022 AOSQP
+    Copyright © 2022 QASSA
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -20,9 +20,9 @@
 <resources>
     <string name="keepqassa_features_title">#keepQASSA Fitur</string>
     <string name="keepqassa_about_rom">Tentang</string>
-    <string name="keepqassa_about_info_summary">AOSQP berbased AOSP/PE+ dengan kustomisasi</string>
+    <string name="keepqassa_about_info_summary">QASSA berbased AOSP/PE+ dengan kustomisasi</string>
     <string name="about_info">Tentang Tim</string>
-    <string name="aosqp_teams">Tim AOSQP</string>
+    <string name="qassa_teams">Tim QASSA</string>
     <string name="telegram">Telegram</string>
     <string name="telegram_description">Gabung ke group diskusi Telegram kami</string>
     <string name="web">Pusat Unduhan</string>
@@ -43,7 +43,7 @@
     <string name="contributor3_description">Kontributor</string>
     <string name="contributor4_description">Kontributor</string>
     <string name="contributor5_description">Kontributor</string>
-    <string name="about_title">Tentang AOSQP dan Tim</string>
+    <string name="about_title">Tentang QASSA dan Tim</string>
     <string name="animations_title">Animasi</string>
     <string name="buttons_title">Tombol</string>
     <string name="gestures_title">Gestures</string>

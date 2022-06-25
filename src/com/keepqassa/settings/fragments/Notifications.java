@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2022 QASSA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +31,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.aosqp.ActionUtils;
+import com.android.internal.util.qassa.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 

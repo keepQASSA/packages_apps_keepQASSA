@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2019 crDroid Android Project
- * Copyright (c) 2022 AOSQP
+ * Copyright (c) 2022 QASSA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import android.util.Log;
 import android.text.TextUtils;
 
 import com.android.settings.R;
-import com.android.internal.util.aosqp.GamingModeController;
+import com.android.internal.util.qassa.GamingModeController;
 
 public class GamingModeReceiver extends BroadcastReceiver {
 

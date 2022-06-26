@@ -20,13 +20,11 @@
     android:title="@string/misc_title" >
 
     <PreferenceCategory
-        android:title="@string/general_misc_title"
-        android:layout="@layout/xd_pref_card_top">
+        android:title="@string/general_misc_title">
 
         <!-- Screenshot Sound  -->
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="screenshot_sound"
-            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/screenshot_sound_title"
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="false" />
@@ -34,7 +32,6 @@
         <!-- Gaming Mode -->
         <Preference
             android:key="gaming_mode"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/gaming_mode_title"
             android:summary="@string/gaming_mode_summary"
             android:fragment="com.keepqassa.settings.fragments.misc.GamingMode"/>
@@ -43,14 +40,11 @@
 
     <PreferenceCategory
         android:key="spoof_category"
-        android:layout="@layout/xd_pref_card_top"
-        android:title="@string/spoof_title"
-        settings:allowDividerAbove="false">
+        android:title="@string/spoof_title">
 
         <!-- Unlimited google photos storage -->
         <SwitchPreference
             android:key="use_photos_spoof"
-            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/use_photos_spoof_title"
             android:summary="@string/use_photos_spoof_summary"
             android:defaultValue="true" />
@@ -58,14 +52,12 @@
         <!-- Unlock FPS for specific games -->
         <SwitchPreference
             android:key="use_games_spoof"
-            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/use_games_spoof_title"
             android:summary="@string/use_games_spoof_summary" />
 
         <!-- Unlock higher quality streams for specific apps -->
         <SwitchPreference
             android:key="use_stream_spoof"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/use_stream_spoof_title"
             android:summary="@string/use_stream_spoof_summary"
             android:defaultValue="true" />
@@ -73,13 +65,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/dashboard_stuff"
-        android:layout="@layout/xd_pref_card_top"
-        settings:allowDividerAbove="false">
+        android:title="@string/dashboard_stuff">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
             android:key="enable_conditions"
-            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/dashboard_conditions_title"
             android:summaryOn="@string/summary_dashboard_conditions_enabled"
             android:summaryOff="@string/summary_dashboard_conditions_disabled"
@@ -87,7 +76,6 @@
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
             android:key="enable_suggestions"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/dashboard_suggestions_title"
             android:summaryOn="@string/summary_dashboard_suggestions_enabled"
             android:summaryOff="@string/summary_dashboard_suggestions_disabled"

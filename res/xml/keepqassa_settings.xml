@@ -30,8 +30,8 @@
         <!-- Status Bar -->
         <Preference
             android:key="statusbar_category"
-            android:layout="@layout/xd_pref_card_top"
             android:title="@string/statusbar_title"
+            settings:allowDividerAbove="true"
             android:fragment="com.keepqassa.settings.fragments.StatusBar"/>
 
         <!-- Interface
@@ -43,21 +43,18 @@
         <!-- Quick Settings -->
         <Preference
             android:key="quicksettings_category"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/quicksettings_title"
             android:fragment="com.keepqassa.settings.fragments.QuickSettings"/>
 
         <!-- Buttons -->
         <Preference
             android:key="buttons_category"
-            android:layout="@layout/xd_pref_card_top"
             android:title="@string/buttons_title"
             android:fragment="com.keepqassa.settings.fragments.Buttons"/>
         
         <!-- Gesture -->
         <Preference
             android:key="gestures_category"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/gestures_title"
             android:fragment="com.keepqassa.settings.fragments.Gestures"/>
 
@@ -76,7 +73,6 @@
         <!-- Notifications -->
         <Preference
             android:key="notifications_category"
-            android:layout="@layout/xd_pref_card_top"
             android:title="@string/notifications_title"
             android:fragment="com.keepqassa.settings.fragments.Notifications"/>
 
@@ -89,14 +85,12 @@
         <!-- Battery Saving -->
         <Preference
             android:key="battery_category"
-            android:layout="@layout/xd_pref_card_mid"
             android:title="@string/battery_title"
             android:fragment="com.keepqassa.settings.fragments.Battery"/>
 
         <!-- Misc -->
         <Preference
             android:key="misc_category"
-            android:layout="@layout/xd_pref_card_bot"
             android:title="@string/misc_title"
             android:fragment="com.keepqassa.settings.fragments.Misc"/>
 

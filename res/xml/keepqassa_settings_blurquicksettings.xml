@@ -22,7 +22,6 @@
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="qs_blur"
-        android:layout="@layout/xd_pref_card_sin"
         android:title="@string/blur_quicksettings_title"
         android:summary="@string/blur_quicksettings_summary"
         android:defaultValue="true" />

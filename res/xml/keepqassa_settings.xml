@@ -32,66 +32,77 @@
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             settings:allowDividerAbove="true"
-            android:fragment="com.keepqassa.settings.fragments.StatusBar"/>
+            android:fragment="com.keepqassa.settings.fragments.StatusBar"
+            android:icon="@drawable/ic_settings_statusbar"/>
 
         <!-- Interface
         <Preference
             android:key="interface_category"
             android:title="@string/interface_title"
-            android:fragment="com.keepqassa.settings.fragments.Interface"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Interface"
+            android:icon="@drawable/ic_settings_interface"/> -->
 
         <!-- Quick Settings -->
         <Preference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
-            android:fragment="com.keepqassa.settings.fragments.QuickSettings"/>
+            android:fragment="com.keepqassa.settings.fragments.QuickSettings"
+            android:icon="@drawable/ic_settings_quicksettings"/>
 
         <!-- Buttons -->
         <Preference
             android:key="buttons_category"
             android:title="@string/buttons_title"
-            android:fragment="com.keepqassa.settings.fragments.Buttons"/>
+            android:fragment="com.keepqassa.settings.fragments.Buttons"
+            android:icon="@drawable/ic_settings_buttons"/>
         
         <!-- Gesture -->
         <Preference
             android:key="gestures_category"
             android:title="@string/gestures_title"
-            android:fragment="com.keepqassa.settings.fragments.Gestures"/>
+            android:fragment="com.keepqassa.settings.fragments.Gestures"
+            android:icon="@drawable/ic_settings_gesture"/>
 
         <!-- Navigation Bar
         <Preference
             android:key="navigation_category"
             android:title="@string/navigation_title" 
-	    android:fragment="com.keepqassa.settings.fragments.Navigation"/> -->
+	    android:fragment="com.keepqassa.settings.fragments.Navigation"/>
+            android:icon="@drawable/ic_settings_navigation"/> -->
 
         <!-- Lock Screen
         <Preference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
-            android:fragment="com.keepqassa.settings.fragments.LockScreen"/> -->
+            android:fragment="com.keepqassa.settings.fragments.LockScreen"/>
+            android:icon="@drawable/ic_settings_lockscreen"/> -->
 
         <!-- Notifications -->
         <Preference
             android:key="notifications_category"
             android:title="@string/notifications_title"
-            android:fragment="com.keepqassa.settings.fragments.Notifications"/>
+            android:fragment="com.keepqassa.settings.fragments.Notifications"
+            android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- Animation
         <Preference
             android:key="animations_category"
             android:title="@string/animations_title"
-            android:fragment="com.keepqassa.settings.fragments.Animations"/> -->
+            android:fragment="com.keepqassa.settings.fragments.Animations"
+            android:icon="@drawable/ic_settings_animations"/> -->
 
         <!-- Battery Saving -->
         <Preference
             android:key="battery_category"
             android:title="@string/battery_title"
-            android:fragment="com.keepqassa.settings.fragments.Battery"/>
+            android:fragment="com.keepqassa.settings.fragments.Battery"
+            android:icon="@drawable/ic_settings_batterysave"/>
 
         <!-- Misc -->
         <Preference
             android:key="misc_category"
             android:title="@string/misc_title"
-            android:fragment="com.keepqassa.settings.fragments.Misc"/>
+            android:fragment="com.keepqassa.settings.fragments.Misc"
+            android:icon="@drawable/ic_settings_misc"/>
 
 </PreferenceScreen>

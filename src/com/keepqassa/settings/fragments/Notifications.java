@@ -45,9 +45,11 @@ public class Notifications extends SettingsPreferenceFragment
 
     private static final String NOTIFICATION_HEADERS  = "notification_headers";
     private static final String CENTER_NOTIFICATION_HEADERS = "center_notification_headers";
+    private static final String RIGHT_NOTIFICATION_HEADERS = "right_notification_headers";
 
     private SystemSettingSwitchPreference mShowHeaders;
     private SystemSettingSwitchPreference mCenterHeaders;
+    private SystemSettingSwitchPreference mRightHeaders;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,11 @@ public class Notifications extends SettingsPreferenceFragment
         mCenterHeaders.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CENTER_NOTIFICATION_HEADERS, 0) == 1));
         mCenterHeaders.setOnPreferenceChangeListener(this);
+
+        mRightHeaders = findPreference(RIGHT_NOTIFICATION_HEADERS);
+        mRightHeaders.setChecked((Settings.System.getInt(resolver,
+                Settings.System.RIGHT_NOTIFICATION_HEADERS, 0) == 1));
+        mRightHeaders.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -82,6 +89,12 @@ public class Notifications extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.CENTER_NOTIFICATION_HEADERS, value ? 1 : 0);
+            ActionUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mRightHeaders) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.RIGHT_NOTIFICATION_HEADERS, value ? 1 : 0);
             ActionUtils.showSystemUiRestartDialog(getContext());
             return true;
         }

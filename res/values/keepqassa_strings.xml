@@ -186,4 +186,8 @@
     <string name="dashboard_suggestions_title">Dashboard suggestions</string>
     <string name="summary_dashboard_suggestions_enabled">Dashboard suggestions are enabled</string>
     <string name="summary_dashboard_suggestions_disabled">Dashboard suggestions are disabled</string>
+
+    <!-- Right R Notification headers -->
+    <string name="right_notification_headers_title">Right notification headers</string>
+    <string name="right_notification_headers_summary">Whether to Right R style notification headers</string>
 </resources>

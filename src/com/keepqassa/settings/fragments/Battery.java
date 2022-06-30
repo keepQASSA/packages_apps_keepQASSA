@@ -46,14 +46,53 @@ public class Battery extends SettingsPreferenceFragment
 
     public static final String TAG = "Battery";
 
+    private ListPreference mBatteryStyle;
+    private ListPreference mBatteryPercent;
+    private int mBatteryPercentValue;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.keepqassa_settings_battery);
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mBatteryStyle = (ListPreference) findPreference("status_bar_battery_style");
+        int batterystyle = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_BATTERY_STYLE, 0, UserHandle.USER_CURRENT);
+        mBatteryStyle.setValue(String.valueOf(batterystyle));
+        mBatteryStyle.setSummary(mBatteryStyle.getEntry());
+        mBatteryStyle.setOnPreferenceChangeListener(this);
+
+        mBatteryPercent = (ListPreference) findPreference("status_bar_show_battery_percent");
+        int batteryPercent = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        mBatteryPercent.setValue(String.valueOf(batteryPercent));
+        mBatteryPercent.setSummary(mBatteryPercent.getEntry());
+        mBatteryPercent.setOnPreferenceChangeListener(this);
+        mBatteryPercent.setEnabled(batterystyle != 4 && batterystyle != 5);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mBatteryStyle) {
+            int batterystyle = Integer.parseInt((String) newValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_BATTERY_STYLE, batterystyle,
+                UserHandle.USER_CURRENT);
+            int index = mBatteryStyle.findIndexOfValue((String) newValue);
+            mBatteryStyle.setSummary(mBatteryStyle.getEntries()[index]);
+            mBatteryPercent.setEnabled(batterystyle != 4 && batterystyle != 5);
+            return true;
+        } else if (preference == mBatteryPercent) {
+            int batteryPercent = Integer.parseInt((String) newValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryPercent,
+                    UserHandle.USER_CURRENT);
+            int index = mBatteryPercent.findIndexOfValue((String) newValue);
+            mBatteryPercent.setSummary(mBatteryPercent.getEntries()[index]);
+            return true;
+        }
         return false;
     }
 

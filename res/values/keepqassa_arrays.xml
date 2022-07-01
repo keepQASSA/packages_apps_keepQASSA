@@ -45,10 +45,13 @@
     <string-array name="status_bar_battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_icon_portrait</item>
         <item>@string/status_bar_battery_style_icon_rlandscape</item> 
-        <item>@string/status_bar_battery_style_icon_landscape</item> 
+        <item>@string/status_bar_battery_style_icon_landscape</item>
         <item>@string/status_bar_battery_style_circle</item>
+        <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
+        <item>@string/status_bar_battery_style_big_dotted_circle</item>
         <item>@string/status_bar_battery_style_solid</item>
+        <item>@string/status_bar_battery_style_big_solid</item>
         <item>@string/status_bar_battery_style_hidden</item>
     </string-array>
 
@@ -60,6 +63,9 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 
     <!-- Battery percent -->
@@ -84,8 +90,11 @@
         <item>@string/status_bar_battery_style_icon_rlandscape</item>
         <item>@string/status_bar_battery_style_icon_landscape</item>
         <item>@string/status_bar_battery_style_circle</item>
+        <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
+        <item>@string/status_bar_battery_style_big_dotted_circle</item>
         <item>@string/status_bar_battery_style_solid</item>
+        <item>@string/status_bar_battery_style_big_solid</item>
         <item>@string/status_bar_battery_style_hidden</item>
     </string-array>
 
@@ -98,6 +107,9 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 
     <!-- QS battery location  -->

@@ -39,14 +39,14 @@
             android:title="@string/center_notification_headers_title"
             android:summary="@string/center_notification_headers_summary"
             android:dependency="notification_headers"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="right_notification_headers"
             android:title="@string/right_notification_headers_title"
             android:summary="@string/right_notification_headers_summary"
             android:dependency="center_notification_headers"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 

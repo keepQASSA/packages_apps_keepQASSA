@@ -62,17 +62,17 @@ public class Notifications extends SettingsPreferenceFragment
 
         mShowHeaders = findPreference(NOTIFICATION_HEADERS);
         mShowHeaders.setChecked((Settings.System.getInt(resolver,
-                Settings.System.NOTIFICATION_HEADERS, 0) == 1));
+                Settings.System.NOTIFICATION_HEADERS, 1) == 1));
         mShowHeaders.setOnPreferenceChangeListener(this);
 
         mCenterHeaders = findPreference(CENTER_NOTIFICATION_HEADERS);
         mCenterHeaders.setChecked((Settings.System.getInt(resolver,
-                Settings.System.CENTER_NOTIFICATION_HEADERS, 0) == 1));
+                Settings.System.CENTER_NOTIFICATION_HEADERS, 1) == 1));
         mCenterHeaders.setOnPreferenceChangeListener(this);
 
         mRightHeaders = findPreference(RIGHT_NOTIFICATION_HEADERS);
         mRightHeaders.setChecked((Settings.System.getInt(resolver,
-                Settings.System.RIGHT_NOTIFICATION_HEADERS, 0) == 1));
+                Settings.System.RIGHT_NOTIFICATION_HEADERS, 1) == 1));
         mRightHeaders.setOnPreferenceChangeListener(this);
     }
 

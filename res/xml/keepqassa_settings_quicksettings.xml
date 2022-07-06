@@ -103,7 +103,7 @@
             android:summary="%s"
             android:entries="@array/qs_rows_portrait_values"
             android:entryValues="@array/qs_rows_portrait_values"
-            android:defaultValue="3" />
+            android:defaultValue="4" />
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="qs_rows_landscape"

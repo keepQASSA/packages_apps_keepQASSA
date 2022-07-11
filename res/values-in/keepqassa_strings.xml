@@ -189,4 +189,16 @@
     <string name="file_header_provider_title">Gambar khusus</string>
     <string name="file_header_provider">file</string>
     <string name="qs_panel_alpha_title">Opasitas latar belakang</string>
+    <string name="status_bar_clock_title">Jam</string>
+    <string name="status_bar_clock_show_seconds_title">Tampilkan detik</string>
+    <string name="status_bar_clock_show_seconds_summary">Tampilkan jam, menit, dan detik</string>
+    <string name="status_bar_clock_position_title">Posisi jam</string>
+    <string name="status_bar_clock_position_right">Kanan</string>
+    <string name="status_bar_clock_position_left">Kiri</string>
+    <string name="status_bar_clock_position_center">Tengah</string>
+    <string name="status_bar_am_pm_title">Gaya AM/PM</string>
+    <string name="status_bar_am_pm_info">24-jam diaktifkan</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Kecil</string>
+    <string name="status_bar_am_pm_hidden">Tersembunyi</string>
 </resources>

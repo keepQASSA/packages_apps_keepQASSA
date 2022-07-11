@@ -55,7 +55,7 @@ public class BlurQuickSettings extends SettingsPreferenceFragment
 
         mQsBlurRadius = (CustomSeekBarPreference) findPreference(QS_BLUR_RADIUS);
         final int blurRadius = Settings.System.getInt(resolver,
-                Settings.System.QS_BLUR_RADIUS, 0);
+                Settings.System.QS_BLUR_RADIUS, 25);
             mQsBlurRadius.setValue((blurRadius));
             mQsBlurRadius.setOnPreferenceChangeListener(this);
     }

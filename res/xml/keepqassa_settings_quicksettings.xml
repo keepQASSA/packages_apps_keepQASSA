@@ -37,7 +37,7 @@
             android:title="@string/status_bar_brightness_slider_auto_title"
             android:summary="@string/status_bar_brightness_slider_auto_summary"
             android:dependency="qs_show_brightness_slider"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"

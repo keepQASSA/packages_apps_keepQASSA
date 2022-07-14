@@ -140,6 +140,14 @@ limitations under the License.
                 android:data="https://t.me/pepeew" />
         </Preference>
 
+        <Preference
+            android:title="@string/contributor_6"
+            android:summary="@string/contributor6_description" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Haze_act" />
+        </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

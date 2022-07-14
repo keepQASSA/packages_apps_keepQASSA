@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.ComponentName;
 import android.content.om.IOverlayManager;
 import android.content.res.Resources;
+import android.provider.SearchIndexableResource;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
@@ -41,7 +42,10 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.keepqassa.settings.fragments.buttons.preference.BacklightTimeoutSeekBar;
 import com.keepqassa.settings.fragments.buttons.preference.ButtonBacklightBrightness;
@@ -62,6 +66,7 @@ import com.android.settings.gestures.SystemNavigationPreferenceController;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_2BUTTON_OVERLAY;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVERLAY;
 
+@SearchIndexable
 public class Buttons extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -805,4 +810,28 @@ public class Buttons extends SettingsPreferenceFragment
         f.show(getFragmentManager(), "dialog_preference");
         onDialogShowing();
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_buttons;
+                    result.add(sir);
+
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    return keys;
+                }
+            };
 }

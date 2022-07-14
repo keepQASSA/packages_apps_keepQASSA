@@ -25,16 +25,24 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import com.keepqassa.settings.preferences.CustomSeekBarPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settings.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@SearchIndexable
 public class BlurQuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -79,4 +87,28 @@ public class BlurQuickSettings extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_blurquicksettings;
+                    result.add(sir);
+
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    return keys;
+                }
+            };
 }

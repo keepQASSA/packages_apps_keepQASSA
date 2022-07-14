@@ -18,10 +18,12 @@
 package com.keepqassa.settings.fragments;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.provider.SearchIndexableResource;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -30,8 +32,15 @@ import androidx.preference.*;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
 
+import java.util.List;
+import java.util.ArrayList;
+
+@SearchIndexable
 public class About extends SettingsPreferenceFragment implements
 Preference.OnPreferenceChangeListener {
 
@@ -51,4 +60,26 @@ Preference.OnPreferenceChangeListener {
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_about;
+                    result.add(sir);
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+            };
 }

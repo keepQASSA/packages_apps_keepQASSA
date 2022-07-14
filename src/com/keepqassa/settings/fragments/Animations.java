@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
@@ -33,13 +34,17 @@ import androidx.preference.*;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+@SearchIndexable
 public class Animations extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -59,4 +64,26 @@ public class Animations extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_animations;
+                    result.add(sir);
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+            };
 }

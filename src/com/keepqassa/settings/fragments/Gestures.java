@@ -24,9 +24,11 @@ import android.provider.SearchIndexableResource;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.android.settings.gestures.AssistGestureSettingsPreferenceController;
@@ -70,21 +72,25 @@ public class Gestures extends DashboardFragment {
         return mAmbientDisplayConfig;
     }
 
-    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(
-                        Context context, boolean enabled) {
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.keepqassa_settings_gestures;
-                    return Arrays.asList(sir);
+                    result.add(sir);
+                    return result;
                 }
-
                 @Override
-                protected boolean isPageSearchEnabled(Context context) {
-                    // All rows in this screen can lead to a different page, so suppress everything
-                    // from this page to remove duplicates.
-                    return false;
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
                 }
             };
 }

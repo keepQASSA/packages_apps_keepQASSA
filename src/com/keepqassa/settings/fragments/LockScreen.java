@@ -24,12 +24,19 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.provider.SearchIndexableResource;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
+
+import java.util.List;
+import java.util.ArrayList;
 
 public class LockScreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -50,4 +57,26 @@ public class LockScreen extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.keepqassa_settings_lockscreen;
+                    result.add(sir);
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+            };
 }

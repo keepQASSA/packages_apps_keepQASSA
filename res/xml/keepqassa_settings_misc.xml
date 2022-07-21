@@ -38,13 +38,6 @@
             settings:interval="10"
             settings:units="@string/unit_milliseconds" />
 
-        <!-- Gaming Mode -->
-        <Preference
-            android:key="gaming_mode"
-            android:title="@string/gaming_mode_title"
-            android:summary="@string/gaming_mode_summary"
-            android:fragment="com.keepqassa.settings.fragments.misc.GamingMode"/>
-
     </PreferenceCategory>
 
     <PreferenceCategory

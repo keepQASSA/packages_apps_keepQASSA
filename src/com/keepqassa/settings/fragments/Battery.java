@@ -75,7 +75,7 @@ public class Battery extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.QS_SHOW_BATTERY_ESTIMATE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
-                Settings.System.STATUS_BAR_BATTERY_STYLE, 8, UserHandle.USER_CURRENT);
+                Settings.System.STATUS_BAR_BATTERY_STYLE, 12, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.STATUS_BAR_BATTERY_TEXT_CHARGING, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,

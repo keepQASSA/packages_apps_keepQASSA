@@ -200,12 +200,16 @@
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_style_title">Battery styles</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_musku">Icon musku</string>
+    <string name="status_bar_battery_style_icon_pill">Icon pill</string>
     <string name="status_bar_battery_style_icon_rlandscape">Icon landscape default (Right)</string>
     <string name="status_bar_battery_style_icon_rlandscape_a">Icon landscape A (Right)</string>
     <string name="status_bar_battery_style_icon_rlandscape_b">Icon landscape B (Right)</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape default (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_a">Icon landscape A (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_b">Icon landscape B (Left)</string>
+    <string name="status_bar_battery_style_icon_landscape_buddy">Icon landscape buddy</string>
+    <string name="status_bar_battery_style_icon_landscape_signal">Icon signal</string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_big_circle">Big circle</string>
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>

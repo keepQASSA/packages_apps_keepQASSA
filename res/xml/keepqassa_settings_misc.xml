@@ -20,7 +20,7 @@
     android:title="@string/misc_title" >
 
     <PreferenceCategory
-        android:title="@string/general_misc_title">
+        android:title="@string/screenshot_misc_title">
 
         <!-- Screenshot Sound  -->
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
@@ -43,6 +43,11 @@
             android:title="@string/ignore_window_secure_title"
             android:summary="@string/ignore_window_secure_summary"
             android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/general_misc_title">
 
         <!-- Gaming Mode -->
         <Preference

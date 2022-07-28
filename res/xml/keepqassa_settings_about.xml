@@ -84,17 +84,9 @@ limitations under the License.
                 android:data="https://t.me/PasangRom" />
         </Preference>
 
-	<Preference
+        <Preference
             android:title="@string/dev_5"
             android:summary="@string/dev5_description" >
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://t.me/sixtyninex" />
-        </Preference>
-
-        <Preference
-            android:title="@string/dev_6"
-            android:summary="@string/dev6_description" >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/zacky_ma" />
@@ -137,14 +129,6 @@ limitations under the License.
             android:summary="@string/contributor5_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/pepeew" />
-        </Preference>
-
-        <Preference
-            android:title="@string/contributor_6"
-            android:summary="@string/contributor6_description" >
-            <intent
-                android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Haze_act" />
         </Preference>
 
@@ -164,7 +148,7 @@ limitations under the License.
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
 	android:key="maintainers"
 	android:title="@string/maintainers" >
 
@@ -181,17 +165,9 @@ limitations under the License.
             android:summary="@string/maintainer2_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/qassabegonia" />
-        </Preference>
-
-        <Preference
-            android:title="@string/dev_6"
-            android:summary="@string/maintainer3_description" >
-            <intent
-                android:action="android.intent.action.VIEW"
                 android:data="https://t.me/zacky_ma" />
         </Preference>
 
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
 </PreferenceScreen>

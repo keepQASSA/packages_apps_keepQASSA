@@ -38,6 +38,7 @@ import com.android.settingslib.search.SearchIndexable;
 import java.util.List;
 import java.util.ArrayList;
 
+@SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 

@@ -39,14 +39,11 @@
     <string name="dev3_description">Designer | core dev</string>
     <string name="dev_4">Yudi</string>
     <string name="dev4_description">Backend qassa</string>
-    <string name="dev_5">Olaf</string>
+    <string name="dev_5">zprjkt</string>
     <string name="dev5_description">Contributor, Device maintainer</string>
-    <string name="dev_6">zprjkt</string>
-    <string name="dev6_description">Contributor, Device maintainer</string>
     <string name="maintainers">Active Maintainers</string>
     <string name="maintainer1_description">Maintains for Xiaomi Redmi Note 9 Pro (Joyeuse)</string>
-    <string name="maintainer2_description">Maintains for Xiaomi Redmi Note 8 Pro (Begonia)</string>
-    <string name="maintainer3_description">Maintains for Xiaomi Redmi Note 5 Pro (Whyred)</string>
+    <string name="maintainer2_description">Maintains for Xiaomi Redmi Note 5 Pro (Whyred)</string>
     <string name="designers">Designers</string>
     <string name="contributor_1">BH36B</string>
     <string name="contributor1_description">Contributor</string>
@@ -56,10 +53,8 @@
     <string name="contributor3_description">Contributor</string>
     <string name="contributor_4">ꐦ𝘧𝘷𝘤𝘬𝘻𝘺𝘴𝘯</string>
     <string name="contributor4_description">Contributor</string>
-    <string name="contributor_5">ᵖⁱᵖⁱᵖⁱʷʷ°</string>
+    <string name="contributor_5">𝙎𝙖𝙞𝙠𝙤𝙃𝙖𝙯𝙚</string>
     <string name="contributor5_description">Contributor</string>
-    <string name="contributor_6">𝙎𝙖𝙞𝙠𝙤𝙃𝙖𝙯𝙚</string>
-    <string name="contributor6_description">Contributor</string>
 	
     <!-- Categories -->
     <string name="about_title">About QASSA and our Teams</string>

@@ -47,8 +47,8 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.keepqassa.settings.fragments.buttons.preference.BacklightTimeoutSeekBar;
-import com.keepqassa.settings.fragments.buttons.preference.ButtonBacklightBrightness;
+import com.keepqassa.settings.fragments.buttons.preferences.BacklightTimeoutSeekBar;
+import com.keepqassa.settings.fragments.buttons.preferences.ButtonBacklightBrightness;
 import com.keepqassa.settings.utils.DeviceUtils;
 import com.keepqassa.settings.utils.TelephonyUtils;
 

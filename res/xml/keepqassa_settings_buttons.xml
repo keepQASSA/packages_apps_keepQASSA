@@ -156,7 +156,7 @@
         android:key="button_backlight_cat"
         android:title="@string/button_backlight_title">
 
-        <com.keepqassa.settings.fragments.buttons.preference.ButtonBacklightBrightness
+        <com.keepqassa.settings.fragments.buttons.preferences.ButtonBacklightBrightness
             android:key="button_backlight"
             android:title="@string/button_backlight_title"
             android:dialogTitle="@string/button_backlight_title"

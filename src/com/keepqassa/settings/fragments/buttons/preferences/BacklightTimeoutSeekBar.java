@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.keepqassa.settings.fragments.buttons.preference;
+package com.keepqassa.settings.fragments.buttons.preferences;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

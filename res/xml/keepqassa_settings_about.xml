@@ -93,6 +93,22 @@ limitations under the License.
         </Preference>
 
         <Preference
+            android:title="@string/dev_6"
+            android:summary="@string/dev6_description" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Yuu_ak15" />
+        </Preference>
+
+        <Preference
+            android:title="@string/dev_7"
+            android:summary="@string/dev7_description" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/TanzArcheart" />
+        </Preference>
+
+        <Preference
             android:title="@string/contributor_1"
             android:summary="@string/contributor1_description" >
             <intent

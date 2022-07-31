@@ -32,6 +32,8 @@
     <string name="dev3_description">Desainer | core dev</string>
     <string name="dev4_description">Backend qassa</string>
     <string name="dev5_description">Kontributor, Device maintainer</string>
+    <string name="dev6_description">Backend qassa</string>
+    <string name="dev7_description">Kontributor, Device maintainer</string>
     <string name="maintainers">Maintainer aktif</string>
     <string name="maintainer1_description">Maintainer Xiaomi Redmi Note 9 Pro (Joyeuse)</string>
     <string name="maintainer2_description">Maintainer Xiaomi Redmi Note 5 Pro (Whyred)</string>

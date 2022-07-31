@@ -257,4 +257,6 @@
     <string name="battery_bar_blend_color_reverse_title">Membalikkan arah warna</string>
     <string name="battery_bar_blend_color_reverse_summary_off">Penuh &#8594; kosong: merah &#8592; hijau &#8592; biru &#8592; merah</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Penuh &#8594; kosong: merah &#8594; hijau &#8594; biru &#8594; merah</string>
+    <string name="status_bar_activity_indicators_title">Tampilkan indikator aktivitas</string>
+    <string name="status_bar_activity_indicators_summary">Menampilkan ikon naik turun di ponsel dan ikon wifi saat data digunakan</string>
 </resources>

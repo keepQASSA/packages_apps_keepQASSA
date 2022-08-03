@@ -59,6 +59,13 @@
             android:summary="@string/force_expanded_notifications_summary"
             android:defaultValue="false" />
 
+        <!-- Pulse notification light -->
+        <SwitchPreference
+            android:key="notification_pulse"
+            android:title="@string/notification_pulse_title"
+            android:summary="@string/notification_pulse_summary"
+            settings:controller="com.android.settings.notification.PulseNotificationPreferenceController"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

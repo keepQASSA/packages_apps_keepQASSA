@@ -31,6 +31,7 @@ import androidx.preference.*;
 
 import com.keepqassa.settings.preferences.CustomSeekBarPreference;
 import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
+import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -57,12 +58,15 @@ public class Misc extends SettingsPreferenceFragment
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
     private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
     private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
     private SwitchPreference mStreamSpoof;
 
     private CustomSeekBarPreference mScreenshotDelay;
+
+    private SystemSettingMasterSwitchPreference mGamingMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +92,11 @@ public class Misc extends SettingsPreferenceFragment
         mScreenshotDelay = (CustomSeekBarPreference) findPreference(KEY_SCREENSHOT_DELAY);
         int delay = (int) ViewConfiguration.get(getActivity()).getScreenshotChordKeyTimeout();
         mScreenshotDelay.setDefaultValue(delay);
+
+        mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
+        mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.GAMING_MODE_ENABLED, 0) == 1));
+        mGamingMode.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -103,6 +112,11 @@ public class Misc extends SettingsPreferenceFragment
         } else if (preference == mStreamSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_STREAM_SPOOF, value ? "true" : "false");
+            return true;
+        } else if (preference == mGamingMode) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
             return true;
         }
         return true;

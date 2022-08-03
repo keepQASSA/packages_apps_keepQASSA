@@ -237,4 +237,5 @@
     <string name="toast_icon_summary">Tampilan ikon aktivitas yang menghasilkan pesan toast</string>
     <string name="status_bar_activity_indicators_title">Tampilkan indikator aktivitas</string>
     <string name="status_bar_activity_indicators_summary">Menampilkan ikon naik turun di ponsel dan ikon wifi saat data digunakan</string>
+    <string name="notification_pulse_title">tampilkan lampu berkedip saat ada notifikasi</string>
 </resources>

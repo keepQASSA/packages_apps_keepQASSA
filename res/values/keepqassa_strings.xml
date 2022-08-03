@@ -339,4 +339,5 @@
     <string name="status_bar_activity_indicators_title">Show activity indicators</string>
     <string name="status_bar_activity_indicators_summary">Show up and down icons on mobile and wifi icons when data is used</string>
 
+    <string name="notification_pulse_summary">Show blink light when there is a notification</string>
 </resources>

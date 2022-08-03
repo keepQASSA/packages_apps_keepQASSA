@@ -57,10 +57,11 @@
             android:defaultValue="true" />
 
         <!-- Gaming mode -->
-        <Preference
-            android:key="gaming_category"
-            android:title="@string/gaming_title" 
-            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"/>
+        <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+            android:key="gaming_mode_enabled"
+            android:title="@string/gaming_title"
+            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 

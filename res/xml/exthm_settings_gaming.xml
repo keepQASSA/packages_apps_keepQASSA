@@ -21,37 +21,28 @@
     android:title="@string/gaming_title" >
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
-        android:key="gaming_mode_enabled"
-        android:title="@string/gaming_mode_enabled_title"
-        android:defaultValue="false" />
-
-    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_add"
         android:title="@string/gaming_mode_dynamic_add_title"
         android:summary="@string/gaming_mode_dynamic_add_summary"
-        android:defaultValue="true"
-        android:dependency="gaming_mode_enabled" />
+        android:defaultValue="true" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_disable_auto_brightness"
         android:title="@string/gaming_mode_disable_auto_brightness_title"
         android:summary="@string/gaming_mode_disable_auto_brightness_summary"
-        android:defaultValue="true"
-        android:dependency="gaming_mode_enabled" />
+        android:defaultValue="true" />
 
     <Preference
         android:key="gaming_mode_notification_danmaku"
         android:title="@string/gaming_mode_notification_danmaku_title" 
         android:summary="@string/gaming_mode_notification_danmaku_summary"
-        android:fragment="com.keepqassa.settings.fragments.gaming.DanmakuSettings"
-        android:dependency="gaming_mode_enabled" />
+        android:fragment="com.keepqassa.settings.fragments.gaming.DanmakuSettings" />
 
     <Preference
         android:key="gaming_mode_quick_start_apps"
         android:title="@string/gaming_mode_quick_start_apps_title" 
         android:summary="@string/gaming_mode_quick_start_apps_summary"
-        android:fragment="com.keepqassa.settings.fragments.gaming.QuickStartAppSettings"
-        android:dependency="gaming_mode_enabled" />
+        android:fragment="com.keepqassa.settings.fragments.gaming.QuickStartAppSettings" />
 
     <PreferenceCategory
         android:title="@string/gaming_mode_performance">
@@ -60,15 +51,13 @@
             android:key="gaming_mode_use_game_driver"
             android:title="@string/gaming_mode_use_game_driver_title"
             android:summary="@string/gaming_mode_use_game_driver_summary"
-            android:defaultValue="true"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_change_performance_level"
             android:title="@string/gaming_mode_change_performance_title"
             android:summary="@string/gaming_mode_change_performance_summary"
-            android:defaultValue="true"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
             android:key="gaming_mode_performance_level"
@@ -76,8 +65,7 @@
             android:defaultValue="5"
             android:max="6"
             settings:min="0"
-            settings:units=""
-            android:dependency="gaming_mode_change_performance_level" />
+            settings:units="" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -87,22 +75,19 @@
             android:key="gaming_mode_disable_notification_alert"
             android:title="@string/gaming_mode_disable_notification_alert_title"
             android:summary="@string/gaming_mode_disable_notification_alert_summary"
-            android:defaultValue="true"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_ringtone"
             android:title="@string/gaming_mode_disable_ringtone_title"
             android:summary="@string/gaming_mode_disable_ringtone_summary"
-            android:defaultValue="false"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_auto_answer_call"
             android:title="@string/gaming_mode_auto_answer_call_title"
             android:summary="@string/gaming_mode_auto_answer_call_summary"
-            android:defaultValue="false"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -111,14 +96,12 @@
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_gesture"
             android:title="@string/gaming_mode_disable_gesture_title"
-            android:defaultValue="false"
-            android:dependency="gaming_mode_enabled" />
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
     <com.keepqassa.settings.preferences.PackageListPreference
         android:key="gaming_mode_app_list"
-        android:title="@string/gaming_mode_apps"
-        android:dependency="gaming_mode_enabled" />
+        android:title="@string/gaming_mode_apps" />
 
 </PreferenceScreen>

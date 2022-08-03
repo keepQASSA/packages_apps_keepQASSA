@@ -210,7 +210,7 @@
     <string name="status_bar_battery_style_icon_landscape_a">Icon landscape A (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_b">Icon landscape B (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_buddy">Icon landscape buddy</string>
-    <string name="status_bar_battery_style_icon_landscape_signal">Icon signal</string>
+    <string name="status_bar_battery_style_icon_signal">Icon signal</string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_big_circle">Big circle</string>
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
@@ -224,7 +224,7 @@
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
     <string name="show_battery_symbol_title">Show lightning symbol</string>
-    <string name="show_battery_symbol_summary">Show lightning \u26A1\uFE0E symbol when charging (Only for hidden battery style)</string>
+    <string name="show_battery_symbol_summary">Show lightning \u26A1\uFE0E symbol when charging (Only for hidden, icon landscape buddy &amp; icon signal battery style)</string>
 
     <!-- Battery percent -->
     <string name="battery_percentage_title">Battery percentage</string>

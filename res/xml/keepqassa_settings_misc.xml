@@ -50,10 +50,11 @@
         android:title="@string/general_misc_title">
 
         <!-- Gaming mode -->
-        <Preference
-            android:key="gaming_category"
+        <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+            android:key="gaming_mode_enabled"
             android:title="@string/gaming_title"
-            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"/>
+            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"
+            android:defaultValue="false" />
 
         <!-- Toast Icon -->
         <com.keepqassa.settings.preferences.GlobalSettingSwitchPreference

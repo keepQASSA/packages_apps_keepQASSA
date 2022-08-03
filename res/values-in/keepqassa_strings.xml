@@ -27,6 +27,8 @@
     <string name="telegram_description">Gabung ke group diskusi Telegram kami</string>
     <string name="web">Pusat Unduhan</string>
     <string name="web_description">Kunjungi portal unduhan kami</string>
+    <string name="donate">Donasi</string>
+    <string name="donate_description">Dukung kami</string>
     <string name="dev1_description">Project Manager | bos server</string>
     <string name="dev2_description">Founder | core dev | device maintainer</string>    
     <string name="dev3_description">Desainer | core dev</string>

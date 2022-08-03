@@ -31,6 +31,8 @@
     <string name="telegram_description">Join our Telegram discussion group</string>
     <string name="web">Download Center</string>
     <string name="web_description">Visit our download portal</string>
+    <string name="donate">Donate</string>
+    <string name="donate_description">Donate Us</string>
     <string name="dev_1">r1oset</string>
     <string name="dev1_description">Project Manager | bos server</string>
     <string name="dev_2">ghou8s</string>

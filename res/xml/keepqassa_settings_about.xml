@@ -46,6 +46,14 @@ limitations under the License.
 	       	android:data="https://sourceforge.net/projects/keepqassa/files/%23keepQASSA/" />
 	</Preference>
 
+        <Preference
+            android:title="@string/donate_description"
+	    android:summary="@string/donate" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://trakteer.id/ghou8s/tip" />
+	</Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

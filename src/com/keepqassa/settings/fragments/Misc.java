@@ -34,7 +34,7 @@ import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.keepqassa.settings.fragments.misc.GamingMode;
+
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -120,7 +120,6 @@ public class Misc extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_DELAY,
                 (int) ViewConfiguration.get(mContext).getScreenshotChordKeyTimeout(), UserHandle.USER_CURRENT);
-        GamingMode.reset(mContext);
     }
 
     @Override

@@ -47,9 +47,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/general_qs_title">
+        android:title="@string/header_qs_title">
 
-        <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
+        <!-- QS clock -->
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+            android:key="show_qs_clock"
+            android:title="@string/qs_clock_title"
+            android:summary="@string/qs_clock_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/footer_qs_title">
+
+    <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_drag_handle"
             android:title="@string/qs_show_drag_handle_title"
             android:summary="@string/qs_show_drag_handle_summary"
@@ -68,7 +80,7 @@
             android:dependency="footer_text_show"
             android:defaultValue="#keepQASSA" />
 
-        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference     
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_footer_show_settings"
             android:title="@string/qs_footer_settings_title"
             android:summary="@string/qs_footer_settings_summary"
@@ -92,17 +104,15 @@
             android:summary="@string/qs_footer_edit_summary"
             android:defaultValue="true" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/general_qs_title">
+
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="headers_icons_style"
             android:title="@string/header_icons_style"
             android:summary="@string/header_icons_style_summary"
-            android:defaultValue="true" />
-
-        <!-- QS clock -->
-        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
-            android:key="show_qs_clock"
-            android:title="@string/qs_clock_title"
-            android:summary="@string/qs_clock_summary"
             android:defaultValue="true" />
 
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference

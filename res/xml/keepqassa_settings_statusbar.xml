@@ -40,6 +40,17 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+        android:title="@string/status_bar_lyric_options_title">
+
+        <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.disguise_props_for_music_app"
+            android:title="@string/disguise_props_for_music_app_title"
+            android:summary="@string/disguise_props_for_music_app_summary"
+            android:dependency="status_bar_show_lyric"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/statusbar_padding">
 
         <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference

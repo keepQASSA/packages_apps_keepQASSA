@@ -129,8 +129,6 @@
     <string name="use_old_mobiletype_title">Use old style mobile data icons</string>
     <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
 
-    <!-- Notifications settings -->
-    <string name="notifications_qs_title">Quick Settings</string>
     <!-- R Notification headers -->
     <string name="notification_headers_title">Show notification headers</string>
     <string name="notification_headers_summary">Whether to show R style notification headers</string>
@@ -386,4 +384,6 @@
     <string name="gaming_mode_show_fpsinfo_title">Show FPS info</string>
     <string name="gaming_mode_show_fpsinfo_summary">Show current FPS information</string>
 
+    <string name="notificationheaders_quicksettings_title">Notification headers</string>
+    <string name="notificationheaders_quicksettings_summary">Notification headers in quick settings</string>
 </resources>

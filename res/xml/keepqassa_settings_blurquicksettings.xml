@@ -19,17 +19,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/blur_quick_settings_title" >
 
-    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
-        android:key="qs_blur"
-        android:title="@string/blur_quicksettings_title"
-        android:summary="@string/blur_quicksettings_summary"
-        android:defaultValue="true" />
-
     <com.keepqassa.settings.preferences.CustomSeekBarPreference
         android:key="qs_blur_radius"
         android:title="@string/qs_blur_radius_title"
         android:summary="@string/qs_blur_radius_summary"
-        android:dependency="qs_blur"
         android:max="25"
         settings:min="1"
         android:defaultValue="25" />

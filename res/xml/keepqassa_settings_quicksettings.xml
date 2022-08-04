@@ -121,11 +121,12 @@
             android:summary="@string/enable_clear_all_button_summary"
             android:defaultValue="false" />
 
-        <PreferenceScreen
-            android:key="notication_headers_quick_settings"
+        <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+            android:key="notification_headers"
             android:title="@string/notificationheaders_quicksettings_title"
             android:summary="@string/notificationheaders_quicksettings_summary"
-            android:fragment="com.keepqassa.settings.fragments.quicksettings.NotificationHeadersQuickSettings" />
+            android:fragment="com.keepqassa.settings.fragments.quicksettings.NotificationHeadersQuickSettings"
+            android:defaultValue="false" />
 
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="qs_quick_pulldown"

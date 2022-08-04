@@ -48,11 +48,9 @@ public class NotificationHeadersQuickSettings extends SettingsPreferenceFragment
 
     public static final String TAG = "NotificationHeadersQuickSettings";
 
-    private static final String NOTIFICATION_HEADERS  = "notification_headers";
     private static final String CENTER_NOTIFICATION_HEADERS = "center_notification_headers";
     private static final String RIGHT_NOTIFICATION_HEADERS = "right_notification_headers";
 
-    private SystemSettingSwitchPreference mShowHeaders;
     private SystemSettingSwitchPreference mCenterHeaders;
     private SystemSettingSwitchPreference mRightHeaders;
 
@@ -62,11 +60,6 @@ public class NotificationHeadersQuickSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.keepqassa_settings_notificationheaders_quicksettings);
 
         final ContentResolver resolver = getActivity().getContentResolver();
-
-        mShowHeaders = findPreference(NOTIFICATION_HEADERS);
-        mShowHeaders.setChecked((Settings.System.getInt(resolver,
-                Settings.System.NOTIFICATION_HEADERS, 1) == 1));
-        mShowHeaders.setOnPreferenceChangeListener(this);
 
         mCenterHeaders = findPreference(CENTER_NOTIFICATION_HEADERS);
         mCenterHeaders.setChecked((Settings.System.getInt(resolver,
@@ -82,13 +75,7 @@ public class NotificationHeadersQuickSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getActivity().getContentResolver();
-	if (preference == mShowHeaders) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
-            ActionUtils.showSystemUiRestartDialog(getContext());
-            return true;
-	} else if (preference == mCenterHeaders) {
+	if (preference == mCenterHeaders) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.CENTER_NOTIFICATION_HEADERS, value ? 1 : 0);

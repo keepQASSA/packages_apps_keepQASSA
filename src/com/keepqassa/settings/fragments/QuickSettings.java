@@ -37,6 +37,7 @@ import androidx.preference.SwitchPreference;
 import com.keepqassa.settings.preferences.SecureSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingEditTextPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
+import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -65,6 +66,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_INTERPOLATOR = "anim_tile_interpolator";
     private static final String HEADER_ICONS_STYLE = "headers_icons_style";
     private static final String FOOTER_TEXT_STRING = "footer_text_string";
+    private static final String NOTIFICATION_HEADERS  = "notification_headers";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -83,6 +85,8 @@ public class QuickSettings extends SettingsPreferenceFragment
     private PreferenceCategory mStatusBarQsAnimationCategory;
 
     private SystemSettingEditTextPreference mFooterString;
+
+    private SystemSettingMasterSwitchPreference mShowHeaders;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -137,6 +141,11 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.System.putString(getActivity().getContentResolver(),
                     Settings.System.FOOTER_TEXT_STRING, "#keepQASSA");
         }
+
+        mShowHeaders = (SystemSettingMasterSwitchPreference) findPreference(NOTIFICATION_HEADERS);
+        mShowHeaders.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NOTIFICATION_HEADERS, 1) == 1));
+        mShowHeaders.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -168,6 +177,12 @@ public class QuickSettings extends SettingsPreferenceFragment
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.FOOTER_TEXT_STRING, "#keepQASSA");
             }
+            return true;
+        } else if (preference == mShowHeaders) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
+            ActionUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         int value = Integer.parseInt((String) newValue);

@@ -115,6 +115,12 @@
             android:summary="@string/header_icons_style_summary"
             android:defaultValue="true" />
 
+        <PreferenceScreen
+            android:key="notication_headers_quick_settings"
+            android:title="@string/notificationheaders_quicksettings_title"
+            android:summary="@string/notificationheaders_quicksettings_summary"
+            android:fragment="com.keepqassa.settings.fragments.quicksettings.NotificationHeadersQuickSettings" />
+
 	<com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="dismiss_all_button"
             android:title="@string/enable_clear_all_button"

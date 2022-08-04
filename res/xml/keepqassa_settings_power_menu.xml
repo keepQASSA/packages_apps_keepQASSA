@@ -11,6 +11,11 @@
         android:defaultValue="false" />
 
     <CheckBoxPreference
+        android:key="screenrecord"
+        android:title="@string/powermenu_screenrecord_title"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
         android:key="airplane"
         android:title="@string/power_menu_airplane_title"
         android:defaultValue="false" />
@@ -25,8 +30,4 @@
         android:title="@string/power_menu_lockdown_title"
         android:defaultValue="false" />
 
-    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
-        android:key="powermenu_screenrecord"
-        android:title="@string/powermenu_screenrecord_title"
-        android:defaultValue="false" />
 </PreferenceScreen>

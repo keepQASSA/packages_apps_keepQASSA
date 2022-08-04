@@ -67,6 +67,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String HEADER_ICONS_STYLE = "headers_icons_style";
     private static final String FOOTER_TEXT_STRING = "footer_text_string";
     private static final String NOTIFICATION_HEADERS  = "notification_headers";
+    private static final String QS_BLUR  = "qs_blur";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -87,6 +88,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     private SystemSettingEditTextPreference mFooterString;
 
     private SystemSettingMasterSwitchPreference mShowHeaders;
+    private SystemSettingMasterSwitchPreference mQsBlur;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,6 +148,11 @@ public class QuickSettings extends SettingsPreferenceFragment
         mShowHeaders.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NOTIFICATION_HEADERS, 1) == 1));
         mShowHeaders.setOnPreferenceChangeListener(this);
+
+        mQsBlur = (SystemSettingMasterSwitchPreference) findPreference(QS_BLUR);
+        mQsBlur.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QS_BLUR, 1) == 1));
+        mQsBlur.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -183,6 +190,11 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
             ActionUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mQsBlur) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_BLUR, value ? 1 : 0);
             return true;
         }
         int value = Integer.parseInt((String) newValue);

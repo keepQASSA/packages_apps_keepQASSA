@@ -95,8 +95,7 @@
     <string name="general_misc_title">Umum</string>
     <string name="screenshot_sound_title">Suara tangkapan layar</string>
     <string name="screenshot_sound_summary">Putar suara saat tangkapan layar diambil</string>
-    <string name="blur_qs_title">Kabur</string>
-    <string name="blur_quick_settings_title">Opsi kabur di balik setelan cepat</string>
+    <string name="blur_quick_settings_title">Kabur di balik setelan cepat</string>
     <string name="blur_quick_settings_summary">Tampilkan blur di belakang pengaturan cepat</string>
     <string name="blur_quicksettings_title">Aktifkan kabur di balik setelan cepat</string>
     <string name="blur_quicksettings_summary">Mengaburkan latar belakang yang gelap di balik pengaturan cepat</string>

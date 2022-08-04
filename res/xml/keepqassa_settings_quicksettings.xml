@@ -128,6 +128,12 @@
             android:fragment="com.keepqassa.settings.fragments.quicksettings.NotificationHeadersQuickSettings"
             android:defaultValue="false" />
 
+        <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+            android:key="qs_blur"
+            android:title="@string/blur_quick_settings_title"
+       	    android:fragment="com.keepqassa.settings.fragments.quicksettings.BlurQuickSettings"
+            android:summary="@string/blur_quick_settings_summary" />
+
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="qs_quick_pulldown"
             android:title="@string/status_bar_quick_qs_pulldown_title"
@@ -146,17 +152,6 @@
             android:title="@string/qs_vibrate_title"
             android:summary="@string/qs_vibrate_summary"
             android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/blur_qs_title">
-
-        <PreferenceScreen
-            android:key="blur_quick_settings"
-            android:title="@string/blur_quick_settings_title"
-       	    android:fragment="com.keepqassa.settings.fragments.quicksettings.BlurQuickSettings"
-            android:summary="@string/blur_quick_settings_summary" />
 
     </PreferenceCategory>
 

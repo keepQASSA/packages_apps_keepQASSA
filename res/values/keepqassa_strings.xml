@@ -143,8 +143,7 @@
     <string name="screenshot_sound_summary">Play sound when screenshot is taken</string>
 
     <!-- QS blur -->
-    <string name="blur_qs_title">Blur</string>
-    <string name="blur_quick_settings_title">Option to blur behind quick settings</string>
+    <string name="blur_quick_settings_title">Blur behind quick settings</string>
     <string name="blur_quick_settings_summary">Show blur behind in quick settings</string>
     <string name="blur_quicksettings_title">Enable blur behind quick settings</string>
     <string name="blur_quicksettings_summary">Blurs the darkened background behind quick settings</string>

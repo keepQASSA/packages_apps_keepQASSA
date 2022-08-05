@@ -269,4 +269,6 @@
     <string name="powermenu_screenrecord_title">Rekam layar</string>
     <string name="show_app_volume_title">Tampilkan volume aplikasi</string>
     <string name="show_app_volume_summary">Tampilkan volume aplikasi di panel volume.</string>
+    <string name="status_bar_clock_font_size_title">Statusbar Clock font size</string>
+    <string name="qs_clock_font_size_title">QS Header Clock font size</string>
 </resources>

@@ -392,4 +392,8 @@
 
     <string name="show_app_volume_title">Show app volume</string>
     <string name="show_app_volume_summary">Show app volume in volume panel.</string>
+
+    <!-- Clock Size -->
+    <string name="status_bar_clock_font_size_title">Statusbar Clock font size</string>
+    <string name="qs_clock_font_size_title">QS Header Clock font size</string>
 </resources>

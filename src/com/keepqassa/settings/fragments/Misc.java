@@ -127,8 +127,6 @@ public class Misc extends SettingsPreferenceFragment
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
-        Settings.Global.putInt(resolver,
-                Settings.Global.TOAST_ICON, 1);
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,

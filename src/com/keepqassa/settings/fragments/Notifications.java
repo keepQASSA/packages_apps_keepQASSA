@@ -35,6 +35,7 @@ import com.android.internal.util.qassa.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.keepqassa.settings.preferences.GlobalSettingSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
@@ -58,6 +59,12 @@ public class Notifications extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getActivity().getContentResolver();
         return true;
+    }
+
+    public static void reset(Context mContext) {
+    final ContentResolver resolver = mContext.getContentResolver();
+        Settings.Global.putInt(resolver,
+                Settings.Global.TOAST_ICON, 1);
     }
 
     @Override

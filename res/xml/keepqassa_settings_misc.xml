@@ -56,13 +56,6 @@
             android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"
             android:defaultValue="false" />
 
-        <!-- Toast Icon -->
-        <com.keepqassa.settings.preferences.GlobalSettingSwitchPreference
-            android:key="toast_icon"
-            android:title="@string/toast_icon_title"
-            android:summary="@string/toast_icon_summary"
-            android:defaultValue="true" />
-
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -89,7 +89,7 @@ limitations under the License.
             android:summary="@string/dev5_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/zacky_ma" />
+                android:data="https://t.me/rayrzy" />
         </Preference>
 
         <Preference
@@ -97,12 +97,20 @@ limitations under the License.
             android:summary="@string/dev6_description" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Yuu_ak15" />
+                android:data="https://t.me/zacky_ma" />
         </Preference>
 
         <Preference
             android:title="@string/dev_7"
             android:summary="@string/dev7_description" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Yuu_ak15" />
+        </Preference>
+
+        <Preference
+            android:title="@string/dev_8"
+            android:summary="@string/dev8_description" >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/TanzArcheart" />

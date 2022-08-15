@@ -47,7 +47,7 @@ import java.util.ArrayList;
 
 @SearchIndexable
 public class Misc extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     public static final String TAG = "Misc";
 

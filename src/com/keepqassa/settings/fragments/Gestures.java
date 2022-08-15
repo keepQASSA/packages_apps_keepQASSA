@@ -36,7 +36,8 @@ import com.android.settings.gestures.DoubleTapScreenPreferenceController;
 import com.android.settings.gestures.PickupGesturePreferenceController;
 
 @SearchIndexable
-public class Gestures extends DashboardFragment {
+public class Gestures extends DashboardFragment
+        implements Indexable {
 
     private static final String TAG = "Gestures";
 

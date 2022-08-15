@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package com.keepqassa.settings.fragments;
+package com.keepqassa.settings.fragments.misc;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -31,14 +32,20 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.SearchIndexable;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import com.keepqassa.settings.preferences.PackageListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSeekBarPreference;
 
-public class GamingModeSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+@SearchIndexable
+public class GamingModeSettings extends SettingsPreferenceFragment
+        implements OnPreferenceChangeListener, Indexable {
 
     private boolean mPerformanceSupported;
     private PackageListPreference mGamingPrefList;
@@ -47,7 +54,7 @@ public class GamingModeSettings extends SettingsPreferenceFragment implements On
     private Preference mDanmaku;
     private Preference mQapps;
     private SystemSettingSeekBarPreference mOpacity;
-    
+
     private boolean mFpsInfoSupported;
 
     @Override
@@ -90,7 +97,7 @@ public class GamingModeSettings extends SettingsPreferenceFragment implements On
         } else {
             prefScreen.removePreference(mShowFPS);
         }
-        
+
         boolean menuEnabled = Settings.System.getInt(getContentResolver(),
                             Settings.System.GAMING_MODE_USE_OVERLAY_MENU, 1) == 1;
         mUseMenuSwitch.setChecked(menuEnabled);
@@ -127,4 +134,28 @@ public class GamingModeSettings extends SettingsPreferenceFragment implements On
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.KEEPQASSA;
     }
+
+    /**
+     * For search
+     */
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.exthm_settings_gaming;
+                    result.add(sir);
+
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    return keys;
+                }
+            };
 }

@@ -46,7 +46,9 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 @SearchIndexable
-public class PowerMenuActions extends SettingsPreferenceFragment {
+public class PowerMenuActions extends SettingsPreferenceFragment
+        implements Indexable {
+
     final static String TAG = "PowerMenuActions";
 
     private CheckBoxPreference mScreenshotPref;

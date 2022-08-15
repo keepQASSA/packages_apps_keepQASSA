@@ -60,7 +60,7 @@ import java.util.Set;
 
 @SearchIndexable
 public class StatusBar extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String ICON_BLACKLIST = "icon_blacklist";
 

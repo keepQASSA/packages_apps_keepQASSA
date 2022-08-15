@@ -68,7 +68,7 @@ import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON_OVE
 
 @SearchIndexable
 public class Buttons extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "Buttons";
 

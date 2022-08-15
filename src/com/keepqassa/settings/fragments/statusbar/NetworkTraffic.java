@@ -41,7 +41,7 @@ import java.util.List;
 
 @SearchIndexable
 public class NetworkTraffic extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener  {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "NetworkTraffic";
 

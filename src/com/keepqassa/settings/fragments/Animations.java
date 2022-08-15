@@ -48,7 +48,7 @@ import java.util.List;
 
 @SearchIndexable
 public class Animations extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     @Override
     public void onCreate(Bundle icicle) {

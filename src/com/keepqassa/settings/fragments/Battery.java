@@ -49,7 +49,7 @@ import java.util.Set;
 
 @SearchIndexable
 public class Battery extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     public static final String TAG = "Battery";
 

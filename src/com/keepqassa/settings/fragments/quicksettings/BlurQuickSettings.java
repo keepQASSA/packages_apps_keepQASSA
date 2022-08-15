@@ -44,7 +44,7 @@ import java.util.List;
 
 @SearchIndexable
 public class BlurQuickSettings extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     public static final String TAG = "BlurQuickSettings";
 

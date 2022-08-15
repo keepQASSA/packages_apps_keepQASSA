@@ -41,8 +41,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 @SearchIndexable
-public class About extends SettingsPreferenceFragment implements
-Preference.OnPreferenceChangeListener {
+public class About extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     @Override
     public void onCreate(Bundle icicle) {

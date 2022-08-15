@@ -53,7 +53,7 @@
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="gaming_mode_enabled"
             android:title="@string/gaming_title"
-            android:fragment="com.keepqassa.settings.fragments.GamingModeSettings"
+            android:fragment="com.keepqassa.settings.fragments.misc.GamingModeSettings"
             android:defaultValue="false" />
 
     </PreferenceCategory>

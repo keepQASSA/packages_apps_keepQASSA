@@ -37,7 +37,7 @@ import java.util.ArrayList;
 
 @SearchIndexable
 public class Navigation extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     public static final String TAG = "Navigation";
 

@@ -40,7 +40,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 @SearchIndexable
-public class Interface extends SettingsPreferenceFragment {
+public class Interface extends SettingsPreferenceFragment
+        implements Indexable {
 
     public static final String TAG = "Interface";
 

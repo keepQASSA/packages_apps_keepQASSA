@@ -54,7 +54,7 @@ import java.util.Set;
 
 @SearchIndexable
 public class QuickSettings extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String CATEGORY_BRIGHTNESS = "status_bar_brightness_category";
     private static final String CATEGORY_QS_ANIMATION = "quick_settings_animations";

@@ -54,7 +54,7 @@
     <PreferenceCategory
         android:title="@string/footer_qs_title">
 
-    <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
+        <com.keepqassa.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_drag_handle"
             android:title="@string/qs_show_drag_handle_title"
             android:summary="@string/qs_show_drag_handle_summary"

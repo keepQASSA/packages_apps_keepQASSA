@@ -49,13 +49,13 @@
         android:key="gaming_mode_notification_danmaku"
         android:title="@string/gaming_mode_notification_danmaku_title" 
         android:summary="@string/gaming_mode_notification_danmaku_summary"
-        android:fragment="com.keepqassa.settings.fragments.gaming.DanmakuSettings" />
+        android:fragment="com.keepqassa.settings.fragments.misc.gaming.DanmakuSettings" />
 
     <Preference
         android:key="gaming_mode_quick_start_apps"
         android:title="@string/gaming_mode_quick_start_apps_title" 
         android:summary="@string/gaming_mode_quick_start_apps_summary"
-        android:fragment="com.keepqassa.settings.fragments.gaming.QuickStartAppSettings" />
+        android:fragment="com.keepqassa.settings.fragments.misc.gaming.QuickStartAppSettings" />
 
     <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
         android:key="gaming_mode_menu_opacity"

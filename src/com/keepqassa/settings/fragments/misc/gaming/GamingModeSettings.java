@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.keepqassa.settings.fragments.misc;
+package com.keepqassa.settings.fragments.misc.gaming;
 
 import com.android.internal.logging.nano.MetricsProto;
 

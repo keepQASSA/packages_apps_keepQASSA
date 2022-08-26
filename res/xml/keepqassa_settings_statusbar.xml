@@ -72,7 +72,7 @@
             android:summary="@string/volte_vowifi_override_summary"
             android:defaultValue="true"/>
 
-       <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"

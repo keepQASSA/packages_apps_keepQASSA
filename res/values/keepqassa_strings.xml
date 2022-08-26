@@ -352,6 +352,8 @@
     <string name="add_package_to_title">Add application</string>
 
     <!-- Gaming mode -->
+    <string name="gaming_mode_title">Gaming mode</string>
+    <string name="gaming_mode_summary">Enhance your gaming experience</string>
     <string name="gaming_mode_enabled_title">Enable gaming mode</string>
     <string name="gaming_mode_disable_auto_brightness_title">Disable automatic brightness</string>
     <string name="gaming_mode_disable_auto_brightness_summary">Disable auto brightness when entering game mode</string>

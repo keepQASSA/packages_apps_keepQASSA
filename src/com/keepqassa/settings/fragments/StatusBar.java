@@ -37,6 +37,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingSeekBarPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
@@ -73,6 +74,7 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
     private static final String KEY_VOWIFI_ICON_STYLE = "vowifi_icon_style";
     private static final String KEY_VOLTE_VOWIFI_OVERRIDE = "volte_vowifi_override";
+    private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
 
     private SystemSettingListPreference mStatusBarClock;
 
@@ -87,6 +89,8 @@ public class StatusBar extends SettingsPreferenceFragment
     private SwitchPreference mDataDisabled;
     private SwitchPreference mShowFourg;
     private SwitchPreference mOverride;
+
+    private SystemSettingMasterSwitchPreference mNetMonitor;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -133,6 +137,11 @@ public class StatusBar extends SettingsPreferenceFragment
             prefScreen.removePreference(mShowFourg);
             prefScreen.removePreference(mOverride);
         }
+
+        mNetMonitor = (SystemSettingMasterSwitchPreference) findPreference(NETWORK_TRAFFIC_STATE);
+        mNetMonitor.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_STATE, 0) == 1));
+        mNetMonitor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -170,6 +179,11 @@ public class StatusBar extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_ICONS_STYLE, value ? 1 : 0);
             ActionUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mNetMonitor) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0);
             return true;
         }
         return true;

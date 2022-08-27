@@ -19,8 +19,8 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/statusbar_title" >
 
-    <PreferenceScreen
-        android:key="traffic_category"
+    <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+        android:key="network_traffic_state"
         android:title="@string/traffic_title"
         android:summary="@string/traffic_summary"
         android:fragment="com.keepqassa.settings.fragments.statusbar.TrafficIndicators" />

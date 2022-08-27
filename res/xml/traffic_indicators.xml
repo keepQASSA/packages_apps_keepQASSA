@@ -18,17 +18,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
-        android:key="network_traffic_state"
-        android:title="@string/network_traffic_state_title"
-        android:defaultValue="false" />
-
     <com.keepqassa.settings.preferences.SystemSettingListPreference
         android:key="network_traffic_view_location"
         android:title="@string/network_traffic_location_title"
         android:entries="@array/network_traffic_location_entries"
         android:entryValues="@array/network_traffic_location_values"
-        android:dependency="network_traffic_state"
         android:summary="%s"
         android:defaultValue="0" />
 
@@ -45,14 +39,12 @@
         android:title="@string/network_traffic_autohide_threshold_title"
         android:max="10"
         settings:min="0"
-        settings:units=""
-        android:dependency="network_traffic_state" />
+        settings:units="" />
 
     <SwitchPreference
         android:key="network_traffic_hidearrow"
         android:title="@string/network_traffic_hidearrow"
         android:summary="@string/network_traffic_hidearrow_summary"
-        android:dependency="network_traffic_state"
         android:defaultValue="false" />
 
 </PreferenceScreen>

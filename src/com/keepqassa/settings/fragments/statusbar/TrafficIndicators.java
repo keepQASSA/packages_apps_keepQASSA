@@ -46,7 +46,6 @@ public class TrafficIndicators extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_FONT_STYLE = "network_traffic_font_style";
 
     private CustomSeekBarPreference mThreshold;
-    private SwitchPreference mNetMonitor;
     private SwitchPreference mNetArrow;
     private SystemSettingListPreference mNetTrafficFont;
 
@@ -56,12 +55,6 @@ public class TrafficIndicators extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.traffic_indicators);
 
         final ContentResolver resolver = getActivity().getContentResolver();
-
-        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SwitchPreference) findPreference("network_traffic_state");
-        mNetMonitor.setChecked(isNetMonitorEnabled);
-        mNetMonitor.setOnPreferenceChangeListener(this);
 
         boolean isArrowEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_HIDEARROW, 0, UserHandle.USER_CURRENT) == 1;
@@ -79,20 +72,11 @@ public class TrafficIndicators extends SettingsPreferenceFragment
         mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
-        mThreshold.setEnabled(isNetMonitorEnabled);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mNetMonitor) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            mNetMonitor.setChecked(value);
-            mThreshold.setEnabled(value);
-            return true;
-        } else if (preference == mThreshold) {
+        if (preference == mThreshold) {
             int val = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,

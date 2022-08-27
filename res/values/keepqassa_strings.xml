@@ -112,7 +112,7 @@
     <string name="header_icons_style_summary">Choose the style of your notification headers icons</string>
 
     <!-- OOS clear all button -->
-    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
+    <string name="enable_clear_all_button">Replace clear all text with OOS clear all button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 
     <!-- Notification count -->

@@ -518,4 +518,8 @@
     <string name="statusbar_padding">Status bar padding</string>
     <string name="statusbar_left_padding">Statusbar left padding</string>
     <string name="statusbar_right_padding">Statusbar right padding</string>
+
+    <!-- Signal Icons -->
+    <string name="signalicons_title">Signal icons</string>
+    <string name="signalicons_summary">Configure the signal icons</string>
 </resources>

@@ -67,13 +67,6 @@ public class StatusBar extends SettingsPreferenceFragment
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
-    private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
-    private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
-    private static final String KEY_SHOW_ROAMING = "roaming_indicator_icon";
-    private static final String KEY_SHOW_DATA_DISABLED = "data_disabled_icon";
-    private static final String KEY_SHOW_FOURG = "show_fourg_icon";
-    private static final String KEY_VOWIFI_ICON_STYLE = "vowifi_icon_style";
-    private static final String KEY_VOLTE_VOWIFI_OVERRIDE = "volte_vowifi_override";
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
 
     private SystemSettingListPreference mStatusBarClock;
@@ -81,14 +74,6 @@ public class StatusBar extends SettingsPreferenceFragment
     private SystemSettingSwitchPreference mStatusbarIconsStyle;
 
     private static boolean sHasCenteredNotch;
-
-    private SwitchPreference mOldMobileType;
-    private SystemSettingSeekBarPreference mVolteIconStyle;
-    private SystemSettingSeekBarPreference mVowifiIconStyle;
-    private SwitchPreference mShowRoaming;
-    private SwitchPreference mDataDisabled;
-    private SwitchPreference mShowFourg;
-    private SwitchPreference mOverride;
 
     private SystemSettingMasterSwitchPreference mNetMonitor;
 
@@ -112,31 +97,6 @@ public class StatusBar extends SettingsPreferenceFragment
         mStatusbarIconsStyle.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_ICONS_STYLE, 0) == 1));
         mStatusbarIconsStyle.setOnPreferenceChangeListener(this);
-
-        mOldMobileType = (SwitchPreference) findPreference(KEY_OLD_MOBILETYPE);
-        boolean mConfigUseOldMobileType = mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_useOldMobileIcons);
-
-        boolean showing = Settings.System.getIntForUser(resolver,
-                Settings.System.USE_OLD_MOBILETYPE,
-                mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT) != 0;
-        mOldMobileType.setChecked(showing);
-
-        mVolteIconStyle = (SystemSettingSeekBarPreference) findPreference(KEY_VOLTE_ICON_STYLE);
-        mVowifiIconStyle = (SystemSettingSeekBarPreference) findPreference(KEY_VOWIFI_ICON_STYLE);
-        mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
-        mDataDisabled = (SwitchPreference) findPreference(KEY_SHOW_DATA_DISABLED);
-        mShowFourg = (SwitchPreference) findPreference(KEY_SHOW_FOURG);
-        mOverride = (SwitchPreference) findPreference(KEY_VOLTE_VOWIFI_OVERRIDE);
-
-        if (!TelephonyUtils.isVoiceCapable(getActivity())) {
-            prefScreen.removePreference(mVolteIconStyle);
-            prefScreen.removePreference(mVowifiIconStyle);
-            prefScreen.removePreference(mShowRoaming);
-            prefScreen.removePreference(mDataDisabled);
-            prefScreen.removePreference(mShowFourg);
-            prefScreen.removePreference(mOverride);
-        }
 
         mNetMonitor = (SystemSettingMasterSwitchPreference) findPreference(NETWORK_TRAFFIC_STATE);
         mNetMonitor.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
@@ -191,25 +151,8 @@ public class StatusBar extends SettingsPreferenceFragment
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
-        boolean mConfigUseOldMobileType = mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_useOldMobileIcons);
-
-        Settings.System.putIntForUser(resolver,
-                Settings.System.USE_OLD_MOBILETYPE, mConfigUseOldMobileType ? 1 : 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.VOLTE_ICON_STYLE, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.VOLTE_VOWIFI_OVERRIDE, 1, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.VOWIFI_ICON_STYLE, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.ROAMING_INDICATOR_ICON, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.BLUETOOTH_SHOW_BATTERY, 1, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.DATA_DISABLED_ICON, 1, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.SHOW_FOURG_ICON, 0, UserHandle.USER_CURRENT);
         Clock.reset(mContext);
     }
 
@@ -237,15 +180,6 @@ public class StatusBar extends SettingsPreferenceFragment
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
-
-                    if (!TelephonyUtils.isVoiceCapable(context)) {
-                        keys.add(KEY_VOLTE_ICON_STYLE);
-                        keys.add(KEY_VOWIFI_ICON_STYLE);
-                        keys.add(KEY_SHOW_ROAMING);
-                        keys.add(KEY_SHOW_DATA_DISABLED);
-                        keys.add(KEY_SHOW_FOURG);
-                        keys.add(KEY_VOLTE_VOWIFI_OVERRIDE);
-                    }
 
                     return keys;
                 }

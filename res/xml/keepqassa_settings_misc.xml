@@ -50,8 +50,8 @@
         android:title="@string/general_misc_title">
 
         <!-- Sensor Block -->
-        <Preference
-            android:key="sensor_block_settings"
+        <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+            android:key="sensor_block"
             android:title="@string/sensor_block_title"
             android:summary="@string/sensor_block_summary"
             android:fragment="com.keepqassa.settings.fragments.misc.SensorBlock"/>

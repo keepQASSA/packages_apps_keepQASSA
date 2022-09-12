@@ -606,4 +606,8 @@
 
     <!-- QS background opacity -->
     <string name="qs_panel_alpha_title">Background opacity</string>
+
+    <!-- QS scrim view -->
+    <string name="qs_scrim_view">Scrim view</string>
+    <string name="qs_scrim_view_summary">enable scrim view in quick settings</string>
 </resources>

@@ -603,4 +603,8 @@
     <!-- Allow fake signature checkbox in developer settings -->
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
+
+    <!-- QS scrim view -->
+    <string name="qs_scrim_view">Scrim view</string>
+    <string name="qs_scrim_view_summary">enable scrim view in quick settings</string>
 </resources>

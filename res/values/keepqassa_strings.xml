@@ -606,7 +606,7 @@
 
     <!-- QS scrim view -->
     <string name="qs_scrim_view">Scrim view</string>
-    <string name="qs_scrim_view_summary">enable scrim view in quick settings</string>
+    <string name="qs_scrim_view_summary">disable scrim view in quick settings</string>
 
     <!-- QS themes -->
     <string name="qs_theme_category">Style</string>

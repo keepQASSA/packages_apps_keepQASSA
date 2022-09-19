@@ -376,7 +376,7 @@
     <string name="less_boring_heads_up_summary">Tampilkan kepala hanya untuk dialer, pesan dan aplikasi alarm</string>
     <string name="allow_signature_fake">Izinkan pemalsuan tanda tangan</string>
     <string name="allow_signature_fake_summary">Izinkan aplikasi melewati sistem keamanan dengan berpura-pura menjadi aplikasi yang berbeda</string>
-    <string name="qs_scrim_view_summary">aktifkan scrim view dalam pengaturan cepat</string>
+    <string name="qs_scrim_view_summary">nonaktifkan scrim view dalam pengaturan cepat</string>
     <string name="qs_theme_category">Gaya</string> 
     <string name="qs_bg_use_new_tint">Warna QS</string>
     <string name="qs_bg_use_new_tint_summary">Aktifkan gaya warna ubin QS</string>

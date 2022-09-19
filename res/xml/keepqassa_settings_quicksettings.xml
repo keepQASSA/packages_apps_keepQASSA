@@ -123,7 +123,7 @@
             android:key="qs_scrim_view"
             android:title="@string/qs_scrim_view"
             android:summary="@string/qs_scrim_view_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="notification_headers"

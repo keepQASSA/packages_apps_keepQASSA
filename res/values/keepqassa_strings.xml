@@ -465,8 +465,8 @@
     <string name="custom_text_clock_font_title">Text Clock font options</string>
     <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
     <string name="lock_clock_font_dialog_title">Select lock clock font</string>
-    <string name="lock_clock_font_stock">Normal (default)</string>
-    <string name="lock_clock_font_bold">Bold</string>
+    <string name="lock_clock_font_bold">Bold (default)</string>
+    <string name="lock_clock_font_stock">Normal</string>
     <string name="lock_clock_font_italic">Italic</string>
     <string name="lock_clock_font_bold_italic">Bold Italic</string>
     <string name="lock_clock_font_light_italic">Light Italic</string>

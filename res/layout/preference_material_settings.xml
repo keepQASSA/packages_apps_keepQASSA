@@ -16,75 +16,58 @@
 
 <!-- Based off frameworks/base/core/res/res/layout/preference_material.xml
      except that this has the negative margin on the image removed. -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+    android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:baselineAligned="false"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
-    android:gravity="center_vertical"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:background="?android:attr/selectableItemBackground"
-    android:divider="@null"
-    android:dividerHeight="0dp"
-    android:clipToPadding="false">
-
-    <LinearLayout
-        android:id="@+id/icon_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="56dp"
-        android:gravity="start|center_vertical"
-        android:orientation="horizontal"
-        android:paddingEnd="12dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp">
-        <com.android.internal.widget.PreferenceImageView
-            android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="48dp"
-            android:maxHeight="48dp"/>
-    </LinearLayout>
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+    <include layout="@layout/image_frame" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:layout_weight="1.0">
 
         <TextView
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:ellipsize="marquee"
             android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="24dp"
-            android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceListItem"
-            android:ellipsize="marquee"/>
+            android:singleLine="true" />
 
         <TextView
+            android:textColor="?android:attr/textColorSecondary"
+            android:layout_gravity="start"
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="24dp"
+            android:maxLines="10"
             android:layout_below="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
+            android:textAlignment="viewStart"
             android:layout_alignStart="@android:id/title"
-            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
-            android:textColor="?android:attr/textColorSecondary"
-            android:maxLines="10"/>
-
+            style="@style/PreferenceSummaryTextStyle" />
     </RelativeLayout>
 
-    <!-- Preference should place its actual preference widget here. -->
     <LinearLayout
+        android:gravity="center|end"
+        android:orientation="vertical"
         android:id="@android:id/widget_frame"
+        android:paddingLeft="16dp"
+        android:paddingRight="0dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="end|center_vertical"
         android:paddingStart="16dp"
-        android:orientation="vertical"/>
+        android:paddingEnd="0dp" />
 
 </LinearLayout>

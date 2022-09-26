@@ -47,7 +47,6 @@ import com.keepqassa.settings.preferences.CustomSeekBarPreference;
 public class BatteryBar extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
-    private static final String PREF_BATT_BAR = "statusbar_battery_bar";
     private static final String PREF_BATT_BAR_COLOR = "statusbar_battery_bar_color";
     private static final String PREF_BATT_BAR_CHARGING_COLOR = "statusbar_battery_bar_charging_color";
     private static final String PREF_BATT_BAR_BATTERY_LOW_COLOR = "statusbar_battery_bar_battery_low_color";
@@ -75,13 +74,7 @@ public class BatteryBar extends SettingsPreferenceFragment
         int intColor;
         String hexColor;
 
-        mBatteryBar = (SwitchPreference) findPreference(PREF_BATT_BAR);
         mHandler = new Handler();
-
-        boolean showing = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR, 0, UserHandle.USER_CURRENT) != 0;
-        mBatteryBar.setChecked(showing);
-        mBatteryBar.setOnPreferenceChangeListener(this);
 
         mBatteryBarColor = (ColorPickerPreference) prefSet.findPreference(PREF_BATT_BAR_COLOR);
         intColor = Settings.System.getIntForUser(resolver,
@@ -113,23 +106,7 @@ public class BatteryBar extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mBatteryBar) {
-            if (mIsBarSwitchingMode) {
-                return false;
-            }
-            mIsBarSwitchingMode = true;
-            boolean showing = ((Boolean)newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.STATUSBAR_BATTERY_BAR,
-                    showing ? 1 : 0, UserHandle.USER_CURRENT);
-            mBatteryBar.setChecked(showing);
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mIsBarSwitchingMode = false;
-                }
-            }, 1500);
-            return true;
-        } else if (preference == mBatteryBarColor) {
+        if (preference == mBatteryBarColor) {
             String hex = ColorPickerPreference.convertToARGB(Integer
                 .parseInt(String.valueOf(newValue)));
             preference.setSummary(hex);
@@ -160,8 +137,6 @@ public class BatteryBar extends SettingsPreferenceFragment
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
 
-        Settings.System.putIntForUser(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_COLOR, 0xff76c124, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,

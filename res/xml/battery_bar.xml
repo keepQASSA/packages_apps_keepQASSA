@@ -19,34 +19,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
-        android:key="statusbar_battery_bar"
-        android:title="@string/battery_bar_title"
-        android:defaultValue="false" />
-
     <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
         android:key="statusbar_battery_bar_thickness"
         android:title="@string/battery_bar_thickness_title"
         android:defaultValue="2"
         android:max="4"
         settings:min="1"
-        settings:units="@string/unit_pixels"
-        android:dependency="statusbar_battery_bar" />
+        settings:units="@string/unit_pixels" />
 
     <com.keepqassa.settings.preferences.SystemSettingListPreference
         android:key="statusbar_battery_bar_style"
         android:title="@string/battery_bar_style_title"
         android:entries="@array/battery_bar_style_entries"
         android:entryValues="@array/battery_bar_style_values"
-        android:defaultValue="0"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="0" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_blend_color"
         android:title="@string/battery_bar_blend_color_title"
         android:summary="@string/battery_bar_blend_color_summary"
-        android:defaultValue="true"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="true" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_blend_color_reverse"
@@ -59,26 +51,22 @@
     <com.keepqassa.settings.preferences.colorpicker.ColorPickerPreference
         android:key="statusbar_battery_bar_color"
         android:title="@string/battery_bar_color"
-        android:defaultValue="0xff76c124"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="0xff76c124" />
 
     <com.keepqassa.settings.preferences.colorpicker.ColorPickerPreference
         android:key="statusbar_battery_bar_battery_low_color"
         android:title="@string/battery_bar_battery_low_color"
-        android:defaultValue="0xfff90028"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="0xfff90028" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_animate"
         android:title="@string/battery_bar_animate_title"
-        android:defaultValue="true"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="true" />
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_enable_charging_color"
         android:title="@string/battery_bar_use_charging_color"
-        android:defaultValue="true"
-        android:dependency="statusbar_battery_bar" />
+        android:defaultValue="true" />
 
     <com.keepqassa.settings.preferences.colorpicker.ColorPickerPreference
         android:key="statusbar_battery_bar_charging_color"

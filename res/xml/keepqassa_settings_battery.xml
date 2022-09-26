@@ -20,8 +20,8 @@
     android:title="@string/battery_title" >
 
     <!-- Battery bar -->
-    <PreferenceScreen
-        android:key="batterybar"
+    <com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference
+        android:key="statusbar_battery_bar"
         android:title="@string/battery_bar_title"
         android:summary="@string/battery_bar_summary"
         android:fragment="com.keepqassa.settings.fragments.battery.BatteryBar" />

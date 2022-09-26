@@ -32,6 +32,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.keepqassa.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.keepqassa.settings.preferences.SystemSettingListPreference;
 import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
@@ -53,14 +54,29 @@ public class Battery extends SettingsPreferenceFragment
 
     public static final String TAG = "Battery";
 
+    private static final String PREF_BATT_BAR = "statusbar_battery_bar";
+
+    private SystemSettingMasterSwitchPreference mBatteryBar;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.keepqassa_settings_battery);
+
+        mBatteryBar = (SystemSettingMasterSwitchPreference) findPreference(PREF_BATT_BAR);
+        mBatteryBar.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1));
+        mBatteryBar.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mBatteryBar) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 

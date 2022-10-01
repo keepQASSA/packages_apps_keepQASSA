@@ -81,6 +81,8 @@ public class Misc extends SettingsPreferenceFragment
     private SystemSettingMasterSwitchPreference mGamingMode;
     private SystemSettingMasterSwitchPreference mSensorBlock;
 
+    private boolean mSelinuxSwitch;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,6 +130,16 @@ public class Misc extends SettingsPreferenceFragment
         mSelinuxPersistence.setChecked(getContext()
             .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
             .contains(PREF_SELINUX_MODE));
+
+        final Preference perfCat = (Preference) prefScreen
+                .findPreference("selinux");
+
+        mSelinuxSwitch = getResources().getBoolean(
+                    R.bool.config_enable_selinux_switch);
+
+        if (!mSelinuxSwitch) {
+            prefScreen.removePreference(perfCat);
+        }
     }
 
     @Override

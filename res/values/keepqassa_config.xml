@@ -19,4 +19,7 @@
 
     <!-- Whether to enable StatusBarLyric -->
     <bool name="config_enable_statusbar_lyric">false</bool>
+
+    <!-- Whether to enable SelinuxSwitch -->
+    <bool name="config_enable_selinux_switch">false</bool>
 </resources>

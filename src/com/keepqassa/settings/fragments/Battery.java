@@ -38,6 +38,7 @@ import com.keepqassa.settings.preferences.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.android.internal.util.qassa.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -55,26 +56,42 @@ public class Battery extends SettingsPreferenceFragment
     public static final String TAG = "Battery";
 
     private static final String PREF_BATT_BAR = "statusbar_battery_bar";
+    private static final String BATTERY_LEVEL_COLORS = "battery_level_colors";
 
     private SystemSettingMasterSwitchPreference mBatteryBar;
+    private SystemSettingSwitchPreference mBatteryLevelColors;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.keepqassa_settings_battery);
 
+        final ContentResolver resolver = getActivity().getContentResolver();
+
         mBatteryBar = (SystemSettingMasterSwitchPreference) findPreference(PREF_BATT_BAR);
         mBatteryBar.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1));
         mBatteryBar.setOnPreferenceChangeListener(this);
+
+        mBatteryLevelColors = findPreference(BATTERY_LEVEL_COLORS);
+        mBatteryLevelColors.setChecked((Settings.System.getInt(resolver,
+                Settings.System.BATTERY_LEVEL_COLORS, 0) == 1));
+        mBatteryLevelColors.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+    final ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBatteryBar) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
+            return true;
+        } else if (preference == mBatteryLevelColors) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.BATTERY_LEVEL_COLORS, value ? 1 : 0);
+            ActionUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;

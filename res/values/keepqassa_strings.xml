@@ -176,16 +176,16 @@
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_style_title">Battery styles</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
-    <string name="status_bar_battery_style_icon_musku">Icon musku</string>
-    <string name="status_bar_battery_style_icon_pill">Icon pill</string>
+    <string name="status_bar_battery_style_icon_ios">Icon ios</string>
+    <string name="status_bar_battery_style_icon_mx">Icon mx</string>
     <string name="status_bar_battery_style_icon_rlandscape">Icon landscape default (Right)</string>
     <string name="status_bar_battery_style_icon_rlandscape_a">Icon landscape A (Right)</string>
     <string name="status_bar_battery_style_icon_rlandscape_b">Icon landscape B (Right)</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape default (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_a">Icon landscape A (Left)</string>
     <string name="status_bar_battery_style_icon_landscape_b">Icon landscape B (Left)</string>
-    <string name="status_bar_battery_style_icon_landscape_buddy">Icon landscape buddy</string>
-    <string name="status_bar_battery_style_icon_signal">Icon signal</string>
+    <string name="status_bar_battery_style_icon_landscape_capsule">Icon landscape capsule</string>
+    <string name="status_bar_battery_style_icon_airoo">Icon airoo</string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_big_circle">Big circle</string>
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
@@ -199,7 +199,7 @@
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
     <string name="show_battery_symbol_title">Show lightning symbol</string>
-    <string name="show_battery_symbol_summary">Show lightning \u26A1\uFE0E symbol when charging (Only for hidden &amp; icon landscape buddy)</string>
+    <string name="show_battery_symbol_summary">Show lightning \u26A1\uFE0E symbol when charging (Only for hidden &amp; icon landscape capsule)</string>
 
     <!-- Battery percent -->
     <string name="battery_percentage_title">Battery percentage</string>

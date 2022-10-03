@@ -26,6 +26,12 @@
         android:summary="@string/battery_bar_summary"
         android:fragment="com.keepqassa.settings.fragments.battery.BatteryBar" />
 
+    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        android:key="charging_animator"
+        android:title="@string/charging_animator_title"
+        android:summary="@string/charging_animator_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/battery_sb_title">
 

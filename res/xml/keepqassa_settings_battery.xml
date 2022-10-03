@@ -32,6 +32,12 @@
         android:summary="@string/battery_level_colors_summary"
         android:defaultValue="false" />
 
+    <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
+        android:key="charging_animator"
+        android:title="@string/charging_animator_title"
+        android:summary="@string/charging_animator_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/battery_sb_title">
 

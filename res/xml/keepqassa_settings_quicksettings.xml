@@ -113,6 +113,11 @@
             android:summary="@string/header_icons_style_summary"
             android:defaultValue="true" />
 
+        <PreferenceScreen
+            android:key="qs_rounded_content_padding"
+            android:title="@string/padding_quick_settings_title"
+            android:fragment="com.keepqassa.settings.fragments.quicksettings.PaddingQuickSettings" />
+
         <com.keepqassa.settings.preferences.SystemSettingListPreference
             android:key="qs_datausage"
             android:title="@string/qs_datausage_title"

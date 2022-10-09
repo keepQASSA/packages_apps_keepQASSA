@@ -681,4 +681,9 @@
 
     <string name="battery_level_colors_title">Toggle colorful battery icon</string>
     <string name="battery_level_colors_summary">Each battery level drop is color coded (only for circle battery)</string>
+
+    <!-- Rounded corner content padding -->
+    <string name="padding_quick_settings_title">Adjust rounded corner content padding</string>
+    <string name="corner_fwvals">Use default values</string>
+    <string name="content_padding">Corner content padding</string>
 </resources>

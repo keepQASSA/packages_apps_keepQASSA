@@ -434,4 +434,7 @@
     <string name="charging_animator_summary">Animasi simbol petir \u26A1\uFE0E saat mengisi daya (hanya untuk baterai lingkaran)</string>
     <string name="battery_level_colors_title">Beralih ikon baterai warna-warni</string>
     <string name="battery_level_colors_summary">Setiap penurunan level baterai diberi kode warna (hanya untuk baterai lingkaran)</string>
+    <string name="padding_quick_settings_title">Sesuaikan bantalan konten sudut membulat</string>
+    <string name="corner_fwvals">Gunakan nilai default</string>
+    <string name="content_padding">Pengisi konten sudut</string>
 </resources>

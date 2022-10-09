@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Whether to enable StatusBarLyric -->
-    <bool name="config_enable_statusbar_lyric">false</bool>
+    <bool name="config_enable_statusbar_lyric">true</bool>
 
     <!-- Whether to enable SelinuxSwitch -->
     <bool name="config_enable_selinux_switch">false</bool>

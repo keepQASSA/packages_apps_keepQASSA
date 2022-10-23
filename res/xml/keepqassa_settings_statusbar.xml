@@ -39,6 +39,7 @@
         android:fragment="com.keepqassa.settings.fragments.statusbar.StatusBarLyric" />
 
     <PreferenceCategory
+        android:key="status_bar_padding"
         android:title="@string/statusbar_padding">
 
         <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference

@@ -78,6 +78,8 @@ public class StatusBar extends SettingsPreferenceFragment
 
     private SystemSettingMasterSwitchPreference mNetMonitor;
 
+    private boolean mEnableStatusBarPadding;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -103,6 +105,16 @@ public class StatusBar extends SettingsPreferenceFragment
         mNetMonitor.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_STATE, 0) == 1));
         mNetMonitor.setOnPreferenceChangeListener(this);
+
+        final Preference perfCat = (Preference) prefScreen
+                .findPreference("status_bar_padding");
+
+        mEnableStatusBarPadding = getResources().getBoolean(
+                    R.bool.config_enable_statusbar_padding);
+
+        if (!mEnableStatusBarPadding) {
+            prefScreen.removePreference(perfCat);
+        }
     }
 
     @Override

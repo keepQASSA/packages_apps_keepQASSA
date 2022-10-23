@@ -75,7 +75,6 @@ public class StatusBar extends SettingsPreferenceFragment
     private SystemSettingSwitchPreference mStatusbarIconsStyle;
 
     private static boolean sHasCenteredNotch;
-    private boolean mEnableStatusBarLyric;
 
     private SystemSettingMasterSwitchPreference mNetMonitor;
 
@@ -104,16 +103,6 @@ public class StatusBar extends SettingsPreferenceFragment
         mNetMonitor.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_STATE, 0) == 1));
         mNetMonitor.setOnPreferenceChangeListener(this);
-
-        final Preference perfCat = (Preference) prefScreen
-                .findPreference("status_bar_lyric");
-
-        mEnableStatusBarLyric = getResources().getBoolean(
-                    R.bool.config_enable_statusbar_lyric);
-
-        if (!mEnableStatusBarLyric) {
-            prefScreen.removePreference(perfCat);
-        }
     }
 
     @Override

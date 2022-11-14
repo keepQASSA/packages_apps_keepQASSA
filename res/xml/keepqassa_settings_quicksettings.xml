@@ -46,15 +46,10 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:title="@string/header_qs_title">
 
-        <PreferenceScreen
-            android:key="qs_privacy_chip"
-            android:title="@string/qs_privacy_chip_title"
-            android:fragment="com.keepqassa.settings.fragments.quicksettings.QsPrivacyChip"/>
-
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:title="@string/footer_qs_title">
@@ -112,6 +107,11 @@
             android:title="@string/header_icons_style"
             android:summary="@string/header_icons_style_summary"
             android:defaultValue="true" />
+
+        <PreferenceScreen
+            android:key="qs_privacy_chip"
+            android:title="@string/qs_privacy_chip_title"
+            android:fragment="com.keepqassa.settings.fragments.quicksettings.QsPrivacyChip"/>
 
         <PreferenceScreen
             android:key="qs_rounded_content_padding"

@@ -67,7 +67,6 @@ public class Misc extends SettingsPreferenceFragment
     private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
     private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
-    private static final String SENSOR_BLOCK = "sensor_block";
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
@@ -84,7 +83,6 @@ public class Misc extends SettingsPreferenceFragment
     private CustomSeekBarPreference mScreenshotDelay;
 
     private SystemSettingMasterSwitchPreference mGamingMode;
-    private SystemSettingMasterSwitchPreference mSensorBlock;
 
     private boolean mSelinuxSwitch;
 
@@ -117,11 +115,6 @@ public class Misc extends SettingsPreferenceFragment
         mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.GAMING_MODE_ENABLED, 0) == 1));
         mGamingMode.setOnPreferenceChangeListener(this);
-
-        mSensorBlock = (SystemSettingMasterSwitchPreference) findPreference(SENSOR_BLOCK);
-        mSensorBlock.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.SENSOR_BLOCK, 0) == 1));
-        mSensorBlock.setOnPreferenceChangeListener(this);
 
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
@@ -209,8 +202,6 @@ public class Misc extends SettingsPreferenceFragment
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_DELAY,
                 (int) ViewConfiguration.get(mContext).getScreenshotChordKeyTimeout(), UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                Settings.System.SENSOR_BLOCK, 0, UserHandle.USER_CURRENT);
         SensorBlock.reset(mContext);
     }
 

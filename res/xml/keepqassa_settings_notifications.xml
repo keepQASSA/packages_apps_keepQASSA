@@ -84,6 +84,15 @@
             android:summary="@string/enable_fc_notifications_summary" 
             android:defaultValue="true" /> 
 
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="max_visible_notification_icons"
+            android:title="@string/max_visible_notification_icons_title"
+            android:summary="@string/max_visible_notification_icons_summary"
+            android:defaultValue="5"
+            android:max="10"
+            settings:min="0"
+            settings:units="" />
+
    </PreferenceCategory>
 
    <PreferenceCategory

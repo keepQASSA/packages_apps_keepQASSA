@@ -826,4 +826,7 @@
     <!-- QQS Count -->
     <string name="qqs_count_title">Increase the number of icons in QQS (requires SystemUI restart)</string>
 
+    <!-- Max visible notification icons -->
+    <string name="max_visible_notification_icons_title">Notification icons</string>
+    <string name="max_visible_notification_icons_summary">Max. notification icons visible on statusbar</string>
 </resources>

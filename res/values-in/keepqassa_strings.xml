@@ -538,4 +538,6 @@
     <string name="spoof_storage_encryption_status_title">Gunakan spoofing enkripsi penyimpanan</string>
     <string name="spoof_storage_encryption_status_summary">Status enkripsi penyimpanan spoof menjadi terenkripsi.</string>
     <string name="qqs_count_title">Tingkatkan jumlah ikon di QQS (memerlukan SystemUI restart)</string>
+    <string name="max_visible_notification_icons_title">Ikon notifikasi</string>
+    <string name="max_visible_notification_icons_summary">Max. ikon notifikasi terlihat di bilah status</string>
 </resources>

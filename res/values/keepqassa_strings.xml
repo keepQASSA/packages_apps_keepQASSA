@@ -746,4 +746,20 @@
     <!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+
+    <string name="status_bar_battery_style_land_a">Icon landscape Simply</string>
+    <string name="status_bar_battery_style_land_b">Icon landscape NeNine</string>
+    <string name="status_bar_battery_style_land_c">Icon landscape ColorOS</string>
+    <string name="status_bar_battery_style_land_d">Icon landscape Love</string>
+    <string name="status_bar_battery_style_land_e">Icon landscape BaseBall</string>
+    <string name="status_bar_battery_style_land_f">Icon lLandscape Half Fill</string>
+    <string name="status_bar_battery_style_land_g">Icon landscape Tadika Mesra</string>
+    <string name="status_bar_battery_style_land_h">Icon landscape MIUI</string>
+    <string name="status_bar_battery_style_land_i">Icon landscape Buddy</string>
+    <string name="status_bar_battery_style_land_j">Icon landscape Strip Path</string>
+    <string name="status_bar_battery_style_land_k">Icon landscape iOS Fourteen</string>
+    <string name="status_bar_battery_style_land_l">Icon landscape iOS Sixteen</string>
+    <string name="status_bar_battery_style_land_m">Icon landscape iOS Outline</string>
+    <string name="status_bar_battery_style_land_n">Icon landscape Ruler</string>
+    <string name="status_bar_battery_style_land_o">Icon landscape Windows</string>
 </resources>

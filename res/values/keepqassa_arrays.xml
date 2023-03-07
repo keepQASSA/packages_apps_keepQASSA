@@ -27,6 +27,21 @@
         <item>@string/status_bar_battery_style_icon_landscape_a</item>
         <item>@string/status_bar_battery_style_icon_landscape_b</item>
         <item>@string/status_bar_battery_style_icon_landscape_capsule</item>
+        <item>@string/status_bar_battery_style_land_a</item>
+        <item>@string/status_bar_battery_style_land_b</item>
+        <item>@string/status_bar_battery_style_land_c</item>
+        <item>@string/status_bar_battery_style_land_d</item>
+        <item>@string/status_bar_battery_style_land_e</item>
+        <item>@string/status_bar_battery_style_land_f</item>
+        <item>@string/status_bar_battery_style_land_g</item>
+        <item>@string/status_bar_battery_style_land_h</item>
+        <item>@string/status_bar_battery_style_land_i</item>
+        <item>@string/status_bar_battery_style_land_j</item>
+        <item>@string/status_bar_battery_style_land_k</item>
+        <item>@string/status_bar_battery_style_land_l</item>
+        <item>@string/status_bar_battery_style_land_m</item>
+        <item>@string/status_bar_battery_style_land_n</item>
+        <item>@string/status_bar_battery_style_land_o</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -55,6 +70,21 @@
         <item>15</item>
         <item>16</item>
         <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
     </string-array>
 
     <!-- Battery percent -->
@@ -86,6 +116,21 @@
         <item>@string/status_bar_battery_style_icon_landscape_a</item>
         <item>@string/status_bar_battery_style_icon_landscape_b</item>
         <item>@string/status_bar_battery_style_icon_landscape_capsule</item>
+        <item>@string/status_bar_battery_style_land_a</item>
+        <item>@string/status_bar_battery_style_land_b</item>
+        <item>@string/status_bar_battery_style_land_c</item>
+        <item>@string/status_bar_battery_style_land_d</item>
+        <item>@string/status_bar_battery_style_land_e</item>
+        <item>@string/status_bar_battery_style_land_f</item>
+        <item>@string/status_bar_battery_style_land_g</item>
+        <item>@string/status_bar_battery_style_land_h</item>
+        <item>@string/status_bar_battery_style_land_i</item>
+        <item>@string/status_bar_battery_style_land_j</item>
+        <item>@string/status_bar_battery_style_land_k</item>
+        <item>@string/status_bar_battery_style_land_l</item>
+        <item>@string/status_bar_battery_style_land_m</item>
+        <item>@string/status_bar_battery_style_land_n</item>
+        <item>@string/status_bar_battery_style_land_o</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -115,6 +160,21 @@
         <item>15</item>
         <item>16</item>
         <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
     </string-array>
 
     <!-- QS battery location  -->

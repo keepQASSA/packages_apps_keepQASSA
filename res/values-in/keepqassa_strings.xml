@@ -479,4 +479,19 @@
     <string name="keepqassa_similliar_menus_summary">beberapa menu serupa</string>
     <string name="charging_animation_title">Mengisi animasi</string>
     <string name="charging_animation_summary">Menampilkan animasi saat perangkat dicolokkan</string>
+    <string name="status_bar_battery_style_land_a">Ikon lanskap Pemandangan Sederhana</string>
+    <string name="status_bar_battery_style_land_b">Ikon lanskap NeNine</string>
+    <string name="status_bar_battery_style_land_c">Ikon lanskap ColorOS</string>
+    <string name="status_bar_battery_style_land_d">Ikon lanskap Cinta</string>
+    <string name="status_bar_battery_style_land_e">Ikon lanskap BaseBola</string>
+    <string name="status_bar_battery_style_land_f">Ikon lanskap Setengah Isi</string>
+    <string name="status_bar_battery_style_land_g">Ikon lanskap Pemandangan Tadika Mesra</string>
+    <string name="status_bar_battery_style_land_h">Ikon lanskap MIUI</string>
+    <string name="status_bar_battery_style_land_i">Ikon lanskap Sobat Pemandangan</string>
+    <string name="status_bar_battery_style_land_j">Ikon lanskap Jalur Lajur</string>
+    <string name="status_bar_battery_style_land_k">Ikon lanskap iOS Empat Belas</string>
+    <string name="status_bar_battery_style_land_l">Ikon lanskap iOS Enam Belas</string>
+    <string name="status_bar_battery_style_land_m">Ikon lanskap Garis Besar iOS</string>
+    <string name="status_bar_battery_style_land_n">Ikon lanskap Penggaris</string>
+    <string name="status_bar_battery_style_land_o">Ikon lanskap Jendela</string>
 </resources>

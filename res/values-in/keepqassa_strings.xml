@@ -540,4 +540,14 @@
     <string name="max_visible_notification_icons_summary">Max. ikon notifikasi terlihat di bilah status</string>
     <string name="notification_sound_vib_screen_on_title">Pemberitahuan berisik</string>
     <string name="notification_sound_vib_screen_on_summary">Putar suara dan getaran untuk notifikasi saat layar aktif</string>
+    <string name="misc_signalwifisb_title">Setelan Ikon Sinyal dan Wifi Lainnya</string>
+    <string name="misc_signalwifisb_summary">sesuaikan pengaturan ikon wifi sinyal bilah status</string>
+    <string name="custom_signal_dimension_title">Dimensi Khusus Ikon Sinyal</string>
+    <string name="custom_signal_dimension_summary">gunakan nilai dimensi khusus yang dapat disesuaikan</string>
+    <string name="custom_signal_height">Tinggi</string>
+    <string name="custom_signal_width">Lebar</string>
+    <string name="custom_wifi_dimension_title">Dimensi Khusus Ikon Wifi</string>
+    <string name="custom_wifi_dimension_summary">gunakan nilai dimensi khusus yang dapat disesuaikan</string>
+    <string name="custom_wifi_height">Tinggi</string>
+    <string name="custom_wifi_width">Lebar</string>
 </resources>

@@ -831,4 +831,17 @@
     <!-- Notifications while screen on -->
     <string name="notification_sound_vib_screen_on_title">Noisy notifications</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
+
+    <!-- custom signal dimen -->
+    <string name="custom_signal_dimension_title">Signal Icon Custom Dimension</string>
+    <string name="custom_signal_dimension_summary">use custom addjustable dimen values</string>
+    <string name="custom_signal_height">Height</string>
+    <string name="custom_signal_width">Width</string>
+
+    <!-- custom wifi dimen -->
+    <string name="custom_wifi_dimension_title">Wifi Icon Custom Dimension</string>
+    <string name="custom_wifi_dimension_summary">use custom addjustable dimen values</string>
+    <string name="custom_wifi_height">Height</string>
+    <string name="custom_wifi_width">Width</string>
+
 </resources>

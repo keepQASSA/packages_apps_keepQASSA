@@ -140,4 +140,9 @@
             android:disableDependentsState="true" />
     </PreferenceCategory>
 
+    <Preference
+	android:summary="@string/keepqassa_similar_menus_summary"
+        settings:allowDividerAbove="true"
+        android:fragment="com.android.settings.fuelgauge.PowerUsageSummary" />
+
 </PreferenceScreen>

@@ -476,4 +476,5 @@
     <string name="advanced_reboot_secured_title">Layar kunci aman</string>
     <string name="advanced_reboot_secured_summary">Tampilkan opsi mulai ulang lanjutan pada layar kunci aman</string>
     <string name="notification_alpha_title">Opasitas latar belakang notifikasi</string>
+    <string name="keepqassa_similliar_menus_summary">beberapa menu serupa</string>
 </resources>

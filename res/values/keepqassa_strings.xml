@@ -741,4 +741,5 @@
     <!-- Notification background opacity -->
     <string name="notification_alpha_title">Notification background opacity</string>
 
+    <string name="keepqassa_similar_menus_summary">Some similar menus</string>
 </resources>

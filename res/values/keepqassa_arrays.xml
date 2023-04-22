@@ -593,6 +593,9 @@
         <item>@string/solid_accent</item>
         <item>@string/outline</item>
         <item>@string/solid_accent_gradient</item>
+        <item>@string/accent1</item>
+        <item>@string/outline1</item>
+        <item>@string/gradiant1</item>
     </string-array>
 
     <string-array name="statusbar_clock_chip_values" translatable="false">
@@ -600,6 +603,9 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
     </string-array>
 
 </resources>

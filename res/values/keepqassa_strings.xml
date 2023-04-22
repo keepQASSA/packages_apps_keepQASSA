@@ -770,5 +770,8 @@
     <string name="solid_accent">Accent</string>
     <string name="outline">Outline</string>
     <string name="solid_accent_gradient">Gradient</string>
+    <string name="accent1">Accent Leafy</string>
+    <string name="outline1">Outline Leafy</string>
+    <string name="gradiant1">Gradient Leafy</string>
 
 </resources>

@@ -499,4 +499,7 @@
     <string name="solid_accent">Aksen</string>
     <string name="outline">Garis Besar</string>
     <string name="solid_accent_gradient">Gradien</string>
+    <string name="accent1">Aksen Berdaun</string>
+    <string name="outline1">Garis Besar Berdaun</string>
+    <string name="gradiant1">Gradien Daun</string>
 </resources>

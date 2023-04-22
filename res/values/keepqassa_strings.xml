@@ -767,4 +767,8 @@
     <string name="statusbar_dual_row_title">Dual Status Bar</string>
     <string name="statusbar_dual_row_summary">Enable dual row statusbar</string>
 
+    <string name="solid_accent">Accent</string>
+    <string name="outline">Outline</string>
+    <string name="solid_accent_gradient">Gradient</string>
+
 </resources>

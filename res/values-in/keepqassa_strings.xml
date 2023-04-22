@@ -496,4 +496,7 @@
     <string name="status_bar_battery_style_land_o">Ikon lanskap Jendela</string>
     <string name="statusbar_dual_row_title">Bilah Status Ganda</string>
     <string name="statusbar_dual_row_summary">Aktifkan bilah status baris ganda</string>
+    <string name="solid_accent">Aksen</string>
+    <string name="outline">Garis Besar</string>
+    <string name="solid_accent_gradient">Gradien</string>
 </resources>

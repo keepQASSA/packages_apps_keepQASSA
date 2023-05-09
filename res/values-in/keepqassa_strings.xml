@@ -502,4 +502,10 @@
     <string name="accent1">Aksen Berdaun</string>
     <string name="outline1">Garis Besar Berdaun</string>
     <string name="gradiant1">Gradien Daun</string>
+    <string name="solid_gradient_neumorph">Gradien Neumorph</string>
+    <string name="solid_gradient_stroke">guratan gradien yang tajam</string>
+    <string name="solid_accent_transparent">Aksen transparan</string>
+    <string name="solid_gradient_light">Cahaya gradien</string>
+    <string name="solid_gradient_shape">Pojok gradien tajam</string>
+    <string name="solid_gradient_void_light">Cahaya Gradien Void</string>
 </resources>

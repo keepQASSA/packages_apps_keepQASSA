@@ -508,4 +508,6 @@
     <string name="solid_gradient_light">Cahaya gradien</string>
     <string name="solid_gradient_shape">Pojok gradien tajam</string>
     <string name="solid_gradient_void_light">Cahaya Gradien Void</string>
+    <string name="solid_leafy_transparent">Aksen dedaunan transparan</string>
+    <string name="solid_sharp_transparent">Sudut transparan yang tajam</string>
 </resources>

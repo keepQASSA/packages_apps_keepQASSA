@@ -779,5 +779,7 @@
     <string name="solid_gradient_light">Gradient light</string>
     <string name="solid_gradient_shape">Sharp gradient corner</string>
     <string name="solid_gradient_void_light">Gradient Void light</string>
+    <string name="solid_leafy_transparent">Accent transparent leafy</string>
+    <string name="solid_sharp_transparent">Sharp transparent corner</string>
 
 </resources>

@@ -127,9 +127,9 @@
     <!-- Unlock FPS for specific games -->
     <string name="use_games_spoof_title">Unlock higher FPS in games</string>
     <string name="use_games_spoof_summary">Spoof your device as different model for specific games to unlock higher FPS</string>
-    <!-- Unlock higher quality streams for specific apps -->
-    <string name="use_stream_spoof_title">Unlock higher quality streams</string>
-    <string name="use_stream_spoof_summary">Spoof your device as Pixel 6 Pro to unlock higher quality streams on Amazon Prime, Disney+, Hotstar, and Netflix</string>
+    <!-- Netflix Spoof -->
+    <string name="netflix_spoof_title">Netflix spoof</string>
+    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
 
     <!-- Show old style mobile data icon -->
     <string name="use_old_mobiletype_title">Use old style mobile data icons</string>

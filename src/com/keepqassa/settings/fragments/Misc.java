@@ -59,12 +59,9 @@ public class Misc extends SettingsPreferenceFragment
 
     public static final String TAG = "Misc";
 
-    private static final String KEY_GAMES_SPOOF = "use_games_spoof";
-    private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
-    private static final String KEY_STREAM_SPOOF = "use_stream_spoof";
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
-    private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
+    private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix";
     private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
     private static final String SELINUX_CATEGORY = "selinux";
@@ -74,9 +71,6 @@ public class Misc extends SettingsPreferenceFragment
 
     private Handler mHandler = new Handler();
 
-    private SwitchPreference mGamesSpoof;
-    private SwitchPreference mPhotosSpoof;
-    private SwitchPreference mStreamSpoof;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
 
@@ -94,18 +88,6 @@ public class Misc extends SettingsPreferenceFragment
 	final PreferenceScreen prefScreen = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
         Resources res = getResources();
-
-        mGamesSpoof = (SwitchPreference) prefScreen.findPreference(KEY_GAMES_SPOOF);
-        mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
-        mGamesSpoof.setOnPreferenceChangeListener(this);
-
-        mPhotosSpoof = (SwitchPreference) prefScreen.findPreference(KEY_PHOTOS_SPOOF);
-        mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
-        mPhotosSpoof.setOnPreferenceChangeListener(this);
-
-        mStreamSpoof = (SwitchPreference) findPreference(KEY_STREAM_SPOOF);
-        mStreamSpoof.setChecked(SystemProperties.getBoolean(SYS_STREAM_SPOOF, true));
-        mStreamSpoof.setOnPreferenceChangeListener(this);
 
         mScreenshotDelay = (CustomSeekBarPreference) findPreference(KEY_SCREENSHOT_DELAY);
         int delay = (int) ViewConfiguration.get(getActivity()).getScreenshotChordKeyTimeout();
@@ -152,19 +134,7 @@ public class Misc extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-	if (preference == mGamesSpoof) {
-            boolean value = (Boolean) newValue;
-            SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mPhotosSpoof) {
-            boolean value = (Boolean) newValue;
-            SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mStreamSpoof) {
-            boolean value = (Boolean) newValue;
-            SystemProperties.set(SYS_STREAM_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mGamingMode) {
+        if (preference == mGamingMode) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
@@ -196,7 +166,7 @@ public class Misc extends SettingsPreferenceFragment
     final ContentResolver resolver = mContext.getContentResolver();
 	SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
-        SystemProperties.set(SYS_STREAM_SPOOF, "true");
+        SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,

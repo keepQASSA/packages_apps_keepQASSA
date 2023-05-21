@@ -67,13 +67,11 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String ICON_BLACKLIST = "icon_blacklist";
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
-    private static final String STATUSBAR_ICONS_STYLE = "statusbar_icons_style";
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
     private static final String STATUSBAR_DUAL_ROW = "statusbar_dual_row";
 
     private SystemSettingListPreference mStatusBarClock;
 
-    private SystemSettingSwitchPreference mStatusbarIconsStyle;
     private SystemSettingSwitchPreference mStatusbarDualRow;
 
     private static boolean sHasCenteredNotch;
@@ -97,11 +95,6 @@ public class StatusBar extends SettingsPreferenceFragment
         mStatusBarClock =
                 (SystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarClock.setOnPreferenceChangeListener(this);
-
-	mStatusbarIconsStyle = (SystemSettingSwitchPreference) findPreference(STATUSBAR_ICONS_STYLE);
-        mStatusbarIconsStyle.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_ICONS_STYLE, 0) == 1));
-        mStatusbarIconsStyle.setOnPreferenceChangeListener(this);
 
         mNetMonitor = (SystemSettingMasterSwitchPreference) findPreference(NETWORK_TRAFFIC_STATE);
         mNetMonitor.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
@@ -154,13 +147,7 @@ public class StatusBar extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
     final ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mStatusbarIconsStyle) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_ICONS_STYLE, value ? 1 : 0);
-            ActionUtils.showSystemUiRestartDialog(getContext());
-            return true;
-        } else if (preference == mNetMonitor) {
+        if (preference == mNetMonitor) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0);

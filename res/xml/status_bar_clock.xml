@@ -16,9 +16,16 @@
      limitations under the License.
 -->
 <PreferenceScreen
-    android:title="@string/status_bar_clock_title"
+    android:title=" "
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/status_bar_clock_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <!-- QS clock -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference

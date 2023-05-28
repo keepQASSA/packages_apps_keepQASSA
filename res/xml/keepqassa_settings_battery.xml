@@ -17,7 +17,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/battery_title" >
+    android:title=" " >
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/battery_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference 
         android:key="charging_animation"
@@ -46,7 +53,8 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
-        android:title="@string/battery_sb_title">
+        android:title="@string/battery_sb_title"
+        android:layout="@layout/xd_pref_category">
 
         <!-- Battery styles -->
         <com.keepqassa.settings.preferences.SystemSettingListPreference
@@ -84,7 +92,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/battery_qs_title">
+        android:title="@string/battery_qs_title"
+        android:layout="@layout/xd_pref_category">
 
         <!-- Battery styles -->
         <com.keepqassa.settings.preferences.SystemSettingListPreference
@@ -123,6 +132,7 @@
 
     <PreferenceCategory
         android:key="aggressive_battery"
+        android:layout="@layout/xd_pref_category"
         android:title="@string/aggressive_battery_title">
 
         <com.keepqassa.settings.preferences.GlobalSettingSwitchPreference

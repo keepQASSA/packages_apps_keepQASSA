@@ -17,7 +17,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/gestures_title" >
+    android:title=" " >
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/gestures_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <Preference
         android:key="gesture_assist_input_summary"

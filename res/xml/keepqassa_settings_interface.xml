@@ -16,7 +16,14 @@
 --> 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/interface_title"
+    android:title=" "
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/interface_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
 </PreferenceScreen>

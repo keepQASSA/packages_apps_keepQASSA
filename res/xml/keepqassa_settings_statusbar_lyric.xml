@@ -16,7 +16,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/status_bar_lyric_title">
+    android:title=" ">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/status_bar_lyric_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <!-- Statusbar Lyric -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
@@ -26,7 +33,8 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
-        android:title="@string/status_bar_lyric_options_title">
+        android:title="@string/status_bar_lyric_options_title"
+        android:layout="@layout/xd_pref_category">
 
         <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.disguise_props_for_music_app"

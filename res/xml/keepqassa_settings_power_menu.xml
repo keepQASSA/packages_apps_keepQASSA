@@ -2,7 +2,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="power_menu"
-    android:title="@string/power_menu_title">
+    android:title=" ">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/power_menu_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <CheckBoxPreference
         android:key="screenshot"

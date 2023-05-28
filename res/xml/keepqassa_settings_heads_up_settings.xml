@@ -17,7 +17,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/heads_up_cat_title" >
+    android:title=" " >
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/heads_up_cat_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <ListPreference
         android:key="heads_up_snooze_time"
@@ -41,6 +48,7 @@
 
     <PreferenceCategory
         android:title="@string/heads_up_blacklist_title"
+        android:layout="@layout/xd_pref_category"
         android:key="blacklist_applications" >
 
         <Preference

@@ -18,7 +18,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/gaming_title" >
+    android:title=" " >
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/gaming_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_add"
@@ -66,6 +73,7 @@
 
     <PreferenceCategory
         android:key="performance_category"
+        android:layout="@layout/xd_pref_category"
         android:title="@string/gaming_mode_performance">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
@@ -90,7 +98,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/gaming_mode_dnd">
+        android:title="@string/gaming_mode_dnd"
+        android:layout="@layout/xd_pref_category">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_notification_alert"
@@ -112,7 +121,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/gaming_mode_prevent_accidental_touch">
+        android:title="@string/gaming_mode_prevent_accidental_touch"
+        android:layout="@layout/xd_pref_category">
 
         <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_gesture"

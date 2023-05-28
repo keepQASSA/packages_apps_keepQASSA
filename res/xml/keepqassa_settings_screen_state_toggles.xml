@@ -16,8 +16,15 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/screen_state_toggles_title"
+    android:title=" "
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/screen_state_toggles_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <SwitchPreference
         android:key="screen_state_toggles_enable_key"
@@ -47,6 +54,7 @@
 
     <PreferenceCategory
         android:key="screen_state_toggles_mobile_key"
+        android:layout="@layout/xd_pref_category"
         android:title="@string/screen_state_toggles_mobile_title">
 
        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
@@ -64,6 +72,7 @@
 
     <PreferenceCategory
         android:key="screen_state_toggles_location_key"
+        android:layout="@layout/xd_pref_category"
         android:title="@string/screen_state_toggles_location_title">
 
        <com.keepqassa.settings.preferences.SystemSettingSwitchPreference

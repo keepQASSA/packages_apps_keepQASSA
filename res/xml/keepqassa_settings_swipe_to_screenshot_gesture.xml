@@ -20,7 +20,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="gesture_swipe_to_screenshot"
-    android:title="@string/swipe_to_screenshot_gesture_title">
+    android:title=" ">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/swipe_to_screenshot_gesture_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
         android:key="swipe_to_screenshot"

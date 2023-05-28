@@ -17,7 +17,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/sensor_block_title">
+    android:title=" ">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/sensor_block_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <!-- Master switch -->
     <com.keepqassa.settings.preferences.SystemSettingSwitchPreference
@@ -29,6 +36,7 @@
     <!-- App picker activity for sensor block -->
     <PreferenceCategory
         android:title="@string/sensor_block_app_picker_title"
+        android:layout="@layout/xd_pref_category"
         android:dependency="sensor_block"
         android:key="sensor_block_applications">
         <Preference

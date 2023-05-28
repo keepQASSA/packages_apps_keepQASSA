@@ -15,9 +15,16 @@
      limitations under the License.
 -->
 <PreferenceScreen
-    android:title="@string/battery_bar_title"
+    android:title=" "
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- xd. fake toolbar -->
+    <Preference
+        android:key="xd_action_bar"
+        android:title="@string/battery_bar_title"
+        android:layout="@layout/xd_action_bar"
+        android:selectable="false"/>
 
     <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
         android:key="statusbar_battery_bar_thickness"

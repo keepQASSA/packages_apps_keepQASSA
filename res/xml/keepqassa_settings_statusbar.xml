@@ -51,6 +51,13 @@
         android:title="@string/statusbar_padding">
 
         <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
+            android:key="statusbar_top_padding"
+            android:title="@string/statusbar_top_padding"
+            android:max="50"
+            android:min="-5"
+            android:defaultValue="-1"/>
+
+        <com.keepqassa.settings.preferences.SystemSettingSeekBarPreference
             android:key="statusbar_left_padding"
             android:title="@string/statusbar_left_padding"
             android:max="50"

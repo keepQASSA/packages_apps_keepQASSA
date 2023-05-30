@@ -789,4 +789,6 @@
     <!-- Lock icon -->
     <string name="hide_lockicon_title">Hide lock icon</string>
     <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
+
+    <string name="statusbar_top_padding">Statusbar top padding</string>
 </resources>

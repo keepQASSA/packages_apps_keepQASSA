@@ -794,7 +794,8 @@
 
     <!-- gvisual mod -->
     <string name="gvisual_title">G-Visual Mod</string>
-    <string name="gvisual_summary">Various UI customizations by @ImYourGege</string>
+    <string name="gvisual_imyourgege_title">G-Visual Mod by @ImYourGege</string>
+    <string name="gvisual_summary">Various UI customizationse</string>
     <string name="rounded_ui_title">Rounded corner</string>
     <string name="rounded_ui_dialog_title">Select rounded corner model</string>
     <string name="rounded_style_default">Default</string>
@@ -812,4 +813,11 @@
     <string name="themer_summary">Browse and select installed themes</string>
     <string name="theme_select_title">Themes</string>
     <string name="theme_select_summary">Browse and select installed themes</string>
+
+    <!-- gvisual mod by ghou8s -->
+    <string name="gvisual_ghou8s_title">G-Visual Mod by @ghou8s</string>
+    <string name="quicksettings_landscape_title">Quicksettings landscape</string>
+    <string name="quicksettings_landscape_dialog_title">Select quicksettings landscape model</string>
+    <string name="quicksettings_landscape_default">Default</string>
+    <string name="quicksettings_landscape_wide">Wide</string>
 </resources>

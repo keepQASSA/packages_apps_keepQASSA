@@ -516,7 +516,8 @@
     <string name="hide_lockicon_summary">Sembunyikan ikon gembok di layar kunci</string>
     <string name="statusbar_top_padding">Padding atas statusbar</string>
     <string name="gvisual_title">Mod G-Visual</string>
-    <string name="gvisual_summary">Berbagai penyesuaian UI oleh @ImYourGege</string>
+    <string name="gvisual_summary">Berbagai penyesuaian UI</string>
+    <string name="gvisual_imyourgege_title">Mod G-Visual oleh @ImYourGege</string>
     <string name="rounded_ui_title">Sudut membulat</string>
     <string name="rounded_ui_dialog_title">Pilih model sudut membulat</string>
     <string name="rounded_style_default">Default</string>
@@ -533,4 +534,9 @@
     <string name="themer_summary">Jelajahi dan pilih tema yang terpasang</string>
     <string name="theme_select_title">Tema</string>
     <string name="theme_select_summary">Jelajahi dan pilih tema yang terpasang</string>
+    <string name="gvisual_ghou8s_title">Mod G-Visual oleh @ghou8s</string>
+    <string name="quicksettings_landscape_title">Lanskap pengaturan cepat</string>
+    <string name="quicksettings_landscape_dialog_title">Pilih model lanskap pengaturan cepat</string>
+    <string name="quicksettings_landscape_default">Default</string>
+    <string name="quicksettings_landscape_wide">Lebar</string>
 </resources>

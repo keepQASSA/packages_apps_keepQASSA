@@ -653,4 +653,15 @@
         <item>4</item>
     </string-array>
 
+    <!-- Gvisual mod by ghou8s -->
+    <string-array name="quicksettings_landscape_titles">
+        <item>@string/quicksettings_landscape_default</item>
+        <item>@string/quicksettings_landscape_wide</item>
+    </string-array>
+
+    <string-array name="quicksettings_landscape_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

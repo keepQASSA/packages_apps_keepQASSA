@@ -64,11 +64,13 @@ public class Gvisual extends SettingsPreferenceFragment implements
 
     private static final String PREF_ROUNDED_CORNER = "rounded_ui";
     private static final String PREF_SB_HEIGHT = "statusbar_height";
+    private static final String PREF_QS_LANDSCAPE_WIDE = "quicksettings_landscape_wide";
 
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private ListPreference mRoundedUi;
     private ListPreference mSbHeight;
+    private ListPreference mQsLWide;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,8 @@ public class Gvisual extends SettingsPreferenceFragment implements
 
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
+
+        setupQuicksettingsLandscapeSwitchPref();
 
         mRoundedUi = (ListPreference) findPreference(PREF_ROUNDED_CORNER);
         int roundedValue = getOverlayPosition(ThemesUtils.UI_RADIUS);
@@ -113,7 +117,25 @@ public class Gvisual extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mRoundedUi) {
+        if (preference == mQsLWide){
+        String qslwide = (String) objValue;
+        final Context context = getContext();
+        switch (qslwide) {
+            case "1":
+            handleOverlays(ThemesUtils.QUICKSETTINGS_LANDSCAPE_WIDE, false, mOverlayManager);
+            break;
+            case "2":
+            handleOverlays(ThemesUtils.QUICKSETTINGS_LANDSCAPE_WIDE, true, mOverlayManager);
+            break;
+        }
+        try {
+             mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+             mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+             mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+        } catch (RemoteException ignored) {
+        }
+        return true;
+        } else if (preference == mRoundedUi) {
         String rounded = (String) objValue;
         int roundedValue = Integer.parseInt(rounded);
         mRoundedUi.setValue(String.valueOf(roundedValue));
@@ -165,6 +187,17 @@ public class Gvisual extends SettingsPreferenceFragment implements
             }
         }
         return overlayName;
+    }
+
+    private void setupQuicksettingsLandscapeSwitchPref() {
+        mQsLWide = (ListPreference) findPreference(PREF_QS_LANDSCAPE_WIDE);
+        mQsLWide.setOnPreferenceChangeListener(this);
+        if (qassaUtils.isThemeEnabled("com.ghou8s.gvisualmod.qsl_w")){
+            mQsLWide.setValue("2");
+        }
+        else{
+            mQsLWide.setValue("1");
+        }
     }
 
     @Override

@@ -541,4 +541,6 @@
     <string name="quicksettings_landscape_wide">Lebar</string>
     <string name="custom_signal_bar_title">Ikon sinyal</string>
     <string name="custom_wifi_bar_title">ikon Wi-Fi</string>
+    <string name="spoof_storage_encryption_status_title">Gunakan spoofing enkripsi penyimpanan</string>
+    <string name="spoof_storage_encryption_status_summary">Status enkripsi penyimpanan spoof menjadi terenkripsi.</string>
 </resources>

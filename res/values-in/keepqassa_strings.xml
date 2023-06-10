@@ -543,4 +543,8 @@
     <string name="custom_wifi_bar_title">ikon Wi-Fi</string>
     <string name="spoof_storage_encryption_status_title">Gunakan spoofing enkripsi penyimpanan</string>
     <string name="spoof_storage_encryption_status_summary">Status enkripsi penyimpanan spoof menjadi terenkripsi.</string>
+    <string name="quicksettings_header_title">header Quicksettings</string>
+    <string name="quicksettings_header_dialog_title">Pilih model header pengaturan cepat</string>
+    <string name="quicksettings_header_default">Default</string>
+    <string name="quicksettings_header_transparent">Transparan</string>
 </resources>

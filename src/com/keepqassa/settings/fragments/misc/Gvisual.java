@@ -65,12 +65,14 @@ public class Gvisual extends SettingsPreferenceFragment implements
     private static final String PREF_ROUNDED_CORNER = "rounded_ui";
     private static final String PREF_SB_HEIGHT = "statusbar_height";
     private static final String PREF_QS_LANDSCAPE_WIDE = "quicksettings_landscape_wide";
+    private static final String PREF_QS_HEADER_TRANSPARENT = "quicksettings_header_transparent";
 
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private ListPreference mRoundedUi;
     private ListPreference mSbHeight;
     private ListPreference mQsLWide;
+    private ListPreference mQsHTransparent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,7 @@ public class Gvisual extends SettingsPreferenceFragment implements
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
 
         setupQuicksettingsLandscapeSwitchPref();
+        setupQuicksettingsHeaderSwitchPref();
 
         mRoundedUi = (ListPreference) findPreference(PREF_ROUNDED_CORNER);
         int roundedValue = getOverlayPosition(ThemesUtils.UI_RADIUS);
@@ -126,6 +129,24 @@ public class Gvisual extends SettingsPreferenceFragment implements
             break;
             case "2":
             handleOverlays(ThemesUtils.QUICKSETTINGS_LANDSCAPE_WIDE, true, mOverlayManager);
+            break;
+        }
+        try {
+             mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+             mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+             mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+        } catch (RemoteException ignored) {
+        }
+        return true;
+        } else if (preference == mQsHTransparent){
+        String qshtransparent = (String) objValue;
+        final Context context = getContext();
+        switch (qshtransparent) {
+            case "1":
+            handleOverlays(ThemesUtils.QUICKSETTINGS_HEADER_TRANSPARENT, false, mOverlayManager);
+            break;
+            case "2":
+            handleOverlays(ThemesUtils.QUICKSETTINGS_HEADER_TRANSPARENT, true, mOverlayManager);
             break;
         }
         try {
@@ -197,6 +218,17 @@ public class Gvisual extends SettingsPreferenceFragment implements
         }
         else{
             mQsLWide.setValue("1");
+        }
+    }
+
+    private void setupQuicksettingsHeaderSwitchPref() {
+        mQsHTransparent = (ListPreference) findPreference(PREF_QS_HEADER_TRANSPARENT);
+        mQsHTransparent.setOnPreferenceChangeListener(this);
+        if (qassaUtils.isThemeEnabled("com.ghou8s.gvisualmod.qsh_t")){
+            mQsHTransparent.setValue("2");
+        }
+        else{
+            mQsHTransparent.setValue("1");
         }
     }
 

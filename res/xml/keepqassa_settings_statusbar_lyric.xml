@@ -43,16 +43,6 @@
             android:dependency="status_bar_show_lyric"
             android:defaultValue="false"/>
 
-        <PreferenceScreen
-            android:key="status_bar_lyric_app"
-            android:title="@string/status_bar_lyric_app_title"
-            android:summary="@string/status_bar_lyric_app_summary"
-            android:dependency="status_bar_show_lyric">
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="io.cjybyjk.statuslyricext"
-                    android:targetClass="io.cjybyjk.statuslyricext.SettingsActivity" />
-    </PreferenceScreen>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

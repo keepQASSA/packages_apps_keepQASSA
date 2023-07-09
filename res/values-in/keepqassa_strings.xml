@@ -550,4 +550,5 @@
     <string name="custom_wifi_dimension_summary">gunakan nilai dimensi khusus yang dapat disesuaikan</string>
     <string name="custom_wifi_height">Tinggi</string>
     <string name="custom_wifi_width">Lebar</string>
+    <string name="status_bar_battery_style_icon_landscape_ios15">Ikon lanskap iOS Lima Belas</string>
 </resources>

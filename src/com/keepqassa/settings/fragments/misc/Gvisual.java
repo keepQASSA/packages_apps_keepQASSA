@@ -24,6 +24,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.om.IOverlayManager;
 import android.content.om.OverlayInfo;
 import android.content.pm.PackageManager;
@@ -64,11 +66,13 @@ public class Gvisual extends SettingsPreferenceFragment implements
 
     private static final String PREF_ROUNDED_CORNER = "rounded_ui";
     private static final String PREF_SB_HEIGHT = "statusbar_height";
+    private static final String PREF_QS_LANDSCAPE = "qs_landscape";
 
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private ListPreference mRoundedUi;
     private ListPreference mSbHeight;
+    private ListPreference mQsLandscape;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -100,6 +104,15 @@ public class Gvisual extends SettingsPreferenceFragment implements
         }
         mSbHeight.setSummary(mSbHeight.getEntry());
         mSbHeight.setOnPreferenceChangeListener(this);
+
+        mQsLandscape = (ListPreference) findPreference(PREF_QS_LANDSCAPE);
+        int qsLandscapeValue = getOverlayPosition(ThemesUtils.QS_LANDSCAPE);
+        if (qsLandscapeValue != -1) {
+            mQsLandscape.setValue(String.valueOf(qsLandscapeValue + 2));
+        } else {
+            mQsLandscape.setValue("1");
+        }
+        mQsLandscape.setSummary(mQsLandscape.getEntry());
     }
 
     public void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
@@ -144,6 +157,25 @@ public class Gvisual extends SettingsPreferenceFragment implements
         }
         return false;
     }
+
+    public OnSharedPreferenceChangeListener mSharedPrefListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(final SharedPreferences sharedPreferences, String key) {
+        if (key.equals(PREF_QS_LANDSCAPE)) {
+                String qsLandscape = sharedPreferences.getString(PREF_QS_LANDSCAPE, "1");
+                String overlayName = getOverlayName(ThemesUtils.QS_LANDSCAPE);
+                int qsLandscapeValue = Integer.parseInt(qsLandscape);
+                if (overlayName != null) {
+                    handleOverlays(overlayName, false, mOverlayManager);
+                }
+                if (qsLandscapeValue > 1) {
+                    handleOverlays(ThemesUtils.QS_LANDSCAPE[qsLandscapeValue - 2],
+                            true, mOverlayManager);
+                }
+                mQsLandscape.setSummary(mQsLandscape.getEntry());
+            }
+        }
+    };
 
     private int getOverlayPosition(String[] overlays) {
         int position = -1;

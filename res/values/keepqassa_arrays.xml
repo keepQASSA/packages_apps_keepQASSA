@@ -657,4 +657,13 @@
         <item>4</item>
     </string-array>
 
+    <string-array name="qs_landscape_titles" translatable="false">
+        <item>@string/qs_landscape_default</item>
+        <item>@string/qs_landscape_wide</item>
+    </string-array>
+
+    <string-array name="qs_landscape_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>

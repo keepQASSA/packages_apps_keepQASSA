@@ -514,7 +514,8 @@
     <string name="hide_lockicon_summary">Sembunyikan ikon gembok di layar kunci</string>
     <string name="statusbar_top_padding">Padding atas statusbar</string>
     <string name="gvisual_title">Mod G-Visual</string>
-    <string name="gvisual_summary">Berbagai penyesuaian UI oleh @ImYourGege</string>
+    <string name="gvisual_summary">Berbagai penyesuaian UI</string>
+    <string name="gvisual_by_ImYourGege_title">oleh @ImYourGege</string>
     <string name="rounded_ui_title">Sudut membulat</string>
     <string name="rounded_ui_dialog_title">Pilih model sudut membulat</string>
     <string name="rounded_style_default">Default</string>
@@ -553,4 +554,9 @@
     <string name="status_bar_battery_style_icon_landscape_ios15">Ikon lanskap iOS Lima Belas</string>
     <string name="idle_manager_title">Manajer Idle</string>
     <string name="idle_manager_summary">Hentikan semua proses latar belakang yang tidak penting saat perangkat dalam keadaan idle</string>
+    <string name="gvisual_by_ghou8s_title">oleh @ghou8s</string>
+    <string name="qs_landscape_title">qs ukuran lanskap</string>
+    <string name="qs_landscape_dialog_title">Pilih ukuran</string>
+    <string name="qs_landscape_default">Bawaan</string>
+    <string name="qs_landscape_wide">Lebar</string>
 </resources>

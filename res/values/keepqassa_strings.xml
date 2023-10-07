@@ -792,7 +792,8 @@
 
     <!-- gvisual mod -->
     <string name="gvisual_title">G-Visual Mod</string>
-    <string name="gvisual_summary">Various UI customizations by @ImYourGege</string>
+    <string name="gvisual_summary">Various UI customizations</string>
+    <string name="gvisual_by_ImYourGege_title">by @ImYourGege</string>
     <string name="rounded_ui_title">Rounded corner</string>
     <string name="rounded_ui_dialog_title">Select rounded corner model</string>
     <string name="rounded_style_default">Default</string>
@@ -853,4 +854,10 @@
     <!-- Idle Manager -->
     <string name="idle_manager_title">Idle Manager</string>
     <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
+    <string name="gvisual_by_ghou8s_title">by @ghou8s</string>
+    <string name="qs_landscape_title">qs lansdscape size</string>
+    <string name="qs_landscape_dialog_title">Select size</string>
+    <string name="qs_landscape_default">Default</string>
+    <string name="qs_landscape_wide">Wide</string>
 </resources>

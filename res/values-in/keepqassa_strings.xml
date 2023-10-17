@@ -78,8 +78,8 @@
     <string name="header_icons_style_summary">Aktifkan Notifikasi QS headers berwarna</string>
     <string name="enable_clear_all_button">Ganti teks hapus semua dengan OOS clear all button</string>
     <string name="enable_clear_all_button_summary">Tampilkan tombol hapus semua notifikasi di quick settings dari pada tombol teks default</string>
-    <string name="status_bar_notif_count_title">Jumlah notifikasi</string>
-    <string name="status_bar_notif_count_summary">Tampilkan jumlah notifikasi yang belum di baca</string>
+    <string name="statusbar_notif_count_title">Tampilkan jumlah notifikasi</string>
+    <string name="statusbar_notif_count_summary">Menampilkan jumlah notifikasi yang tertunda</string>
     <string name="spoof_title">Pemalsuan</string>
     <string name="use_photos_spoof_title">Penyimpanan Foto Tak Terbatas</string>
     <string name="use_photos_spoof_summary">Tipu perangkat Anda sebagai Pixel XL hanya untuk aplikasi Google Foto guna menyediakan penyimpanan tak terbatas untuk pencadangan</string>

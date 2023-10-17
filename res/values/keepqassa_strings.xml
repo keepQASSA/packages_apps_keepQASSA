@@ -116,8 +116,8 @@
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 
     <!-- Notification count -->
-    <string name="status_bar_notif_count_title">Notification count</string>
-    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+    <string name="statusbar_notif_count_title">Show notification count</string>
+    <string name="statusbar_notif_count_summary">Display the number of pending notifications</string>
 
     <!-- Spoofing -->
     <string name="spoof_title">Spoofing</string>

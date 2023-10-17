@@ -105,9 +105,9 @@
     <string name="lockscreen_interface_category">Interface</string>
     <string name="lockscreen_misc_category">Miscellaneous</string>
 
-    <!-- Colored Statusbar & Header Icons -->
-    <string name="statusbar_icons_style">Colored Statusbar Notification Icons</string>
-    <string name="statusbar_icons_style_summary">Choose the style of your statusbar notification icons</string>
+    <!-- Statusbar & Header colored icons -->
+    <string name="statusbar_colored_icons_title">Colored icons</string>
+    <string name="statusbar_colored_icons_summary">Use proper app icons for notification icons in statusbar</string>
     <string name="header_icons_style">Colored Notification Headers Icons</string>
     <string name="header_icons_style_summary">Choose the style of your notification headers icons</string>
 

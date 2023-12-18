@@ -74,8 +74,6 @@
     <string name="rows_columns_qs_title">Baris dan Kolom</string>
     <string name="statusbar_colored_icons_title">Ikon berwarna</string>
     <string name="statusbar_colored_icons_summary">Gunakan ikon aplikasi yang tepat untuk ikon notifikasi di bilah status</string>
-    <string name="header_icons_style">Notifikasi QS Headers berwarna</string>
-    <string name="header_icons_style_summary">Aktifkan Notifikasi QS headers berwarna</string>
     <string name="enable_clear_all_button">Ganti teks hapus semua dengan OOS clear all button</string>
     <string name="enable_clear_all_button_summary">Tampilkan tombol hapus semua notifikasi di quick settings dari pada tombol teks default</string>
     <string name="statusbar_notif_count_title">Tampilkan jumlah notifikasi</string>

@@ -64,7 +64,6 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_STYLE = "anim_tile_style";
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_DURATION = "anim_tile_duration";
     private static final String STATUS_BAR_QUICK_QS_ANIMATION_TILE_INTERPOLATOR = "anim_tile_interpolator";
-    private static final String HEADER_ICONS_STYLE = "headers_icons_style";
     private static final String FOOTER_TEXT_STRING = "footer_text_string";
     private static final String NOTIFICATION_HEADERS  = "notification_headers";
     private static final String QS_BLUR  = "qs_blur";
@@ -77,8 +76,6 @@ public class QuickSettings extends SettingsPreferenceFragment
     private SystemSettingListPreference mStatusBarQsAnimationStyle;
     private SystemSettingListPreference mStatusBarQsAnimationTileDuration;
     private SystemSettingListPreference mStatusBarQsAnimationTileInterpolator;
-
-    private SystemSettingSwitchPreference mHeaderIconsStyle;
 
     private SwitchPreference mStatusBarQsShowAutoBrightness;
 
@@ -127,11 +124,6 @@ public class QuickSettings extends SettingsPreferenceFragment
 
         updateQsAnimationDependents(Integer.parseInt(mStatusBarQsAnimationStyle.getValue()));
 
-	mHeaderIconsStyle = findPreference(HEADER_ICONS_STYLE);
-        mHeaderIconsStyle.setChecked((Settings.System.getInt(resolver,
-                Settings.System.HEADER_ICONS_STYLE, 0) == 1));
-        mHeaderIconsStyle.setOnPreferenceChangeListener(this);
-
         mFooterString = (SystemSettingEditTextPreference) findPreference(FOOTER_TEXT_STRING);
         mFooterString.setOnPreferenceChangeListener(this);
         String footerString = Settings.System.getString(getContentResolver(),
@@ -168,13 +160,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
     final ContentResolver resolver = getActivity().getContentResolver();
-	if (preference == mHeaderIconsStyle) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.HEADER_ICONS_STYLE, value ? 1 : 0);
-            ActionUtils.showSystemUiRestartDialog(getContext());
-            return true;
-        } else if (preference == mFooterString) {
+        if (preference == mFooterString) {
             String value = (String) newValue;
             if (value != "" && value != null)
                 Settings.System.putString(getActivity().getContentResolver(),

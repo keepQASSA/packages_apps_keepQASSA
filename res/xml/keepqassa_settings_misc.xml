@@ -157,6 +157,13 @@
             android:summary="@string/netflix_spoof_summary"
             android:defaultValue="false" />
 
+        <!-- Google Play Integrity -->
+        <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pixelprops.pi"
+            android:title="@string/pi_spoof_title"
+            android:summary="@string/pi_spoof_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

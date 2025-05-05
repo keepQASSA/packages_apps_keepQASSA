@@ -545,4 +545,5 @@
     <string name="status_bar_battery_style_icon_landscape_ios15">Ikon lanskap iOS Lima Belas</string>
     <string name="idle_manager_title">Manajer Idle</string>
     <string name="idle_manager_summary">Hentikan semua proses latar belakang yang tidak penting saat perangkat dalam keadaan idle</string>
+    <string name="status_bar_battery_style_icon_landscape_oneui7">Ikon lanskap OneUI 7</string>
 </resources>

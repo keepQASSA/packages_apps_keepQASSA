@@ -43,6 +43,7 @@
         <item>@string/status_bar_battery_style_land_m</item>
         <item>@string/status_bar_battery_style_land_n</item>
         <item>@string/status_bar_battery_style_land_o</item>
+        <item>@string/status_bar_battery_style_icon_landscape_oneui7</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -87,6 +88,7 @@
         <item>31</item>
         <item>32</item>
         <item>33</item>
+        <item>34</item>
     </string-array>
 
     <!-- Battery percent -->
@@ -134,6 +136,7 @@
         <item>@string/status_bar_battery_style_land_m</item>
         <item>@string/status_bar_battery_style_land_n</item>
         <item>@string/status_bar_battery_style_land_o</item>
+        <item>@string/status_bar_battery_style_icon_landscape_oneui7</item>
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
@@ -178,6 +181,7 @@
         <item>30</item>
         <item>31</item>
         <item>32</item>
+        <item>33</item>
         <item>33</item>
     </string-array>
 

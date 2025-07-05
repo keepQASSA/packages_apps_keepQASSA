@@ -536,16 +536,6 @@
     <string name="ticker_animation_mode_scroll">Scroll</string>
     <string name="ticker_tick_duration_title">Ticker duration</string>
 
-    <!-- Status Bar Lyric -->
-    <string name="status_bar_show_lyric_title">Status bar lyric</string>
-    <string name="status_bar_show_lyric_summary">Show lyric in status bar (install the StatusBarLyricExt app first)</string>
-    <string name="status_bar_lyric_options_title">Options</string>
-    <string name="disguise_props_for_music_app_title">Disguise device for music apps</string>
-    <string name="disguise_props_for_music_app_summary">Disguise device in some music applications for support status bar lyric. After changing this toggle, you have to restart applications for the change to take effect.</string>
-    <string name="status_bar_lyric_title">Status bar lyric</string>
-    <string name="status_bar_lyric_summary">Configure the Status bar lyric</string>
-    <string name="status_bar_lyric_info_summary">lyric will be displayed depending on the app or song that supports to show lyric or not</string>
-
     <!-- Heads up -->
     <string name="heads_up_cat_title">Heads up</string>
     <string name="heads_up_cat_summary">Snooze, timeout blacklist etc</string>

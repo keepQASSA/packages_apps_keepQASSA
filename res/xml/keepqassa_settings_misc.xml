@@ -136,33 +136,33 @@
             android:summary="@string/spoof_storage_encryption_status_summary"
             android:defaultValue="false"/>
 
-        <!-- Unlock FPS for specific games -->
+        <!-- Unlock FPS for specific games
         <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.games"
             android:title="@string/use_games_spoof_title"
             android:summary="@string/use_games_spoof_summary"
             android:defaultValue="false" />
 
-        <!-- Unlimited google photos storage -->
+        Unlimited google photos storage
         <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.gphotos"
             android:title="@string/use_photos_spoof_title"
             android:summary="@string/use_photos_spoof_summary"
             android:defaultValue="true" />
 
-        <!-- Netflix -->
+        Netflix
         <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.netflix"
             android:title="@string/netflix_spoof_title"
             android:summary="@string/netflix_spoof_summary"
             android:defaultValue="false" />
 
-        <!-- Google Play Integrity -->
+        Google Play Integrity
         <com.keepqassa.settings.preferences.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.pi"
             android:title="@string/pi_spoof_title"
             android:summary="@string/pi_spoof_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" /> -->
 
     </PreferenceCategory>
 

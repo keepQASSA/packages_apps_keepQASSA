@@ -675,7 +675,7 @@ public class Buttons extends SettingsPreferenceFragment
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.Global.putInt(resolver,
-                Settings.Global.SHOW_ROTATION_BUTTON, 1);
+                Settings.Global.SHOW_ROTATION_BUTTON, 0);
     }
 
     private void writeDisableNavkeysOption(boolean enabled) {

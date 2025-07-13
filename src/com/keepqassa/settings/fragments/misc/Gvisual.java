@@ -62,12 +62,12 @@ import com.android.internal.util.qassa.qassaUtils;
 public class Gvisual extends SettingsPreferenceFragment implements
          OnPreferenceChangeListener {
 
-    private static final String PREF_ROUNDED_CORNER = "rounded_ui";
+    /*private static final String PREF_ROUNDED_CORNER = "rounded_ui";*/
     private static final String PREF_SB_HEIGHT = "statusbar_height";
 
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
-    private ListPreference mRoundedUi;
+    /*private ListPreference mRoundedUi;*/
     private ListPreference mSbHeight;
 
     @Override
@@ -81,7 +81,7 @@ public class Gvisual extends SettingsPreferenceFragment implements
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
 
-        mRoundedUi = (ListPreference) findPreference(PREF_ROUNDED_CORNER);
+        /*mRoundedUi = (ListPreference) findPreference(PREF_ROUNDED_CORNER);
         int roundedValue = getOverlayPosition(ThemesUtils.UI_RADIUS);
         if (roundedValue != -1) {
             mRoundedUi.setValue(String.valueOf(roundedValue + 2));
@@ -89,7 +89,7 @@ public class Gvisual extends SettingsPreferenceFragment implements
             mRoundedUi.setValue("1");
         }
         mRoundedUi.setSummary(mRoundedUi.getEntry());
-        mRoundedUi.setOnPreferenceChangeListener(this);
+        mRoundedUi.setOnPreferenceChangeListener(this);*/
 
         mSbHeight = (ListPreference) findPreference(PREF_SB_HEIGHT);
         int sbHeightValue = getOverlayPosition(ThemesUtils.STATUSBAR_HEIGHT);
@@ -113,7 +113,7 @@ public class Gvisual extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mRoundedUi) {
+        /*if (preference == mRoundedUi) {
         String rounded = (String) objValue;
         int roundedValue = Integer.parseInt(rounded);
         mRoundedUi.setValue(String.valueOf(roundedValue));
@@ -126,8 +126,8 @@ public class Gvisual extends SettingsPreferenceFragment implements
                         true, mOverlayManager);
         }
         mRoundedUi.setSummary(mRoundedUi.getEntry());
-        return true;
-        } else if (preference == mSbHeight) {
+        return true;*/
+        if (preference == mSbHeight) {
         String sbheight = (String) objValue;
         int sbheightValue = Integer.parseInt(sbheight);
         mSbHeight.setValue(String.valueOf(sbheightValue));

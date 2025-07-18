@@ -39,9 +39,9 @@
         android:defaultValue="0xffffff"
         android:persistent="false" />
 
-        <ListPreference
+        <!-- <ListPreference
             android:key="android.theme.customization.accent_color"
-            android:title="@string/theme_customization_accent_color_title"/>
+            android:title="@string/theme_customization_accent_color_title"/> -->
         <ListPreference
             android:key="android.theme.customization.font"
             android:title="@string/theme_customization_font_title"/>

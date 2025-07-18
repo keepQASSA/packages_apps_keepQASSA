@@ -85,8 +85,6 @@
     <string name="use_games_spoof_summary">Tipu perangkat Anda sebagai model berbeda untuk game tertentu untuk membuka kunci FPS yang lebih tinggi</string>
     <string name="netflix_spoof_title">Netflix spoof</string>
     <string name="netflix_spoof_summary">Menipu perangkat Anda sebagai model berbeda untuk Netflix</string>
-    <string name="pi_spoof_title">Spoof Integritas Google Play</string>
-    <string name="pi_spoof_summary">Memalsukan perangkat Anda sebagai model berbeda untuk Integritas Google Play</string>
     <string name="use_old_mobiletype_title">Gunakan ikon data seluler gaya lama</string>
     <string name="use_old_mobiletype_summary">Tampilkan ikon jenis ponsel di atas indikator sinyal</string>
     <string name="notification_headers_title">Tampilkan header notifikasi</string>

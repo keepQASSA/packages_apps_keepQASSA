@@ -59,9 +59,9 @@ public class Misc extends SettingsPreferenceFragment
 
     public static final String TAG = "Misc";
 
-    /*private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
+    private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
-    private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix":*/
+    private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix";
     private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
     private static final String SELINUX_CATEGORY = "selinux";
@@ -164,9 +164,9 @@ public class Misc extends SettingsPreferenceFragment
 
     public static void reset(Context mContext) {
     final ContentResolver resolver = mContext.getContentResolver();
-        /*SystemProperties.set(SYS_GAMES_SPOOF, "false");
+        SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
-        SystemProperties.set(SYS_NETFLIX_SPOOF, "false");*/
+        SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
         Settings.System.putIntForUser(resolver,
                 Settings.System.SCREENSHOT_SOUND, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
